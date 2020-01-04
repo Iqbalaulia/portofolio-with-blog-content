@@ -3,3 +3,4 @@
 <link href="{{ asset('/css/aos.css') }}" rel="stylesheet">
 <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
 <link href="{{ asset('/css/main.css') }}" rel="stylesheet">
+<link href="{{ asset('/css/my-style.css') }}" rel="stylesheet">

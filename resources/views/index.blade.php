@@ -61,17 +61,20 @@
                         <div class="section">
                             <div class="container">
                                 <div class="button-container">
-                                    <a class="btn btn-default btn-round btn-lg btn-icon" href="https://www.facebook.com/rafi.vidoll" target="_blank" rel="tooltip"
+                                    <a class="btn btn-default btn-round btn-lg btn-icon"
+                                        href="https://www.facebook.com/rafi.vidoll" target="_blank" rel="tooltip"
                                         title="Follow me on Facebook"><i class="fa fa-facebook"></i></a>
-                                    <a class="btn btn-default btn-round btn-lg btn-icon" href="https://twitter.com/MiqbalAuliaR" target="_blank" rel="tooltip"
-                                        title="Follow me on Twitter"><i class="fa fa-twitter"></i></a>
-                                    <a class="btn btn-default btn-round btn-lg btn-icon" href="https://github.com/Iqbalaulia/" target="_blank" rel="tooltip"
+                                    <a class="btn btn-default btn-round btn-lg btn-icon"
+                                        href="https://github.com/Iqbalaulia/" target="_blank" rel="tooltip"
                                         title="Follow me on Github"><i class="fa fa-github-alt"
                                             aria-hidden="true"></i></a>
-                                    <a class="btn btn-default btn-round btn-lg btn-icon" href="https://www.instagram.com/boss_iqbalar" target="_blank" rel="tooltip"
+                                    <a class="btn btn-default btn-round btn-lg btn-icon"
+                                        href="https://www.instagram.com/boss_iqbalar" target="_blank" rel="tooltip"
                                         title="Follow me on Instagram"><i class="fa fa-instagram"></i></a>
-                                        <a class="btn btn-default btn-round btn-lg btn-icon" href="https://www.linkedin.com/in/muhammad-iqbal-aulia-rafi-9122aa144/" target="_blank" rel="tooltip"
-                                        title="Follow me on Linkind"><i class="fa fa-linkedin"></i></a>
+                                    <a class="btn btn-default btn-round btn-lg btn-icon"
+                                        href="https://www.linkedin.com/in/muhammad-iqbal-aulia-rafi-9122aa144/"
+                                        target="_blank" rel="tooltip" title="Follow me on Linkind"><i
+                                            class="fa fa-linkedin"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -80,44 +83,58 @@
             </div>
             <div class="section" id="about">
                 <div class="container">
-                    <div class="card" data-aos="fade-up" data-aos-offset="10">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-12">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+
+                            <div class="card" data-aos="fade-up" data-aos-offset="10">
+
                                 <div class="card-body">
-                                    <div class="h4 mt-0 title">About</div>
-                                    <p>Hello! I am Anthony Barnett. Web Developer, Graphic Designer and Photographer.
+                                    <img src="{{ asset('/images/profile/iqbal.jpg') }}" alt="">
+
+                                    <div class="h4 mt-2 title">About</div>
+                                    <hr>
+                                    <p>Hello! I am Muhammad Iqbal Aulia Rafi'. Web Developer.
                                     </p>
-                                    <p>Creative CV is a HTML resume template for professionals. Built with Bootstrap 4,
+                                    <p>Creative CV is a HTML resume template for professionals. Built with Bootstrap
+                                        4,
                                         Now UI Kit and FontAwesome, this modern and responsive design template is
                                         perfect to showcase your portfolio, skills and experience. <a
                                             href="https://templateflip.com/templates/creative-cv/" target="_blank">Learn
                                             More</a></p>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-12">
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+
+                            <div class="card" data-aos="fade-up" data-aos-offset="10">
+
                                 <div class="card-body">
                                     <div class="h4 mt-0 title">Basic Information</div>
                                     <div class="row">
                                         <div class="col-sm-4"><strong class="text-uppercase">Age:</strong></div>
-                                        <div class="col-sm-8">24</div>
+                                        <div class="col-sm-8">22 years old</div>
                                     </div>
                                     <div class="row mt-3">
-                                        <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
-                                        <div class="col-sm-8">anthony@company.com</div>
+                                        <div class="col-sm-4"><strong class="text-uppercase">Email:</strong>
+                                        </div>
+                                        <div class="col-sm-8">iqbal.developer16@gmail.com</div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="col-sm-4"><strong class="text-uppercase">Language:</strong>
+                                        </div>
+                                        <div class="col-sm-8">English, Indonesia</div>
                                     </div>
                                     <div class="row mt-3">
-                                        <div class="col-sm-4"><strong class="text-uppercase">Phone:</strong></div>
-                                        <div class="col-sm-8">+1718-111-0011</div>
-                                    </div>
-                                    <div class="row mt-3">
-                                        <div class="col-sm-4"><strong class="text-uppercase">Address:</strong></div>
-                                        <div class="col-sm-8">140, City Center, New York, U.S.A</div>
-                                    </div>
-                                    <div class="row mt-3">
-                                        <div class="col-sm-4"><strong class="text-uppercase">Language:</strong></div>
-                                        <div class="col-sm-8">English, German, French</div>
+                                        <div class="col-sm-4"><strong class="text-uppercase">Motto:</strong>
+                                        </div>
+                                        <div class="col-sm-8">Don't ever give up, your one step today will succeed
+                                            in the next 5-10 years</div>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -135,8 +152,8 @@
                                         <div class="progress">
                                             <div class="progress-bar progress-bar-primary" data-aos="progress-full"
                                                 data-aos-offset="10" data-aos-duration="2000" role="progressbar"
-                                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                                style="width: 80%;"></div><span class="progress-value">80%</span>
+                                                aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
+                                                style="width: 90%;"></div><span class="progress-value">90%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -147,7 +164,7 @@
                                             <div class="progress-bar progress-bar-primary" data-aos="progress-full"
                                                 data-aos-offset="10" data-aos-duration="2000" role="progressbar"
                                                 aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                                style="width: 75%;"></div><span class="progress-value">75%</span>
+                                                style="width: 80%;"></div><span class="progress-value">80%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -160,7 +177,7 @@
                                             <div class="progress-bar progress-bar-primary" data-aos="progress-full"
                                                 data-aos-offset="10" data-aos-duration="2000" role="progressbar"
                                                 aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                                style="width: 60%;"></div><span class="progress-value">60%</span>
+                                                style="width: 70%;"></div><span class="progress-value">70%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -171,7 +188,7 @@
                                             <div class="progress-bar progress-bar-primary" data-aos="progress-full"
                                                 data-aos-offset="10" data-aos-duration="2000" role="progressbar"
                                                 aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                                style="width: 60%;"></div><span class="progress-value">60%</span>
+                                                style="width: 75%;"></div><span class="progress-value">75%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -184,13 +201,57 @@
                                             <div class="progress-bar progress-bar-primary" data-aos="progress-full"
                                                 data-aos-offset="10" data-aos-duration="2000" role="progressbar"
                                                 aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                                style="width: 75%;"></div><span class="progress-value">75%</span>
+                                                style="width: 90%;"></div><span class="progress-value">90%</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="progress-container progress-primary"><span
-                                            class="progress-badge">Photoshop</span>
+                                            class="progress-badge">Laravel</span>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full"
+                                                data-aos-offset="10" data-aos-duration="2000" role="progressbar"
+                                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                                style="width: 80%;"></div><span class="progress-value">80%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="progress-container progress-primary"><span
+                                            class="progress-badge">PHP</span>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full"
+                                                data-aos-offset="10" data-aos-duration="2000" role="progressbar"
+                                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                                style="width: 80%;"></div><span class="progress-value">80%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="progress-container progress-primary"><span class="progress-badge">React
+                                            JS</span>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full"
+                                                data-aos-offset="10" data-aos-duration="2000" role="progressbar"
+                                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                                style="width: 60%;"></div><span class="progress-value">60%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="progress-container progress-primary"><span class="progress-badge">Vue
+                                            JS</span>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full"
+                                                data-aos-offset="10" data-aos-duration="2000" role="progressbar"
+                                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                                style="width: 40%;"></div><span class="progress-value">40%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="progress-container progress-primary"><span
+                                            class="progress-badge">MySQL</span>
                                         <div class="progress">
                                             <div class="progress-bar progress-bar-primary" data-aos="progress-full"
                                                 data-aos-offset="10" data-aos-duration="2000" role="progressbar"
@@ -228,44 +289,20 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="cc-porfolio-image img-raised" data-aos="fade-up"
-                                            data-aos-anchor-placement="top-bottom"><a href="#web-development">
-                                                <figure class="cc-effect"><img src="images/project-1.jpg" alt="Image" />
+                                            data-aos-anchor-placement="top-bottom">
+                                            <a href="https://peduly.com/" target="_blank">
+                                                <figure class="cc-effect"><img
+                                                        src="{{ asset('./images/project/peduly.png') }}" alt="Image" />
                                                     <figcaption>
                                                         <div class="h4">Recent Project</div>
                                                         <p>Web Development</p>
                                                     </figcaption>
                                                 </figure>
-                                            </a></div>
-                                        <div class="cc-porfolio-image img-raised" data-aos="fade-up"
-                                            data-aos-anchor-placement="top-bottom"><a href="#web-development">
-                                                <figure class="cc-effect"><img src="images/project-2.jpg" alt="Image" />
-                                                    <figcaption>
-                                                        <div class="h4">Startup Project</div>
-                                                        <p>Web Development</p>
-                                                    </figcaption>
-                                                </figure>
-                                            </a></div>
+                                            </a>
+                                        </div>                                        
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="cc-porfolio-image img-raised" data-aos="fade-up"
-                                            data-aos-anchor-placement="top-bottom"><a href="#web-development">
-                                                <figure class="cc-effect"><img src="images/project-3.jpg" alt="Image" />
-                                                    <figcaption>
-                                                        <div class="h4">Food Order Project</div>
-                                                        <p>Web Development</p>
-                                                    </figcaption>
-                                                </figure>
-                                            </a></div>
-                                        <div class="cc-porfolio-image img-raised" data-aos="fade-up"
-                                            data-aos-anchor-placement="top-bottom"><a href="#web-development">
-                                                <figure class="cc-effect"><img src="images/project-4.jpg" alt="Image" />
-                                                    <figcaption>
-                                                        <div class="h4">Web Advertising Project</div>
-                                                        <p>Web Development</p>
-                                                    </figcaption>
-                                                </figure>
-                                            </a></div>
-                                    </div>
+
+                                    
                                 </div>
                             </div>
                         </div>
