@@ -6,18 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Muhammad Iqbal Aulia Rafi'</title>
     <meta name="description" content="Creative CV is a HTML resume template for professionals. Built with Bootstrap 4, Now UI Kit and FontAwesome, this modern and responsive design template is perfect to showcase your portfolio, skils and experience."/>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link href="{{ asset('/css/aos.css') }}" rel="stylesheet">
-    <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('/css/main.css') }}" rel="stylesheet">
+    {{-- css --}}
+    @include('./component/css')
+    {{--  --}}
   </head>
   <body id="top">
     <header>
       <div class="profile-page sidebar-collapse">
         <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
           <div class="container">
-            <div class="navbar-translate"><a class="navbar-brand" href="#" rel="tooltip">Aulia Rafi'</a>
+            <div class="navbar-translate"><a class="navbar-brand" href="#" rel="tooltip">Muhammad Iqbal Aulia Rafi'</a>
               <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-bar bar1"></span><span class="navbar-toggler-bar bar2"></span><span class="navbar-toggler-bar bar3"></span></button>
             </div>
             <div class="collapse navbar-collapse justify-content-end" id="navigation">
@@ -38,12 +36,12 @@
 <div class="profile-page">
   <div class="wrapper">
     <div class="page-header page-header-small" filter-color="green">
-      <div class="page-header-image" data-parallax="true" style="background-image: url('images/cc-bg-1.jpg');"></div>
+      <div class="page-header-image" data-parallax="true" style="background-image: url({{ asset('/images/background-profile/macbook.jpg') }})"></div>
       <div class="container">
         <div class="content-center">
-          <div class="cc-profile-image"><a href="#"><img src="images/anthony.jpg" alt="Image"/></a></div>
-          <div class="h2 title">Anthony Barnett</div>
-          <p class="category text-white">Web Developer, Graphic Designer,  Photographer</p><a class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Hire Me</a><a class="btn btn-primary" href="#" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Download CV</a>
+          <div class="cc-profile-image"><a href="#"><img src="{{ asset('images/profile/iqbal.jpg') }}" alt="Image"/></a></div>
+          <div class="h2 title">Muhammad Iqbal Aulia Rafi'</div>
+          <p class="category text-white">Web Developer</p><a class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Hire Me</a><a class="btn btn-primary" href="#" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Download CV</a>
         </div>
       </div>
       <div class="section">
@@ -516,11 +514,6 @@
         <p>&copy; Creative CV. All rights reserved.<br>Design - <a class="credit" href="https://templateflip.com" target="_blank">TemplateFlip</a></p>
       </div>
     </footer>
-    <script src="{{ asset('/js/core/jquery.3.2.1.min.js') }}"></script>
-    <script src="{{ asset('/js/core/popper.min.js') }}"></script>
-    <script src="{{ asset('/js/core/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('/js/now-ui-kit.js?v=1.1.0') }}"></script>
-    <script src="{{ asset('/js/aos.js') }}"></script>
-    <script src="{{ asset('/js/scripts/main.js') }}"></script>
+    @include('./component/js')
   </body>
 </html>
