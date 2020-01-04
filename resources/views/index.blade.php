@@ -529,7 +529,7 @@
             <div class="section">
                 <div class="container cc-education">
                     <div class="h4 text-center mb-4 title">Education</div>
-                    <div class="card">
+                    {{-- <div class="card">
                         <div class="row">
                             <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
                                 data-aos-duration="500">
@@ -551,7 +551,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="card">
                         <div class="row">
                             <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
@@ -563,8 +563,8 @@
                             </div>
                             <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
                                 <div class="card-body">
-                                    <div class="h5">Bachelor of Computer Science</div>
-                                    <p class="category">University of Computer Science</p>
+                                    <div class="h5">Bachelor of Information System</div>
+                                    <p class="category">University of Dinamika</p>
                                     <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna
                                         quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc
                                         inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed
@@ -587,7 +587,7 @@
                             <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
                                 <div class="card-body">
                                     <div class="h5">Science and Mathematics</div>
-                                    <p class="category">School of Secondary board</p>
+                                    <p class="category">School of Kemala Bhayangkari 1 Surabaya</p>
                                     <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna
                                         quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc
                                         inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed
@@ -600,7 +600,7 @@
                     </div>
                 </div>
             </div>
-            <div class="section" id="reference">
+            {{-- <div class="section" id="reference">
                 <div class="container cc-reference">
                     <div class="h4 mb-4 text-center title">References</div>
                     <div class="card" data-aos="zoom-in">
@@ -666,9 +666,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <div class="section" id="contact">
-                <div class="cc-contact-information" style="background-image: url('images/staticmap.png');">
+                <div class="cc-contact-information" style="background-image: url({{ asset('/images/background-profile/peta.png') }});">
                     <div class="container">
                         <div class="cc-contact">
                             <div class="row">
@@ -733,12 +733,12 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="card-body">
-                                                    <p class="mb-0"><strong>Address </strong></p>
+                                                    {{-- <p class="mb-0"><strong>Address </strong></p>
                                                     <p class="pb-2">140, City Center, New York, U.S.A</p>
                                                     <p class="mb-0"><strong>Phone</strong></p>
-                                                    <p class="pb-2">+1718-111-0011</p>
+                                                    <p class="pb-2">+1718-111-0011</p> --}}
                                                     <p class="mb-0"><strong>Email</strong></p>
-                                                    <p>anthony@company.com</p>
+                                                    <p>iqbal.developer16@gmail.com</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -758,10 +758,9 @@
                 href="#"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a><a
                 class="cc-instagram btn btn-link" href="#"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i></a>
         </div>
-        <div class="h4 title text-center">Anthony Barnett</div>
+        <div class="h4 title text-center">Muhammad Iqbal Aulia Rafi</div>
         <div class="text-center text-muted">
-            <p>&copy; Creative CV. All rights reserved.<br>Design - <a class="credit" href="https://templateflip.com"
-                    target="_blank">TemplateFlip</a></p>
+            <p>&copy; Iqbal Aulia. All rights reserved.</p>
         </div>
     </footer>
     @include('./component/js')
