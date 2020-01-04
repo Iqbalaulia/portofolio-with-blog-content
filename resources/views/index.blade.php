@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Muhammad Iqbal Aulia Rafi'</title>
     <meta name="description"
-        content="Creative CV is a HTML resume template for professionals. Built with Bootstrap 4, Now UI Kit and FontAwesome, this modern and responsive design template is perfect to showcase your portfolio, skils and experience." />
+        content="Muhammad Iqbal Aulia Rafi Profile's" />
     {{-- css --}}
     @include('./component/css')
     {{--  --}}
@@ -417,13 +417,13 @@
                             <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
                                 data-aos-duration="500">
                                 <div class="card-body cc-experience-header">
-                                    <p>March 2016 - Present</p>
-                                    <div class="h5">CreativeM</div>
+                                    <p>Jul 2019 - Present</p>
+                                    <div class="h5">Peduly.com</div>
                                 </div>
                             </div>
                             <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
                                 <div class="card-body">
-                                    <div class="h5">Front End Developer</div>
+                                    <div class="h5">Full Stack Web Developer</div>
                                     <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna
                                         quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc
                                         inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed
@@ -439,13 +439,13 @@
                             <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
                                 data-aos-duration="500">
                                 <div class="card-body cc-experience-header">
-                                    <p>April 2014 - March 2016</p>
-                                    <div class="h5">WebNote</div>
+                                    <p>Agu 2019 - Nov 2019</p>
+                                    <div class="h5">SmartAircraft Aero</div>
                                 </div>
                             </div>
                             <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
                                 <div class="card-body">
-                                    <div class="h5">Web Developer</div>
+                                    <div class="h5">Frontend Web Developer</div>
                                     <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna
                                         quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc
                                         inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed
@@ -461,13 +461,59 @@
                             <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
                                 data-aos-duration="500">
                                 <div class="card-body cc-experience-header">
-                                    <p>April 2013 - February 2014</p>
-                                    <div class="h5">WEBM</div>
+                                    <p>Feb 2019 - Mar 2019</p>
+                                    <div class="h5">PT. Sinergi Informatika Semen Indonesia (SISI)</div>
                                 </div>
                             </div>
                             <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
                                 <div class="card-body">
-                                    <div class="h5">Intern</div>
+                                    <div class="h5">Internship</div>
+                                    <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna
+                                        quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc
+                                        inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed
+                                        mauris. Lacinia porta vestibulum diam integer quisque eros pulvinar curae,
+                                        curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium
+                                        molestie ultricies sollicitudin dui.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
+                                data-aos-duration="500">
+                                <div class="card-body cc-experience-header">
+                                    <p>Jan 2019 - Mar 2019</p>
+                                    <div class="h5">UD. Sumber Rejeki Jaya Mulya</div>
+                                </div>
+                            </div>
+                            <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                                <div class="card-body">
+                                    <div class="h5">Engineer</div>
+                                    <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna
+                                        quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc
+                                        inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed
+                                        mauris. Lacinia porta vestibulum diam integer quisque eros pulvinar curae,
+                                        curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium
+                                        molestie ultricies sollicitudin dui.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
+                                data-aos-duration="500">
+                                <div class="card-body cc-experience-header">
+                                    <p>Agu 2018 - Sep 2018</p>
+                                    <div class="h5">BikinBisnis.com</div>
+                                </div>
+                            </div>
+                            <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                                <div class="card-body">
+                                    <div class="h5">Frontend Web Developer</div>
                                     <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna
                                         quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc
                                         inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed
