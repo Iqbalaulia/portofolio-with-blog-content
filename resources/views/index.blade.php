@@ -21,11 +21,11 @@
                 <div class="wrapper">
                     <div class="page-header page-header-small" filter-color="green">
                         <div class="page-header-image" data-parallax="true"
-                            style="background-image: url({{ asset('/images/background-profile/macbook.jpg') }})"></div>
+                            style="background-image: url({{ asset('/user/images/background-profile/macbook.jpg') }})"></div>
                         <div class="container">
                             <div class="content-center">
                                 <div class="cc-profile-image"><a href="#"><img
-                                            src="{{ asset('images/profile/iqbal.jpg') }}" alt="Image" /></a></div>
+                                            src="{{ asset('/user/images/profile/iqbal.jpg') }}" alt="Image" /></a></div>
                                 <div class="h2 title">Muhammad Iqbal Aulia Rafi'</div>
                                 <p class="category text-white">Web Developer</p><a
                                     class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in"
@@ -64,7 +64,7 @@
                             <div class="card" data-aos="fade-up" data-aos-offset="10">
 
                                 <div class="card-body">
-                                    <img src="{{ asset('/images/profile/iqbal.jpg') }}" alt="">
+                                    <img src="{{ asset('/user/images/profile/iqbal.jpg') }}" alt="">
 
                                     <div class="h4 mt-2 title">About</div>
                                     <hr>
@@ -267,7 +267,7 @@
                                             data-aos-anchor-placement="top-bottom">
                                             <a href="https://peduly.com/" target="_blank">
                                                 <figure class="cc-effect"><img
-                                                        src="{{ asset('./images/project/peduly.png') }}" alt="Image" />
+                                                        src="{{ asset('/user/images/project/peduly.png') }}" alt="Image" />
                                                     <figcaption>
                                                         <div class="h4">Recent Project</div>
                                                         <p>Web Development</p>
@@ -643,7 +643,7 @@
                 </div>
             </div> --}}
             <div class="section" id="contact">
-                <div class="cc-contact-information" style="background-image: url({{ asset('/images/background-profile/peta.png') }});">
+                <div class="cc-contact-information" style="background-image: url({{ asset('/user/images/background-profile/peta.png') }});">
                     <div class="container">
                         <div class="cc-contact">
                             <div class="row">
