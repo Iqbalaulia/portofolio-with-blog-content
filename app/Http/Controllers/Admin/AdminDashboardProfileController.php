@@ -4,8 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
-class AdminDashboardController extends Controller
+class AdminDashboardProfileController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +15,10 @@ class AdminDashboardController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard.dashboardadmin.index');
-    }
+        $profileUser = Auth::user();
+        return view('admin.dashboard.profile.index',compact('profileUser'));
 
-    
+    }
 
     /**
      * Show the form for creating a new resource.
