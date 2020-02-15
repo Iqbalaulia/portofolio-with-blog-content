@@ -11,6 +11,8 @@
     {{-- css --}}
     @include('./component/css')
     {{--  --}}
+
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="1dd9ffe7-8da9-4d43-9d5d-d8c18be382bd";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </head>
 
 <body id="top">

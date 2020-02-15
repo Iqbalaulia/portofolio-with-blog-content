@@ -22,6 +22,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('/admin/lib/gritter/css/jquery.gritter.css') }}" />
     <!-- Custom styles for this template -->
     <link href="{{ asset('/admin/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('/admin/css/profile-dashboard.css') }}" rel="stylesheet">
     <link href="{{ asset('/admin/css/style-responsive.css') }}" rel="stylesheet">
     <script src="{{ asset('/admin/lib/chart-master/Chart.js') }}"></script>
 

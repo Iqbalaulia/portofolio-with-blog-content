@@ -36,4 +36,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // relasi
+
+    public function DetailProfiles(){
+        return $this->hasMany(DetailProfile::class, 'username','id');        
+
+    }
 }
