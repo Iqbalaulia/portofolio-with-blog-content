@@ -1,735 +1,673 @@
 <!DOCTYPE html>
-<html lang="en-US">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Muhammad Iqbal Aulia Rafi'</title>
-    <meta name="description"
-        content="Muhammad Iqbal Aulia Rafi Profile's" />
-    {{-- css --}}
+<html lang="en">
+  <head>
+    <title>Clark - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
     @include('./component/css')
-    {{--  --}}
 
-    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="1dd9ffe7-8da9-4d43-9d5d-d8c18be382bd";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
-</head>
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Clark</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
 
-<body id="top">
-    @include('./component/header')
-    <div class="page-content">
-        <div>
-            <div class="profile-page">
-                <div class="wrapper">
-                    <div class="page-header page-header-small" filter-color="green">
-                        <div class="page-header-image" data-parallax="true"
-                            style="background-image: url({{ asset('/user/images/background-profile/macbook.jpg') }})"></div>
-                        <div class="container">
-                            <div class="content-center">
-                                <div class="cc-profile-image"><a href="#"><img
-                                            src="{{ asset('/user/images/profile/iqbal.jpg') }}" alt="Image" /></a></div>
-                                <div class="h2 title">Muhammad Iqbal Aulia Rafi'</div>
-                                <p class="category text-white">Web Developer</p><a
-                                    class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in"
-                                    data-aos-anchor="data-aos-anchor">Hire Me</a><a class="btn btn-primary" href="#"
-                                    data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Download CV</a>
-                            </div>
-                        </div>
-                        <div class="section">
-                            <div class="container">
-                                <div class="button-container">
-                                    <a class="btn btn-default btn-round btn-lg btn-icon"
-                                        href="https://www.facebook.com/rafi.vidoll" target="_blank" rel="tooltip"
-                                        title="Follow me on Facebook"><i class="fa fa-facebook"></i></a>
-                                    <a class="btn btn-default btn-round btn-lg btn-icon"
-                                        href="https://github.com/Iqbalaulia/" target="_blank" rel="tooltip"
-                                        title="Follow me on Github"><i class="fa fa-github-alt"
-                                            aria-hidden="true"></i></a>
-                                    <a class="btn btn-default btn-round btn-lg btn-icon"
-                                        href="https://www.instagram.com/boss_iqbalar" target="_blank" rel="tooltip"
-                                        title="Follow me on Instagram"><i class="fa fa-instagram"></i></a>
-                                    <a class="btn btn-default btn-round btn-lg btn-icon"
-                                        href="https://www.linkedin.com/in/muhammad-iqbal-aulia-rafi-9122aa144/"
-                                        target="_blank" rel="tooltip" title="Follow me on Linkind"><i
-                                            class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="section" id="about">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#services-section" class="nav-link"><span>Services</span></a></li>
+	          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
+	          <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#blog-section" class="nav-link"><span>My Blog</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	      <div class="slider-item ">
+	      	<div class="overlay"></div>
+	        <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
+	          		<div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Clark Thompson</span></h1>
+			            <h2 class="mb-4">A Freelance Web Designer</h2>
+			            <p><a href="#" class="btn btn-primary py-3 px-4">Hire me</a> <a href="#" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
 
-                            <div class="card" data-aos="fade-up" data-aos-offset="10">
+	      <div class="slider-item">
+	      	<div class="overlay"></div>
+	        <div class="container">
+	          <div class="row d-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_2.png);">
+	          		<div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm a <span>web designer</span> based in London</h1>
+			            <p><a href="#" class="btn btn-primary py-3 px-4">Hire me</a> <a href="#" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+	    </div>
+    </section>
 
-                                <div class="card-body">
-                                    <img src="{{ asset('/user/images/profile/iqbal.jpg') }}" alt="">
-
-                                    <div class="h4 mt-2 title">About</div>
-                                    <hr>
-                                    <p>Hello! I am Muhammad Iqbal Aulia Rafi'. Web Developer.
-                                    </p>
-                                    <p>Creative CV is a HTML resume template for professionals. Built with Bootstrap
-                                        4,
-                                        Now UI Kit and FontAwesome, this modern and responsive design template is
-                                        perfect to showcase your portfolio, skills and experience. <a
-                                            href="https://templateflip.com/templates/creative-cv/" target="_blank">Learn
-                                            More</a></p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-
-                            <div class="card" data-aos="fade-up" data-aos-offset="10">
-
-                                <div class="card-body">
-                                    <div class="h4 mt-0 title">Basic Information</div>
-                                    <div class="row">
-                                        <div class="col-sm-4"><strong class="text-uppercase">Age:</strong></div>
-                                        <div class="col-sm-8">22 years old</div>
-                                    </div>
-                                    <div class="row mt-3">
-                                        <div class="col-sm-4"><strong class="text-uppercase">Email:</strong>
-                                        </div>
-                                        <div class="col-sm-8">iqbal.developer16@gmail.com</div>
-                                    </div>
-
-                                    <div class="row mt-3">
-                                        <div class="col-sm-4"><strong class="text-uppercase">Language:</strong>
-                                        </div>
-                                        <div class="col-sm-8">English, Indonesia</div>
-                                    </div>
-                                    <div class="row mt-3">
-                                        <div class="col-sm-4"><strong class="text-uppercase">Motto:</strong>
-                                        </div>
-                                        <div class="col-sm-8">Don't ever give up, your one step today will succeed
-                                            in the next 5-10 years</div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="section" id="skill">
-                <div class="container">
-                    <div class="h4 text-center mb-4 title">Professional Skills</div>
-                    <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="progress-container progress-primary"><span
-                                            class="progress-badge">HTML</span>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full"
-                                                data-aos-offset="10" data-aos-duration="2000" role="progressbar"
-                                                aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
-                                                style="width: 90%;"></div><span class="progress-value">90%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="progress-container progress-primary"><span
-                                            class="progress-badge">CSS</span>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full"
-                                                data-aos-offset="10" data-aos-duration="2000" role="progressbar"
-                                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                                style="width: 80%;"></div><span class="progress-value">80%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="progress-container progress-primary"><span
-                                            class="progress-badge">JavaScript</span>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full"
-                                                data-aos-offset="10" data-aos-duration="2000" role="progressbar"
-                                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                                style="width: 70%;"></div><span class="progress-value">70%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="progress-container progress-primary"><span
-                                            class="progress-badge">SASS</span>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full"
-                                                data-aos-offset="10" data-aos-duration="2000" role="progressbar"
-                                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                                style="width: 75%;"></div><span class="progress-value">75%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="progress-container progress-primary"><span
-                                            class="progress-badge">Bootstrap</span>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full"
-                                                data-aos-offset="10" data-aos-duration="2000" role="progressbar"
-                                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                                style="width: 90%;"></div><span class="progress-value">90%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="progress-container progress-primary"><span
-                                            class="progress-badge">Laravel</span>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full"
-                                                data-aos-offset="10" data-aos-duration="2000" role="progressbar"
-                                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                                style="width: 80%;"></div><span class="progress-value">80%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="progress-container progress-primary"><span
-                                            class="progress-badge">PHP</span>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full"
-                                                data-aos-offset="10" data-aos-duration="2000" role="progressbar"
-                                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                                style="width: 80%;"></div><span class="progress-value">80%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="progress-container progress-primary"><span class="progress-badge">React
-                                            JS</span>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full"
-                                                data-aos-offset="10" data-aos-duration="2000" role="progressbar"
-                                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                                style="width: 60%;"></div><span class="progress-value">60%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="progress-container progress-primary"><span class="progress-badge">Vue
-                                            JS</span>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full"
-                                                data-aos-offset="10" data-aos-duration="2000" role="progressbar"
-                                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                                style="width: 40%;"></div><span class="progress-value">40%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="progress-container progress-primary"><span
-                                            class="progress-badge">MySQL</span>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full"
-                                                data-aos-offset="10" data-aos-duration="2000" role="progressbar"
-                                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                                style="width: 70%;"></div><span class="progress-value">70%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="section" id="portfolio">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 ml-auto mr-auto">
-                            <div class="h4 text-center mb-4 title">Portfolio</div>
-                            <div class="nav-align-center">
-                                <ul class="nav nav-pills nav-pills-primary" role="tablist">
-                                    <li class="nav-item"><a class="nav-link active" data-toggle="tab"
-                                            href="#web-development" role="tablist"><i class="fa fa-laptop"
-                                                aria-hidden="true"></i></a></li>
-                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#graphic-design"
-                                            role="tablist"><i class="fa fa-picture-o" aria-hidden="true"></i></a></li>
-                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Photography"
-                                            role="tablist"><i class="fa fa-camera" aria-hidden="true"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-content gallery mt-5">
-                        <div class="tab-pane active" id="web-development">
-                            <div class="ml-auto mr-auto">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="cc-porfolio-image img-raised" data-aos="fade-up"
-                                            data-aos-anchor-placement="top-bottom">
-                                            <a href="https://peduly.com/" target="_blank">
-                                                <figure class="cc-effect"><img
-                                                        src="{{ asset('/user/images/project/peduly.png') }}" alt="Image" />
-                                                    <figcaption>
-                                                        <div class="h4">Recent Project</div>
-                                                        <p>Web Development</p>
-                                                    </figcaption>
-                                                </figure>
-                                            </a>
-                                        </div>                                        
-                                    </div>
-
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="graphic-design" role="tabpanel">
-                            <div class="ml-auto mr-auto">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="cc-porfolio-image img-raised" data-aos="fade-up"
-                                            data-aos-anchor-placement="top-bottom"><a href="#graphic-design">
-                                                <figure class="cc-effect"><img src="images/graphic-design-1.jpg"
-                                                        alt="Image" />
-                                                    <figcaption>
-                                                        <div class="h4">Triangle Pattern</div>
-                                                        <p>Graphic Design</p>
-                                                    </figcaption>
-                                                </figure>
-                                            </a></div>
-                                        <div class="cc-porfolio-image img-raised" data-aos="fade-up"
-                                            data-aos-anchor-placement="top-bottom"><a href="#graphic-design">
-                                                <figure class="cc-effect"><img src="images/graphic-design-2.jpg"
-                                                        alt="Image" />
-                                                    <figcaption>
-                                                        <div class="h4">Abstract Umbrella</div>
-                                                        <p>Graphic Design</p>
-                                                    </figcaption>
-                                                </figure>
-                                            </a></div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="cc-porfolio-image img-raised" data-aos="fade-up"
-                                            data-aos-anchor-placement="top-bottom"><a href="#graphic-design">
-                                                <figure class="cc-effect"><img src="images/graphic-design-3.jpg"
-                                                        alt="Image" />
-                                                    <figcaption>
-                                                        <div class="h4">Cube Surface Texture</div>
-                                                        <p>Graphic Design</p>
-                                                    </figcaption>
-                                                </figure>
-                                            </a></div>
-                                        <div class="cc-porfolio-image img-raised" data-aos="fade-up"
-                                            data-aos-anchor-placement="top-bottom"><a href="#graphic-design">
-                                                <figure class="cc-effect"><img src="images/graphic-design-4.jpg"
-                                                        alt="Image" />
-                                                    <figcaption>
-                                                        <div class="h4">Abstract Line</div>
-                                                        <p>Graphic Design</p>
-                                                    </figcaption>
-                                                </figure>
-                                            </a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="Photography" role="tabpanel">
-                            <div class="ml-auto mr-auto">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="cc-porfolio-image img-raised" data-aos="fade-up"
-                                            data-aos-anchor-placement="top-bottom"><a href="#Photography">
-                                                <figure class="cc-effect"><img src="images/photography-1.jpg"
-                                                        alt="Image" />
-                                                    <figcaption>
-                                                        <div class="h4">Photoshoot</div>
-                                                        <p>Photography</p>
-                                                    </figcaption>
-                                                </figure>
-                                            </a></div>
-                                        <div class="cc-porfolio-image img-raised" data-aos="fade-up"
-                                            data-aos-anchor-placement="top-bottom"><a href="#Photography">
-                                                <figure class="cc-effect"><img src="images/photography-3.jpg"
-                                                        alt="Image" />
-                                                    <figcaption>
-                                                        <div class="h4">Wedding Photoshoot</div>
-                                                        <p>Photography</p>
-                                                    </figcaption>
-                                                </figure>
-                                            </a></div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="cc-porfolio-image img-raised" data-aos="fade-up"
-                                            data-aos-anchor-placement="top-bottom"><a href="#Photography">
-                                                <figure class="cc-effect"><img src="images/photography-2.jpg"
-                                                        alt="Image" />
-                                                    <figcaption>
-                                                        <div class="h4">Beach Photoshoot</div>
-                                                        <p>Photography</p>
-                                                    </figcaption>
-                                                </figure>
-                                            </a></div>
-                                        <div class="cc-porfolio-image img-raised" data-aos="fade-up"
-                                            data-aos-anchor-placement="top-bottom"><a href="#Photography">
-                                                <figure class="cc-effect"><img src="images/photography-4.jpg"
-                                                        alt="Image" />
-                                                    <figcaption>
-                                                        <div class="h4">Nature Photoshoot</div>
-                                                        <p>Photography</p>
-                                                    </figcaption>
-                                                </figure>
-                                            </a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="section" id="experience">
-                <div class="container cc-experience">
-                    <div class="h4 text-center mb-4 title">Work Experience</div>
-                    <div class="card">
-                        <div class="row">
-                            <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
-                                data-aos-duration="500">
-                                <div class="card-body cc-experience-header">
-                                    <p>Jul 2019 - Present</p>
-                                    <div class="h5">Peduly.com</div>
-                                </div>
-                            </div>
-                            <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                                <div class="card-body">
-                                    <div class="h5">Full Stack Web Developer</div>
-                                    <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna
-                                        quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc
-                                        inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed
-                                        mauris. Lacinia porta vestibulum diam integer quisque eros pulvinar curae,
-                                        curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium
-                                        molestie ultricies sollicitudin dui.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="row">
-                            <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
-                                data-aos-duration="500">
-                                <div class="card-body cc-experience-header">
-                                    <p>Agu 2019 - Nov 2019</p>
-                                    <div class="h5">SmartAircraft Aero</div>
-                                </div>
-                            </div>
-                            <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                                <div class="card-body">
-                                    <div class="h5">Frontend Web Developer</div>
-                                    <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna
-                                        quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc
-                                        inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed
-                                        mauris. Lacinia porta vestibulum diam integer quisque eros pulvinar curae,
-                                        curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium
-                                        molestie ultricies sollicitudin dui.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="row">
-                            <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
-                                data-aos-duration="500">
-                                <div class="card-body cc-experience-header">
-                                    <p>Feb 2019 - Mar 2019</p>
-                                    <div class="h5">PT. Sinergi Informatika Semen Indonesia (SISI)</div>
-                                </div>
-                            </div>
-                            <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                                <div class="card-body">
-                                    <div class="h5">Internship</div>
-                                    <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna
-                                        quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc
-                                        inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed
-                                        mauris. Lacinia porta vestibulum diam integer quisque eros pulvinar curae,
-                                        curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium
-                                        molestie ultricies sollicitudin dui.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="row">
-                            <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
-                                data-aos-duration="500">
-                                <div class="card-body cc-experience-header">
-                                    <p>Jan 2019 - Mar 2019</p>
-                                    <div class="h5">UD. Sumber Rejeki Jaya Mulya</div>
-                                </div>
-                            </div>
-                            <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                                <div class="card-body">
-                                    <div class="h5">Engineer</div>
-                                    <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna
-                                        quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc
-                                        inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed
-                                        mauris. Lacinia porta vestibulum diam integer quisque eros pulvinar curae,
-                                        curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium
-                                        molestie ultricies sollicitudin dui.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="row">
-                            <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
-                                data-aos-duration="500">
-                                <div class="card-body cc-experience-header">
-                                    <p>Agu 2018 - Sep 2018</p>
-                                    <div class="h5">BikinBisnis.com</div>
-                                </div>
-                            </div>
-                            <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                                <div class="card-body">
-                                    <div class="h5">Frontend Web Developer</div>
-                                    <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna
-                                        quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc
-                                        inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed
-                                        mauris. Lacinia porta vestibulum diam integer quisque eros pulvinar curae,
-                                        curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium
-                                        molestie ultricies sollicitudin dui.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="section">
-                <div class="container cc-education">
-                    <div class="h4 text-center mb-4 title">Education</div>
-                    {{-- <div class="card">
-                        <div class="row">
-                            <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
-                                data-aos-duration="500">
-                                <div class="card-body cc-education-header">
-                                    <p>2013 - 2015</p>
-                                    <div class="h5">Master's Degree</div>
-                                </div>
-                            </div>
-                            <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                                <div class="card-body">
-                                    <div class="h5">Master of Information Technology</div>
-                                    <p class="category">University of Computer Science</p>
-                                    <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna
-                                        quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc
-                                        inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed
-                                        mauris. Lacinia porta vestibulum diam integer quisque eros pulvinar curae,
-                                        curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium
-                                        molestie ultricies sollicitudin dui.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
-                    <div class="card">
-                        <div class="row">
-                            <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
-                                data-aos-duration="500">
-                                <div class="card-body cc-education-header">
-                                    <p>2009 - 2013</p>
-                                    <div class="h5">Bachelor's Degree</div>
-                                </div>
-                            </div>
-                            <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                                <div class="card-body">
-                                    <div class="h5">Bachelor of Information System</div>
-                                    <p class="category">University of Dinamika</p>
-                                    <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna
-                                        quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc
-                                        inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed
-                                        mauris. Lacinia porta vestibulum diam integer quisque eros pulvinar curae,
-                                        curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium
-                                        molestie ultricies sollicitudin dui.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="row">
-                            <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
-                                data-aos-duration="500">
-                                <div class="card-body cc-education-header">
-                                    <p>2007 - 2009</p>
-                                    <div class="h5">High School</div>
-                                </div>
-                            </div>
-                            <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                                <div class="card-body">
-                                    <div class="h5">Science and Mathematics</div>
-                                    <p class="category">School of Kemala Bhayangkari 1 Surabaya</p>
-                                    <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna
-                                        quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc
-                                        inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed
-                                        mauris. Lacinia porta vestibulum diam integer quisque eros pulvinar curae,
-                                        curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium
-                                        molestie ultricies sollicitudin dui.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{-- <div class="section" id="reference">
-                <div class="container cc-reference">
-                    <div class="h4 mb-4 text-center title">References</div>
-                    <div class="card" data-aos="zoom-in">
-                        <div class="carousel slide" id="cc-Indicators" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li class="active" data-target="#cc-Indicators" data-slide-to="0"></li>
-                                <li data-target="#cc-Indicators" data-slide-to="1"></li>
-                                <li data-target="#cc-Indicators" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="row">
-                                        <div class="col-lg-2 col-md-3 cc-reference-header"><img
-                                                src="images/reference-image-1.jpg" alt="Image" />
-                                            <div class="h5 pt-2">Aiyana</div>
-                                            <p class="category">CEO / WEBM</p>
-                                        </div>
-                                        <div class="col-lg-10 col-md-9">
-                                            <p> Habitasse venenatis commodo tempor eleifend arcu sociis sollicitudin
-                                                ante pulvinar ad, est porta cras erat ullamcorper volutpat metus duis
-                                                platea convallis, tortor primis ac quisque etiam luctus nisl nullam
-                                                fames. Ligula purus suscipit tempus nascetur curabitur donec nam
-                                                ullamcorper, laoreet nullam mauris dui aptent facilisis neque elementum
-                                                ac, risus semper felis parturient fringilla rhoncus eleifend.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        <div class="col-lg-2 col-md-3 cc-reference-header"><img
-                                                src="images/reference-image-2.jpg" alt="Image" />
-                                            <div class="h5 pt-2">Braiden</div>
-                                            <p class="category">CEO / Creativem</p>
-                                        </div>
-                                        <div class="col-lg-10 col-md-9">
-                                            <p> Habitasse venenatis commodo tempor eleifend arcu sociis sollicitudin
-                                                ante pulvinar ad, est porta cras erat ullamcorper volutpat metus duis
-                                                platea convallis, tortor primis ac quisque etiam luctus nisl nullam
-                                                fames. Ligula purus suscipit tempus nascetur curabitur donec nam
-                                                ullamcorper, laoreet nullam mauris dui aptent facilisis neque elementum
-                                                ac, risus semper felis parturient fringilla rhoncus eleifend.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        <div class="col-lg-2 col-md-3 cc-reference-header"><img
-                                                src="images/reference-image-3.jpg" alt="Image" />
-                                            <div class="h5 pt-2">Alexander</div>
-                                            <p class="category">CEO / Webnote</p>
-                                        </div>
-                                        <div class="col-lg-10 col-md-9">
-                                            <p> Habitasse venenatis commodo tempor eleifend arcu sociis sollicitudin
-                                                ante pulvinar ad, est porta cras erat ullamcorper volutpat metus duis
-                                                platea convallis, tortor primis ac quisque etiam luctus nisl nullam
-                                                fames. Ligula purus suscipit tempus nascetur curabitur donec nam
-                                                ullamcorper, laoreet nullam mauris dui aptent facilisis neque elementum
-                                                ac, risus semper felis parturient fringilla rhoncus eleifend.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
-            <div class="section" id="contact">
-                <div class="cc-contact-information" style="background-image: url({{ asset('/user/images/background-profile/peta.png') }});">
-                    <div class="container">
-                        <div class="cc-contact">
-                            <div class="row">
-                                <div class="col-md-9">
-                                    <div class="card mb-0" data-aos="zoom-in">
-                                        <div class="h4 text-center title">Contact Me</div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="card-body">
-                                                    <form action="https://formspree.io/your@email.com" method="POST">
-                                                        <div class="p pb-3 text-center"><strong>Feel free to contact me </strong>
-                                                        </div>
-                                                        <div class="row mb-3">
-                                                            <div class="col">
-                                                                <div class="input-group"><span
-                                                                        class="input-group-addon"><i
-                                                                            class="fa fa-user-circle"></i></span>
-                                                                    <input class="form-control" type="text" name="name"
-                                                                        placeholder="Name" required="required" />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row mb-3">
-                                                            <div class="col">
-                                                                <div class="input-group"><span
-                                                                        class="input-group-addon"><i
-                                                                            class="fa fa-file-text"></i></span>
-                                                                    <input class="form-control" type="text"
-                                                                        name="Subject" placeholder="Subject"
-                                                                        required="required" />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row mb-3">
-                                                            <div class="col">
-                                                                <div class="input-group"><span
-                                                                        class="input-group-addon"><i
-                                                                            class="fa fa-envelope"></i></span>
-                                                                    <input class="form-control" type="email"
-                                                                        name="_replyto" placeholder="E-mail"
-                                                                        required="required" />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row mb-3">
-                                                            <div class="col">
-                                                                <div class="form-group">
-                                                                    <textarea class="form-control" name="message"
-                                                                        placeholder="Your Message"
-                                                                        required="required"></textarea>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col" align="right">
-                                                                <button class="btn btn-primary"
-                                                                    type="submit">Send</button>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                            {{-- <div class="col-md-6">
-                                                <div class="card-body">
-                                                    <p class="mb-0"><strong>Address </strong></p>
-                                                    <p class="pb-2">140, City Center, New York, U.S.A</p>
-                                                    <p class="mb-0"><strong>Phone</strong></p>
-                                                    <p class="pb-2">+1718-111-0011</p>
-                                                    <p class="mb-0"><strong>Email</strong></p>
-                                                    <p>iqbal.developer16@gmail.com</p>
-                                                </div>
-                                            </div> --}}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+    		<div class="row d-flex">
+    			<div class="col-md-6 col-lg-5 d-flex">
+    				<div class="img-about img d-flex align-items-stretch">
+    					<div class="overlay"></div>
+	    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(images/bg_1.png);">
+	    				</div>
+    				</div>
+    			</div>
+    			<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+    				<div class="row justify-content-start pb-3">
+		          <div class="col-md-12 heading-section ftco-animate">
+		          	<h1 class="big">About</h1>
+		            <h2 class="mb-4">About Me</h2>
+		            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+		            <ul class="about-info mt-4 px-md-0 px-2">
+		            	<li class="d-flex"><span>Name:</span> <span>Clark Thompson</span></li>
+		            	<li class="d-flex"><span>Date of birth:</span> <span>January 01, 1987</span></li>
+		            	<li class="d-flex"><span>Address:</span> <span>San Francisco CA 97987 USA</span></li>
+		            	<li class="d-flex"><span>Zip code:</span> <span>1000</span></li>
+		            	<li class="d-flex"><span>Email:</span> <span>clarkthomp@gmail.com</span></li>
+		            	<li class="d-flex"><span>Phone: </span> <span>+1-2234-5678-9-0</span></li>
+		            </ul>
+		          </div>
+		        </div>
+	          <div class="counter-wrap ftco-animate d-flex mt-md-3">
+              <div class="text">
+              	<p class="mb-4">
+	                <span class="number" data-number="120">0</span>
+	                <span>Project complete</span>
+                </p>
+                <p><a href="#" class="btn btn-primary py-3 px-3">Download CV</a></p>
+              </div>
+	          </div>
+	        </div>
         </div>
-    </div>
-    @include('./component/footer')
-    @include('./component/js')
-</body>
+    	</div>
+    </section>
+
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+          </div>
+        </div>
+    		<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2014-2015</span>
+    					<h2>Master Degree of Design</h2>
+    					<span class="position">Cambridge University</span>
+    					<p class="mt-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+    				</div>
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2014-2015</span>
+    					<h2>Bachelor's Degree of C.A</h2>
+    					<span class="position">Cambridge University</span>
+    					<p class="mt-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+    				</div>
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2014-2015</span>
+    					<h2>Diploma in Computer</h2>
+    					<span class="position">Cambridge University</span>
+    					<p class="mt-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2014-2015</span>
+    					<h2>Art &amp; Creative Director</h2>
+    					<span class="position">Cambridge University</span>
+    					<p class="mt-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+    				</div>
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2014-2015</span>
+    					<h2>Wordpress Developer</h2>
+    					<span class="position">Cambridge University</span>
+    					<p class="mt-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+    				</div>
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2017-2018</span>
+    					<h2>UI/UX Designer</h2>
+    					<span class="position">Cambridge University</span>
+    					<p class="mt-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+    <section class="ftco-section" id="services-section">
+    	<div class="container">
+    		<div class="row justify-content-center py-5 mt-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Services</h1>
+            <h2 class="mb-4">Services</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+          </div>
+        </div>
+    		<div class="row">
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="#" class="services-1">
+							<span class="icon">
+								<i class="flaticon-analysis"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Web Design</h3>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="#" class="services-1">
+							<span class="icon">
+								<i class="flaticon-flasks"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Phtography</h3>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="#" class="services-1">
+							<span class="icon">
+								<i class="flaticon-ideas"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Web Developer</h3>
+							</div>
+						</a>
+					</div>
+
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="#" class="services-1">
+							<span class="icon">
+								<i class="flaticon-analysis"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">App Developing</h3>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="#" class="services-1">
+							<span class="icon">
+								<i class="flaticon-flasks"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Branding</h3>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="#" class="services-1">
+							<span class="icon">
+								<i class="flaticon-ideas"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Product Strategy</h3>
+							</div>
+						</a>
+					</div>
+				</div>
+    	</div>
+    </section>
+
+		
+		<section class="ftco-section" id="skills-section">
+			<div class="container">
+				<div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Skills</h1>
+            <h2 class="mb-4">My Skills</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+          </div>
+        </div>
+				<div class="row">
+					<div class="col-md-6 animate-box">
+						<div class="progress-wrap ftco-animate">
+							<h3>Photoshop</h3>
+							<div class="progress">
+							 	<div class="progress-bar color-1" role="progressbar" aria-valuenow="90"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
+							    <span>90%</span>
+							  	</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 animate-box">
+						<div class="progress-wrap ftco-animate">
+							<h3>jQuery</h3>
+							<div class="progress">
+							 	<div class="progress-bar color-2" role="progressbar" aria-valuenow="85"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:85%">
+							    <span>85%</span>
+							  	</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 animate-box">
+						<div class="progress-wrap ftco-animate">
+							<h3>HTML5</h3>
+							<div class="progress">
+							 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="95"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:95%">
+							    <span>95%</span>
+							  	</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 animate-box">
+						<div class="progress-wrap ftco-animate">
+							<h3>CSS3</h3>
+							<div class="progress">
+							 	<div class="progress-bar color-4" role="progressbar" aria-valuenow="90"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
+							    <span>90%</span>
+							  	</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 animate-box">
+						<div class="progress-wrap ftco-animate">
+							<h3>WordPress</h3>
+							<div class="progress">
+							 	<div class="progress-bar color-5" role="progressbar" aria-valuenow="70"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:70%">
+							    <span>70%</span>
+							  	</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 animate-box">
+						<div class="progress-wrap ftco-animate">
+							<h3>SEO</h3>
+							<div class="progress">
+							 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="80"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:80%">
+							    <span>80%</span>
+							  	</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+ 
+
+    <section class="ftco-section ftco-project" id="projects-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Our Projects</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+          </div>
+        </div>
+    		<div class="row">
+    			<div class="col-md-4">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-4.jpg);">
+    					<div class="overlay"></div>
+	    				<div class="text text-center p-4">
+	    					<h3><a href="#">Branding &amp; Illustration Design</a></h3>
+	    					<span>Web Design</span>
+	    				</div>
+    				</div>
+  				</div>
+  				<div class="col-md-8">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-5.jpg);">
+    					<div class="overlay"></div>
+	    				<div class="text text-center p-4">
+	    					<h3><a href="#">Branding &amp; Illustration Design</a></h3>
+	    					<span>Web Design</span>
+	    				</div>
+    				</div>
+  				</div>
+
+    			<div class="col-md-8">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-1.jpg);">
+    					<div class="overlay"></div>
+	    				<div class="text text-center p-4">
+	    					<h3><a href="#">Branding &amp; Illustration Design</a></h3>
+	    					<span>Web Design</span>
+	    				</div>
+    				</div>
+
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-6.jpg);">
+    					<div class="overlay"></div>
+	    				<div class="text text-center p-4">
+	    					<h3><a href="#">Branding &amp; Illustration Design</a></h3>
+	    					<span>Web Design</span>
+	    				</div>
+    				</div>
+    			</div>
+    			<div class="col-md-4">
+    				<div class="row">
+    					<div class="col-md-12">
+		    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-2.jpg);">
+		    					<div class="overlay"></div>
+			    				<div class="text text-center p-4">
+			    					<h3><a href="#">Branding &amp; Illustration Design</a></h3>
+			    					<span>Web Design</span>
+			    				</div>
+		    				</div>
+	    				</div>
+	    				<div class="col-md-12">
+		    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-3.jpg);">
+		    					<div class="overlay"></div>
+			    				<div class="text text-center p-4">
+			    					<h3><a href="#">Branding &amp; Illustration Design</a></h3>
+			    					<span>Web Design</span>
+			    				</div>
+		    				</div>
+	    				</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+
+    <section class="ftco-section" id="blog-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Blog</h1>
+            <h2 class="mb-4">Our Blog</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+              	<div class="d-flex align-items-center mb-3 meta">
+	                <p class="mb-0">
+	                	<span class="mr-2">June 21, 2019</span>
+	                	<a href="#" class="mr-2">Admin</a>
+	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+	                </p>
+                </div>
+                <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+              	<div class="d-flex align-items-center mb-3 meta">
+	                <p class="mb-0">
+	                	<span class="mr-2">June 21, 2019</span>
+	                	<a href="#" class="mr-2">Admin</a>
+	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+	                </p>
+                </div>
+                <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+              	<div class="d-flex align-items-center mb-3 meta">
+	                <p class="mb-0">
+	                	<span class="mr-2">June 21, 2019</span>
+	                	<a href="#" class="mr-2">Admin</a>
+	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+	                </p>
+                </div>
+                <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+    	<div class="container">
+				<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="100">0</strong>
+                <span>Awards</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="1200">0</strong>
+                <span>Complete Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="1200">0</strong>
+                <span>Happy Customers</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="500">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>I'm <span>Available</span> for freelancing</h2>
+						<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+						<p class="mb-0"><a href="#" class="btn btn-primary py-3 px-5">Hire me</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://1234567920">+ 1235 2355 98</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Website</h3>
+	            <p><a href="#">yoursite.com</a></p>
+	          </div>
+          </div>
+        </div>
+
+        <div class="row no-gutters block-9">
+          <div class="col-md-6 order-md-last d-flex">
+            <form action="#" class="bg-light p-4 p-md-5 contact-form">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Name">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Email">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Subject">
+              </div>
+              <div class="form-group">
+                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+              </div>
+            </form>
+          
+          </div>
+
+          <div class="col-md-6 d-flex">
+          	<div class="img" style="background-image: url(images/about.jpg);"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+		
+
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">About</h2>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Services</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Services</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Design</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Development</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Business Strategy</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Data Analysis</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Graphic Design</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  {{-- <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div> --}}
+
+
+    
+  </body>
+  @include('./component/js')
 
 </html>

@@ -1,6 +1,11 @@
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-<link href="{{ asset('/user/css/aos.css') }}" rel="stylesheet">
-<link href="{{ asset('/user/css/bootstrap.min.css') }}" rel="stylesheet">
-<link href="{{ asset('/user/css/main.css') }}" rel="stylesheet">
-<link href="{{ asset('/user/css/my-style.css') }}" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+<link rel="stylesheet" href="{{asset('/user/css/open-iconic-bootstrap.min.css')}}">
+<link rel="stylesheet" href="{{asset('/user/css/animate.css')}}">
+<link rel="stylesheet" href="{{asset('/user/css/owl.carousel.min.css')}}">
+<link rel="stylesheet" href="{{asset('/user/css/owl.theme.default.min.css')}}">
+<link rel="stylesheet" href="{{asset('/user/css/magnific-popup.css')}}">
+<link rel="stylesheet" href="{{asset('/user/css/aos.css')}}">
+<link rel="stylesheet" href="{{asset('/user/css/ionicons.min.css')}}">
+<link rel="stylesheet" href="{{asset('/user/css/flaticon.css')}}">
+<link rel="stylesheet" href="{{asset('/user/css/icomoon.css')}}">
+<link rel="stylesheet" href="{{asset('/user/css/style.css')}}">
