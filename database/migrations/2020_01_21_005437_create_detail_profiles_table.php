@@ -17,11 +17,13 @@ class CreateDetailProfilesTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->string('profession');
-            $table->string('age');
-            $table->string('language');
-            $table->string('motto');
-            $table->string('about-me');
+            $table->string('date_birth');
+            $table->string('address');
+            $table->string('country');
+            $table->string('email');
+            $table->string('phone');
+            $table->string('about_me');
+            $table->string('project_complate');
             $table->string('facebook');
             $table->string('github');
             $table->string('instagram');

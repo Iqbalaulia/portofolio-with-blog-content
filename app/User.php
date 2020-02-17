@@ -40,7 +40,18 @@ class User extends Authenticatable
     // relasi
 
     public function DetailProfiles(){
-        return $this->hasMany(DetailProfile::class, 'username','id');        
+        return $this->hasMany(DetailProfile::class, 'username','id','name','email');        
+    }
 
+    public function Education(){
+        return $this->hasMany(Education::class, 'username','id','name','email');        
+    }
+
+    public function Experience(){
+        return $this->hasMany(Experience::class, 'username','id','name','email');        
+    }
+
+    public function Skill(){
+        return $this->hasMany(Skill::class, 'username','id','name','email');        
     }
 }
