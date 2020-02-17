@@ -1,438 +1,938 @@
 @extends('./admin/index')
 @section('content-admin')
-<div class="row">
-<div class="col-lg-9 main-chart">
-    <!--CUSTOM CHART START -->
-    <div class="border-head">
-        <h3>USER VISITS</h3>
+<div id="crypto-stats-3" class="row">
+    <div class="col-xl-4 col-12">
+      <div class="card crypto-card-3 pull-up">
+        <div class="card-content">
+          <div class="card-body pb-0">
+            <div class="row">
+              <div class="col-2">
+                <h1><i class="cc BTC warning font-large-2" title="BTC"></i></h1>
+              </div>
+              <div class="col-5 pl-2">
+                <h4>BTC</h4>
+                <h6 class="text-muted">Bitcoin</h6>
+              </div>
+              <div class="col-5 text-right">
+                <h4>$9,980</h4>
+                <h6 class="success darken-4">31% <i class="la la-arrow-up"></i></h6>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <canvas id="btc-chartjs" class="height-75"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="custom-bar-chart">
-        <ul class="y-axis">
-            <li><span>10.000</span></li>
-            <li><span>8.000</span></li>
-            <li><span>6.000</span></li>
-            <li><span>4.000</span></li>
-            <li><span>2.000</span></li>
-            <li><span>0</span></li>
-        </ul>
-        <div class="bar">
-            <div class="title">JAN</div>
-            <div class="value tooltips" data-original-title="8.500" data-toggle="tooltip" data-placement="top">85%</div>
+    <div class="col-xl-4 col-12">
+      <div class="card crypto-card-3 pull-up">
+        <div class="card-content">
+          <div class="card-body pb-0">
+            <div class="row">
+              <div class="col-2">
+                <h1><i class="cc ETH blue-grey lighten-1 font-large-2" title="ETH"></i></h1>
+              </div>
+              <div class="col-5 pl-2">
+                <h4>ETH</h4>
+                <h6 class="text-muted">Ethereum</h6>
+              </div>
+              <div class="col-5 text-right">
+                <h4>$944</h4>
+                <h6 class="success darken-4">12% <i class="la la-arrow-up"></i></h6>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <canvas id="eth-chartjs" class="height-75"></canvas>
+            </div>
+          </div>
         </div>
-        <div class="bar ">
-            <div class="title">FEB</div>
-            <div class="value tooltips" data-original-title="5.000" data-toggle="tooltip" data-placement="top">50%</div>
-        </div>
-        <div class="bar ">
-            <div class="title">MAR</div>
-            <div class="value tooltips" data-original-title="6.000" data-toggle="tooltip" data-placement="top">60%</div>
-        </div>
-        <div class="bar ">
-            <div class="title">APR</div>
-            <div class="value tooltips" data-original-title="4.500" data-toggle="tooltip" data-placement="top">45%</div>
-        </div>
-        <div class="bar">
-            <div class="title">MAY</div>
-            <div class="value tooltips" data-original-title="3.200" data-toggle="tooltip" data-placement="top">32%</div>
-        </div>
-        <div class="bar ">
-            <div class="title">JUN</div>
-            <div class="value tooltips" data-original-title="6.200" data-toggle="tooltip" data-placement="top">62%</div>
-        </div>
-        <div class="bar">
-            <div class="title">JUL</div>
-            <div class="value tooltips" data-original-title="7.500" data-toggle="tooltip" data-placement="top">75%</div>
-        </div>
+      </div>
     </div>
-    <!--custom chart end-->
-    <div class="row mt">
-        <!-- SERVER STATUS PANELS -->
-        <div class="col-md-4 col-sm-4 mb">
-            <div class="grey-panel pn donut-chart">
-                <div class="grey-header">
-                    <h5>SERVER LOAD</h5>
+    <div class="col-xl-4 col-12">
+      <div class="card crypto-card-3 pull-up">
+        <div class="card-content">
+          <div class="card-body pb-0">
+            <div class="row">
+              <div class="col-2">
+                <h1><i class="cc XRP info font-large-2" title="XRP"></i></h1>
+              </div>
+              <div class="col-5 pl-2">
+                <h4>XRP</h4>
+                <h6 class="text-muted">Balance</h6>
+              </div>
+              <div class="col-5 text-right">
+                <h4>$1.2</h4>
+                <h6 class="danger">20% <i class="la la-arrow-down"></i></h6>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <canvas id="xrp-chartjs" class="height-75"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Candlestick Multi Level Control Chart -->
+  <!-- Slaes & Purchase Order -->
+  <div class="row">
+    <div class="col-12 col-xl-4">
+      <div id="accordionCrypto" role="tablist" aria-multiselectable="true">
+        <div class="card collapse-icon accordion-icon-rotate">
+          <div id="heading31" class="card-header bg-info p-1 bg-lighten-1">
+            <a data-toggle="collapse" data-parent="#accordionCrypto" href="#accordionBTC" aria-expanded="true"
+            aria-controls="accordionBTC" class="card-title lead white">BTC</a>
+          </div>
+          <div id="accordionBTC" role="tabpanel" aria-labelledby="heading31" class="card-collapse collapse show"
+          aria-expanded="true">
+            <div class="card-content">
+              <div class="card-body p-0">
+                <div class="media-list list-group">
+                  <div class="list-group-item list-group-item-action media p-1">
+                    <a class="media-link" href="#">
+                      <span class="media-left">
+                        <p class="text-bold-600 m-0">BTC/USD</p>
+                        <p class="font-small-2 text-muted m-0">24h Change</p>
+                        <p class="font-small-2 text-muted m-0">24h Volume</p>
+                      </span>
+                      <span class="media-body text-right">
+                        <p class="text-bold-600 m-0">11916.9</p>
+                        <p class="font-small-2 text-muted m-0 success">283.1 USD (+2.33%)</p>
+                        <p class="font-small-2 text-muted m-0 text-bold-600">1029.1906 BTC</p>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="list-group-item list-group-item-action media p-1 bg-info bg-lighten-5">
+                    <a class="media-link" href="#">
+                      <span class="media-left">
+                        <p class="text-bold-600 m-0">BTC/EUR</p>
+                        <p class="font-small-2 text-muted m-0">24h Change</p>
+                        <p class="font-small-2 text-muted m-0">24h Volume</p>
+                      </span>
+                      <span class="media-body text-right">
+                        <p class="text-bold-600 m-0">9213.3</p>
+                        <p class="font-small-2 text-muted m-0 success">56.1 EUR (+5.52%)</p>
+                        <p class="font-small-2 text-muted m-0 text-bold-600">560.1906 BTC</p>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="list-group-item list-group-item-action media p-1 border-bottom-0">
+                    <a class="media-link" href="#">
+                      <span class="media-left">
+                        <p class="text-bold-600 m-0">BTC/GBP</p>
+                        <p class="font-small-2 text-muted m-0">24h Change</p>
+                        <p class="font-small-2 text-muted m-0">24h Volume</p>
+                      </span>
+                      <span class="media-body text-right">
+                        <p class="text-bold-600 m-0">8015.1</p>
+                        <p class="font-small-2 text-muted m-0 danger">-183.1 USD (-1.33%)</p>
+                        <p class="font-small-2 text-muted m-0 text-bold-600">320.1906 BTC</p>
+                      </span>
+                    </a>
+                  </div>
                 </div>
-                <canvas id="serverstatus01" height="120" width="120"></canvas>
-                <script>
-                    var doughnutData = [{
-                            value: 70,
-                            color: "#FF6B6B"
-                        },
-                        {
-                            value: 30,
-                            color: "#fdfdfd"
-                        }
-                    ];
-                    var myDoughnut = new Chart(document.getElementById("serverstatus01").getContext(
-                        "2d")).Doughnut(doughnutData);
-
-                </script>
+              </div>
+            </div>
+          </div>
+          <div id="heading32" class="card-header bg-info p-1 bg-lighten-1 my-1">
+            <a data-toggle="collapse" data-parent="#accordionCrypto" href="#accordionETH" aria-expanded="false"
+            aria-controls="accordionETH" class="card-title lead white collapsed">ETH</a>
+          </div>
+          <div id="accordionETH" role="tabpanel" aria-labelledby="heading32" class="card-collapse collapse"
+          aria-expanded="false">
+            <div class="card-content">
+              <div class="card-body p-0">
+                <div class="media-list list-group">
+                  <div class="list-group-item list-group-item-action media p-1">
+                    <a class="media-link" href="#">
+                      <span class="media-left">
+                        <p class="text-bold-600 m-0">ETH/USD</p>
+                        <p class="font-small-2 text-muted m-0">24h Change</p>
+                        <p class="font-small-2 text-muted m-0">24h Volume</p>
+                      </span>
+                      <span class="media-body text-right">
+                        <p class="text-bold-600 m-0">11916.9</p>
+                        <p class="font-small-2 text-muted m-0 success">283.1 USD (+2.33%)</p>
+                        <p class="font-small-2 text-muted m-0 text-bold-600">1029.1906 ETH</p>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="list-group-item list-group-item-action media p-1">
+                    <a class="media-link" href="#">
+                      <span class="media-left">
+                        <p class="text-bold-600 m-0">ETH/EUR</p>
+                        <p class="font-small-2 text-muted m-0">24h Change</p>
+                        <p class="font-small-2 text-muted m-0">24h Volume</p>
+                      </span>
+                      <span class="media-body text-right">
+                        <p class="text-bold-600 m-0">9213.3</p>
+                        <p class="font-small-2 text-muted m-0 success">56.1 EUR (+5.52%)</p>
+                        <p class="font-small-2 text-muted m-0 text-bold-600">560.1906 ETH</p>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="list-group-item list-group-item-action media p-1 border-bottom-0">
+                    <a class="media-link" href="#">
+                      <span class="media-left">
+                        <p class="text-bold-600 m-0">ETH/GBP</p>
+                        <p class="font-small-2 text-muted m-0">24h Change</p>
+                        <p class="font-small-2 text-muted m-0">24h Volume</p>
+                      </span>
+                      <span class="media-body text-right">
+                        <p class="text-bold-600 m-0">8015.1</p>
+                        <p class="font-small-2 text-muted m-0 danger">-183.1 USD (-1.33%)</p>
+                        <p class="font-small-2 text-muted m-0 text-bold-600">320.1906 ETH</p>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="heading33" class="card-header bg-info p-1 bg-lighten-1">
+            <a data-toggle="collapse" data-parent="#accordionCrypto" href="#accordionXRP" aria-expanded="false"
+            aria-controls="accordionXRP" class="card-title lead white collapsed">XRP</a>
+          </div>
+          <div id="accordionXRP" role="tabpanel" aria-labelledby="heading33" class="card-collapse collapse"
+          aria-expanded="false">
+            <div class="card-content">
+              <div class="card-body p-0">
+                <div class="media-list list-group">
+                  <div class="list-group-item list-group-item-action media p-1">
+                    <a class="media-link" href="#">
+                      <span class="media-left">
+                        <p class="text-bold-600 m-0">XRP/USD</p>
+                        <p class="font-small-2 text-muted m-0">24h Change</p>
+                        <p class="font-small-2 text-muted m-0">24h Volume</p>
+                      </span>
+                      <span class="media-body text-right">
+                        <p class="text-bold-600 m-0">11916.9</p>
+                        <p class="font-small-2 text-muted m-0 success">283.1 USD (+2.33%)</p>
+                        <p class="font-small-2 text-muted m-0 text-bold-600">1029.1906 XRP</p>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="list-group-item list-group-item-action media p-1">
+                    <a class="media-link" href="#">
+                      <span class="media-left">
+                        <p class="text-bold-600 m-0">XRP/EUR</p>
+                        <p class="font-small-2 text-muted m-0">24h Change</p>
+                        <p class="font-small-2 text-muted m-0">24h Volume</p>
+                      </span>
+                      <span class="media-body text-right">
+                        <p class="text-bold-600 m-0">9213.3</p>
+                        <p class="font-small-2 text-muted m-0 success">56.1 EUR (+5.52%)</p>
+                        <p class="font-small-2 text-muted m-0 text-bold-600">560.1906 XRP</p>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="list-group-item list-group-item-action media p-1 border-bottom-0">
+                    <a class="media-link" href="#">
+                      <span class="media-left">
+                        <p class="text-bold-600 m-0">XRP/GBP</p>
+                        <p class="font-small-2 text-muted m-0">24h Change</p>
+                        <p class="font-small-2 text-muted m-0">24h Volume</p>
+                      </span>
+                      <span class="media-body text-right">
+                        <p class="text-bold-600 m-0">8015.1</p>
+                        <p class="font-small-2 text-muted m-0 danger">-183.1 USD (-1.33%)</p>
+                        <p class="font-small-2 text-muted m-0 text-bold-600">320.1906 XRP</p>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-xl-8">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">BTC/USD</h4>
+          <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li class="text-center mr-4">
+                <h6 class="text-muted">Last price</h6>
+                <p class="text-bold-600 mb-0">$ 11916.9</p>
+              </li>
+              <li class="text-center mr-4">
+                <h6 class="text-muted">Daily change</h6>
+                <p class="text-bold-600 mb-0">$ 283.1</p>
+              </li>
+              <li class="text-center">
+                <h6 class="text-muted">24h volume</h6>
+                <p class="text-bold-600 mb-0"><i class="cc BTC-alt" title="BTC"></i> 1029.1906 BTC</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-content collapse show">
+          <div class="card-body pt-0">
+            <div id="btc-candlestick-control" class="height-350 echart-container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Trade History & Place Order -->
+  <div class="row">
+    <div class="col-12 col-xl-4">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Trade History</h4>
+          <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+          <div class="heading-elements">
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <label class="btn round btn-sm btn-outline-info active">
+                <input type="radio" name="options" id="option1" autocomplete="off" checked> Market
+              </label>
+              <label class="btn round btn-sm btn-outline-info">
+                <input type="radio" name="options" id="option2" autocomplete="off"> Yours
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="table-responsive mt-1">
+            <table class="table table-xs">
+              <thead>
+                <tr>
+                  <th>Price($)</th>
+                  <th>Amount</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="success">11900.12</td>
+                  <td><i class="cc BTC-alt"></i> 0.215</td>
+                  <td>11:23:25</td>
+                </tr>
+                <tr>
+                  <td class="danger">11903.18</td>
+                  <td><i class="cc BTC-alt"></i> 1.545</td>
+                  <td>11:23:05</td>
+                </tr>
+                <tr>
+                  <td class="success">11899.56</td>
+                  <td><i class="cc BTC-alt"></i> 0.541</td>
+                  <td>11:22:50</td>
+                </tr>
+                <tr>
+                  <td class="danger">11910.52</td>
+                  <td><i class="cc BTC-alt"></i> 0.321</td>
+                  <td>11:22:15</td>
+                </tr>
+                <tr>
+                  <td class="danger">11901.15</td>
+                  <td><i class="cc BTC-alt"></i> 0.548</td>
+                  <td>11:21:25</td>
+                </tr>
+                <tr>
+                  <td class="success">11903.45</td>
+                  <td><i class="cc BTC-alt"></i> 0.587</td>
+                  <td>11:21:01</td>
+                </tr>
+                <tr>
+                  <td class="danger">11895.50</td>
+                  <td><i class="cc BTC-alt"></i> 5.125</td>
+                  <td>11:20:15</td>
+                </tr>
+                <tr>
+                  <td class="danger">11889.56</td>
+                  <td><i class="cc BTC-alt"></i> 0.894</td>
+                  <td>11:20:03</td>
+                </tr>
+                <tr>
+                  <td class="success">11885.69</td>
+                  <td><i class="cc BTC-alt"></i> 0.754</td>
+                  <td>11:19:55</td>
+                </tr>
+                <tr>
+                  <td class="danger">11891.12</td>
+                  <td><i class="cc BTC-alt"></i> 0.889</td>
+                  <td>11:19:15</td>
+                </tr>
+                <tr>
+                  <td class="danger">11889.88</td>
+                  <td><i class="cc BTC-alt"></i> 0.654</td>
+                  <td>11:18:18</td>
+                </tr>
+                <tr>
+                  <td class="success">11881.15</td>
+                  <td><i class="cc BTC-alt"></i> 1.254</td>
+                  <td>11:18:01</td>
+                </tr>
+                <tr>
+                  <td class="success">11875.75</td>
+                  <td><i class="cc BTC-alt"></i> 0.885</td>
+                  <td>11:17:25</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-xl-8">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Place Order</h4>
+          <div class="heading-elements">
+            <h6 class="danger">Fee: 0.2%</h6>
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="card-body">
+            <ul class="nav nav-tabs nav-underline no-hover-bg">
+              <li class="nav-item">
+                <a class="nav-link active" id="base-limit" data-toggle="tab" aria-controls="limit"
+                href="#limit" aria-expanded="true">Limit</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="base-market" data-toggle="tab" aria-controls="market" href="#market"
+                aria-expanded="false">Market</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="base-stop-limit" data-toggle="tab" aria-controls="stop-limit"
+                href="#stop-limit" aria-expanded="false">Stop Limit</a>
+              </li>
+            </ul>
+            <div class="tab-content px-1 pt-1">
+              <div role="tabpanel" class="tab-pane active" id="limit" aria-expanded="true" aria-labelledby="base-limit">
                 <div class="row">
-                    <div class="col-sm-6 col-xs-6 goleft">
-                        <p>Usage<br />Increase:</p>
+                  <div class="col-12 col-xl-6 border-right-blue-grey border-right-lighten-4 pr-2 p-0">
+                    <div class="row my-2">
+                      <div class="col-4">
+                        <h5 class="text-bold-600 mb-0">Buy BTC</h5>
+                      </div>
+                      <div class="col-8 text-right">
+                        <p class="text-muted mb-0">USD Balance: $ 5000.00</p>
+                      </div>
                     </div>
-                    <div class="col-sm-6 col-xs-6">
-                        <h2>21%</h2>
+                    <form class="form form-horizontal">
+                      <div class="form-body">
+                        <div class="form-group row">
+                          <label class="col-md-3 col-form-label" for="btc-limit-buy-price">Price</label>
+                          <div class="col-md-9">
+                            <input type="number" id="btc-limit-buy-price" class="form-control" placeholder="$ 11916.9"
+                            name="btc-limit-buy-price">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-md-3 col-form-label" for="btc-limit-buy-amount">Amount</label>
+                          <div class="col-md-9">
+                            <input type="number" id="btc-limit-buy-amount" class="form-control" placeholder="0.026547 BTC"
+                            name="btc-limit-buy-amount">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-md-3"></div>
+                          <div class="col-md-9">
+                            <button type="button" class="btn round btn-outline-secondary btn-sm">25%</button>
+                            <button type="button" class="btn round btn-outline-secondary btn-sm">50%</button>
+                            <button type="button" class="btn round btn-outline-secondary btn-sm">75%</button>
+                            <button type="button" class="btn round btn-outline-secondary btn-sm">100%</button>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-md-3 col-form-label" for="btc-limit-buy-total">Total</label>
+                          <div class="col-md-9">
+                            <input type="number" disabled id="btc-limit-buy-total" class="form-control" placeholder="$ 318.1856"
+                            name="btc-limit-buy-total">
+                          </div>
+                        </div>
+                        <div class="form-actions pb-0">
+                          <button type="submit" class="btn round btn-success btn-block btn-glow"> Buy BTC </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-12 col-xl-6 pl-2 p-0">
+                    <div class="row my-2">
+                      <div class="col-4">
+                        <h5 class="text-bold-600 mb-0">Sell BTC</h5>
+                      </div>
+                      <div class="col-8 text-right">
+                        <p class="text-muted mb-0">BTC Balance: 1.2654898</p>
+                      </div>
                     </div>
+                    <form class="form form-horizontal">
+                      <div class="form-body">
+                        <div class="form-group row">
+                          <label class="col-md-3 col-form-label" for="btc-price">Price</label>
+                          <div class="col-md-9">
+                            <input type="number" id="btc-limit-sell-price" class="form-control" placeholder="$ 11916.9"
+                            name="btc-limit-sell-price">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-md-3 col-form-label" for="btc-limit-sell-amount">Amount</label>
+                          <div class="col-md-9">
+                            <input type="number" id="btc-limit-sell-amount" class="form-control" placeholder="0.026547 BTC"
+                            name="btc-limit-sell-amount">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-md-3"></div>
+                          <div class="col-md-9">
+                            <button type="button" class="btn round btn-outline-secondary btn-sm">25%</button>
+                            <button type="button" class="btn round btn-outline-secondary btn-sm">50%</button>
+                            <button type="button" class="btn round btn-outline-secondary btn-sm">75%</button>
+                            <button type="button" class="btn round btn-outline-secondary btn-sm">100%</button>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-md-3 col-form-label" for="btc-limit-sell-total">Total</label>
+                          <div class="col-md-9">
+                            <input type="number" disabled id="btc-limit-sell-total" class="form-control" placeholder="$ 318.1856"
+                            name="btc-limit-sell-total">
+                          </div>
+                        </div>
+                        <div class="form-actions pb-0">
+                          <button type="submit" class="btn round btn-danger btn-block btn-glow"> Sell BTC </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
                 </div>
-            </div>
-            <!-- /grey-panel -->
-        </div>
-        <!-- /col-md-4-->
-        <div class="col-md-4 col-sm-4 mb">
-            <div class="darkblue-panel pn">
-                <div class="darkblue-header">
-                    <h5>DROPBOX STATICS</h5>
-                </div>
-                <canvas id="serverstatus02" height="120" width="120"></canvas>
-                <script>
-                    var doughnutData = [{
-                            value: 60,
-                            color: "#1c9ca7"
-                        },
-                        {
-                            value: 40,
-                            color: "#f68275"
-                        }
-                    ];
-                    var myDoughnut = new Chart(document.getElementById("serverstatus02").getContext(
-                        "2d")).Doughnut(doughnutData);
-
-                </script>
-                <p>April 17, 2014</p>
-                <footer>
-                    <div class="pull-left">
-                        <h5><i class="fa fa-hdd-o"></i> 17 GB</h5>
-                    </div>
-                    <div class="pull-right">
-                        <h5>60% Used</h5>
-                    </div>
-                </footer>
-            </div>
-            <!--  /darkblue panel -->
-        </div>
-        <!-- /col-md-4 -->
-        <div class="col-md-4 col-sm-4 mb">
-            <!-- REVENUE PANEL -->
-            <div class="green-panel pn">
-                <div class="green-header">
-                    <h5>REVENUE</h5>
-                </div>
-                <div class="chart mt">
-                    <div class="sparkline" data-type="line" data-resize="true" data-height="75" data-width="90%"
-                        data-line-width="1" data-line-color="#fff" data-spot-color="#fff" data-fill-color=""
-                        data-highlight-line-color="#fff" data-spot-radius="4"
-                        data-data="[200,135,667,333,526,996,564,123,890,464,655]"></div>
-                </div>
-                <p class="mt"><b>$ 17,980</b><br />Month Income</p>
-            </div>
-        </div>
-        <!-- /col-md-4 -->
-    </div>
-    <!-- /row -->
-    <div class="row">
-        <!-- WEATHER PANEL -->
-        <div class="col-md-4 mb">
-            <div class="weather pn">
-                <i class="fa fa-cloud fa-4x"></i>
-                <h2>11º C</h2>
-                <h4>BUDAPEST</h4>
-            </div>
-        </div>
-        <!-- /col-md-4-->
-        <!-- DIRECT MESSAGE PANEL -->
-        <div class="col-md-8 mb">
-            <div class="message-p pn">
-                <div class="message-header">
-                    <h5>DIRECT MESSAGE</h5>
-                </div>
+              </div>
+              <div class="tab-pane" id="market" aria-labelledby="base-market">
                 <div class="row">
-                    <div class="col-md-3 centered hidden-sm hidden-xs">
-                        <img src="img/ui-danro.jpg" class="img-circle" width="65">
+                  <div class="col-12 col-xl-6 border-right-blue-grey border-right-lighten-4 pr-2 p-0">
+                    <div class="row my-2">
+                      <div class="col-4">
+                        <h5 class="text-bold-600 mb-0">Buy BTC</h5>
+                      </div>
+                      <div class="col-8 text-right">
+                        <p class="text-muted mb-0">USD Balance: $ 5000.00</p>
+                      </div>
                     </div>
-                    <div class="col-md-9">
-                        <p>
-                            <name>Dan Rogers</name>
-                            sent you a message.
-                        </p>
-                        <p class="small">3 hours ago</p>
-                        <p class="message">Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                            text ever since the 1500s.</p>
-                        <form class="form-inline" role="form">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="exampleInputText" placeholder="Reply Dan">
-                            </div>
-                            <button type="submit" class="btn btn-default">Send</button>
-                        </form>
+                    <form class="form form-horizontal">
+                      <div class="form-body">
+                        <div class="form-group row">
+                          <label class="col-md-3 col-form-label" for="btc-market-buy-price">Price</label>
+                          <div class="col-md-9">
+                            <input type="number" disabled id="btc-market-buy-price" class="form-control" placeholder="Market prise $"
+                            name="btc-market-buy-price">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-md-3 col-form-label" for="btc-market-buy-amount">Amount</label>
+                          <div class="col-md-9">
+                            <input type="number" id="btc-market-buy-amount" class="form-control" placeholder="0.026547 BTC"
+                            name="btc-market-buy-amount">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-md-3"></div>
+                          <div class="col-md-9">
+                            <button type="button" class="btn round btn-outline-secondary btn-sm">25%</button>
+                            <button type="button" class="btn round btn-outline-secondary btn-sm">50%</button>
+                            <button type="button" class="btn round btn-outline-secondary btn-sm">75%</button>
+                            <button type="button" class="btn round btn-outline-secondary btn-sm">100%</button>
+                          </div>
+                        </div>
+                        <div class="form-actions pb-0">
+                          <button type="submit" class="btn round btn-success btn-block btn-glow"> Buy BTC </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-12 col-xl-6 pl-2 p-0">
+                    <div class="row my-2">
+                      <div class="col-4">
+                        <h5 class="text-bold-600 mb-0">Sell BTC</h5>
+                      </div>
+                      <div class="col-8 text-right">
+                        <p class="text-muted mb-0">BTC Balance: 1.2654898</p>
+                      </div>
                     </div>
+                    <form class="form form-horizontal">
+                      <div class="form-body">
+                        <div class="form-group row">
+                          <label class="col-md-3 col-form-label" for="btc-price">Price</label>
+                          <div class="col-md-9">
+                            <input type="number" disabled id="btc-market-sell-price" class="form-control" placeholder="Market prise $"
+                            name="btc-market-sell-price">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-md-3 col-form-label" for="btc-market-sell-amount">Amount</label>
+                          <div class="col-md-9">
+                            <input type="number" id="btc-market-sell-amount" class="form-control" placeholder="0.026547 BTC"
+                            name="btc-market-sell-amount">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-md-3"></div>
+                          <div class="col-md-9">
+                            <button type="button" class="btn round btn-outline-secondary btn-sm">25%</button>
+                            <button type="button" class="btn round btn-outline-secondary btn-sm">50%</button>
+                            <button type="button" class="btn round btn-outline-secondary btn-sm">75%</button>
+                            <button type="button" class="btn round btn-outline-secondary btn-sm">100%</button>
+                          </div>
+                        </div>
+                        <div class="form-actions pb-0">
+                          <button type="submit" class="btn round btn-danger btn-block btn-glow"> Sell BTC </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
                 </div>
-            </div>
-            <!-- /Message Panel-->
-        </div>
-        <!-- /col-md-8  -->
-    </div>
-    <div class="row">
-        <!-- TWITTER PANEL -->
-        <div class="col-md-4 mb">
-            <div class="twitter-panel pn">
-                <i class="fa fa-twitter fa-4x"></i>
-                <p>Dashio is here! Take a look and enjoy this new Bootstrap Dashboard theme.</p>
-                <p class="user">@Alvrz_is</p>
-            </div>
-        </div>
-        <!-- /col-md-4 -->
-        <div class="col-md-4 mb">
-            <!-- WHITE PANEL - TOP USER -->
-            <div class="white-panel pn">
-                <div class="white-header">
-                    <h5>TOP USER</h5>
-                </div>
-                <p><img src="img/ui-zac.jpg" class="img-circle" width="50"></p>
-                <p><b>Zac Snider</b></p>
+              </div>
+              <div class="tab-pane" id="stop-limit" aria-labelledby="base-stop-limit">
                 <div class="row">
-                    <div class="col-md-6">
-                        <p class="small mt">MEMBER SINCE</p>
-                        <p>2012</p>
+                  <div class="col-12 col-xl-6 border-right-blue-grey border-right-lighten-4 pr-2 p-0">
+                    <div class="row my-2">
+                      <div class="col-4">
+                        <h5 class="text-bold-600 mb-0">Buy BTC</h5>
+                      </div>
+                      <div class="col-8 text-right">
+                        <p class="text-muted mb-0">USD Balance: $ 5000.00</p>
+                      </div>
                     </div>
-                    <div class="col-md-6">
-                        <p class="small mt">TOTAL SPEND</p>
-                        <p>$ 47,60</p>
+                    <form class="form form-horizontal">
+                      <div class="form-body">
+                        <div class="form-group row">
+                          <label class="col-md-3 col-form-label" for="btc-stop-buy">Stop</label>
+                          <div class="col-md-9">
+                            <input type="number" id="btc-stop-buy" class="form-control" placeholder="$ 11916.9"
+                            name="btc-stop-buy">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-md-3 col-form-label" for="btc-stop-buy-limit">Limit</label>
+                          <div class="col-md-9">
+                            <input type="number" id="btc-stop-buy-limit" class="form-control" placeholder="$ 12000.0"
+                            name="btc-stop-buy-limit">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-md-3 col-form-label" for="btc-stop-buy-amount">Amount</label>
+                          <div class="col-md-9">
+                            <input type="number" id="btc-stop-buy-amount" class="form-control" placeholder="0.026547 BTC"
+                            name="btc-stop-buy-amount">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-md-3"></div>
+                          <div class="col-md-9">
+                            <button type="button" class="btn round btn-outline-secondary btn-sm">25%</button>
+                            <button type="button" class="btn round btn-outline-secondary btn-sm">50%</button>
+                            <button type="button" class="btn round btn-outline-secondary btn-sm">75%</button>
+                            <button type="button" class="btn round btn-outline-secondary btn-sm">100%</button>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-md-3 col-form-label" for="btc-stop-buy-total">Total</label>
+                          <div class="col-md-9">
+                            <input type="number" disabled id="btc-stop-buy-total" class="form-control" placeholder="$ 318.1856"
+                            name="btc-stop-buy-total">
+                          </div>
+                        </div>
+                        <div class="form-actions pb-0">
+                          <button type="submit" class="btn round btn-success btn-block btn-glow"> Buy BTC </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-12 col-xl-6 pl-2 p-0">
+                    <div class="row my-2">
+                      <div class="col-4">
+                        <h5 class="text-bold-600 mb-0">Sell BTC</h5>
+                      </div>
+                      <div class="col-8 text-right">
+                        <p class="text-muted mb-0">BTC Balance: 1.2654898</p>
+                      </div>
                     </div>
+                    <form class="form form-horizontal">
+                      <div class="form-body">
+                        <div class="form-group row">
+                          <label class="col-md-3 col-form-label" for="btc-stop-sell">Stop</label>
+                          <div class="col-md-9">
+                            <input type="number" id="btc-stop-sell" class="form-control" placeholder="$ 11916.9"
+                            name="btc-stop-sell">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-md-3 col-form-label" for="btc-stop-sell-limit">Limit</label>
+                          <div class="col-md-9">
+                            <input type="number" id="btc-stop-sell-limit" class="form-control" placeholder="$ 12000.0"
+                            name="btc-stop-sell-limit">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-md-3 col-form-label" for="btc-stop-sell-amount">Amount</label>
+                          <div class="col-md-9">
+                            <input type="number" id="btc-stop-sell-amount" class="form-control" placeholder="0.026547 BTC"
+                            name="btc-stop-sell-amount">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-md-3"></div>
+                          <div class="col-md-9">
+                            <button type="button" class="btn round btn-outline-secondary btn-sm">25%</button>
+                            <button type="button" class="btn round btn-outline-secondary btn-sm">50%</button>
+                            <button type="button" class="btn round btn-outline-secondary btn-sm">75%</button>
+                            <button type="button" class="btn round btn-outline-secondary btn-sm">100%</button>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-md-3 col-form-label" for="btc-stop-sell-total">Total</label>
+                          <div class="col-md-9">
+                            <input type="number" disabled id="btc-stop-sell-total" class="form-control" placeholder="$ 318.1856"
+                            name="btc-stop-sell-total">
+                          </div>
+                        </div>
+                        <div class="form-actions pb-0">
+                          <button type="submit" class="btn round btn-danger btn-block btn-glow"> Sell BTC </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        <!-- /col-md-4 -->
-        <div class="col-md-4 mb">
-            <!-- INSTAGRAM PANEL -->
-            <div class="instagram-panel pn">
-                <i class="fa fa-instagram fa-4x"></i>
-                <p>@THISISYOU<br /> 5 min. ago
-                </p>
-                <p><i class="fa fa-comment"></i> 18 | <i class="fa fa-heart"></i> 49</p>
-            </div>
-        </div>
-        <!-- /col-md-4 -->
+      </div>
     </div>
-    <!-- /row -->
-    <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-4 mb">
-            <div class="product-panel-2 pn">
-                <div class="badge badge-hot">HOT</div>
-                <img src="img/product.jpg" width="200" alt="">
-                <h5 class="mt">Flat Pack Heritage</h5>
-                <h6>TOTAL SALES: 1388</h6>
-                <button class="btn btn-small btn-theme04">FULL REPORT</button>
-            </div>
+  </div>
+  <!--/ Trade History & Place Order -->
+  <!-- Sell Orders & Buy Order -->
+  <div class="row match-height">
+    <div class="col-12 col-xl-6">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Sell Order</h4>
+          <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+          <div class="heading-elements">
+            <p class="text-muted">Total BTC available: 6542.56585</p>
+          </div>
         </div>
-        <!-- /col-md-4 -->
-        <!--  PROFILE 02 PANEL -->
-        <div class="col-lg-4 col-md-4 col-sm-4 mb">
-            <div class="content-panel pn">
-                <div id="profile-02">
-                    <div class="user">
-                        <img src="img/friends/fr-06.jpg" class="img-circle" width="80">
-                        <h4>DJ SHERMAN</h4>
-                    </div>
-                </div>
-                <div class="pr2-social centered">
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-dribbble"></i></a>
-                </div>
-            </div>
-            <!-- /panel -->
+        <div class="card-content">
+          <div class="table-responsive">
+            <table class="table table-de mb-0">
+              <thead>
+                <tr>
+                  <th>Price per BTC</th>
+                  <th>BTC Ammount</th>
+                  <th>Total($)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-success bg-lighten-5">
+                  <td>10583.4</td>
+                  <td><i class="cc BTC-alt"></i> 0.45000000</td>
+                  <td>$ 4762.53</td>
+                </tr>
+                <tr>
+                  <td>10583.5</td>
+                  <td><i class="cc BTC-alt"></i> 0.04000000</td>
+                  <td>$ 423.34</td>
+                </tr>
+                <tr>
+                  <td>10583.7</td>
+                  <td><i class="cc BTC-alt"></i> 0.25100000</td>
+                  <td>$ 2656.51</td>
+                </tr>
+                <tr>
+                  <td>10583.8</td>
+                  <td><i class="cc BTC-alt"></i> 0.35000000</td>
+                  <td>$ 3704.33</td>
+                </tr>
+                <tr>
+                  <td>10595.7</td>
+                  <td><i class="cc BTC-alt"></i> 0.30000000</td>
+                  <td>$ 3178.71</td>
+                </tr>
+                <tr class="bg-danger bg-lighten-5">
+                  <td>10599.5</td>
+                  <td><i class="cc BTC-alt"></i> 0.02000000</td>
+                  <td>$ 211.99</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-        <!--/ col-md-4 -->
-        <div class="col-md-4 col-sm-4 mb">
-            <div class="green-panel pn">
-                <div class="green-header">
-                    <h5>DISK SPACE</h5>
-                </div>
-                <canvas id="serverstatus03" height="120" width="120"></canvas>
-                <script>
-                    var doughnutData = [{
-                            value: 60,
-                            color: "#2b2b2b"
-                        },
-                        {
-                            value: 40,
-                            color: "#fffffd"
-                        }
-                    ];
-                    var myDoughnut = new Chart(document.getElementById("serverstatus03").getContext(
-                        "2d")).Doughnut(doughnutData);
-
-                </script>
-                <h3>60% USED</h3>
-            </div>
-        </div>
-        <!-- /col-md-4 -->
+      </div>
     </div>
-    <!-- /row -->
-</div>
-<!-- /col-lg-9 END SECTION MIDDLE -->
-<!-- **********************************************************************************************************************************************************
-RIGHT SIDEBAR CONTENT
-*********************************************************************************************************************************************************** -->
-<div class="col-lg-3 ds">
-    <!--COMPLETED ACTIONS DONUTS CHART-->
-    <div class="donut-main">
-        <h4>COMPLETED ACTIONS & PROGRESS</h4>
-        <canvas id="newchart" height="130" width="130"></canvas>
-        <script>
-            var doughnutData = [{
-                    value: 70,
-                    color: "#4ECDC4"
-                },
-                {
-                    value: 30,
-                    color: "#fdfdfd"
-                }
-            ];
-            var myDoughnut = new Chart(document.getElementById("newchart").getContext("2d"))
-                .Doughnut(doughnutData);
-
-        </script>
+    <div class="col-12 col-xl-6">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Buy Order</h4>
+          <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+          <div class="heading-elements">
+            <p class="text-muted">Total USD available: 9065930.43</p>
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="table-responsive">
+            <table class="table table-de mb-0">
+              <thead>
+                <tr>
+                  <th>Price per BTC</th>
+                  <th>BTC Ammount</th>
+                  <th>Total($)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-danger bg-lighten-5">
+                  <td>10599.5</td>
+                  <td><i class="cc BTC-alt"></i> 0.02000000</td>
+                  <td>$ 211.99</td>
+                </tr>
+                <tr>
+                  <td>10583.5</td>
+                  <td><i class="cc BTC-alt"></i> 0.04000000</td>
+                  <td>$ 423.34</td>
+                </tr>
+                <tr>
+                  <td>10583.8</td>
+                  <td><i class="cc BTC-alt"></i> 0.35000000</td>
+                  <td>$ 3704.33</td>
+                </tr>
+                <tr>
+                  <td>10595.7</td>
+                  <td><i class="cc BTC-alt"></i> 0.30000000</td>
+                  <td>$ 3178.71</td>
+                </tr>
+                <tr class="bg-danger bg-lighten-5">
+                  <td>10583.7</td>
+                  <td><i class="cc BTC-alt"></i> 0.25100000</td>
+                  <td>$ 2656.51</td>
+                </tr>
+                <tr>
+                  <td>10595.8</td>
+                  <td><i class="cc BTC-alt"></i> 0.29697926</td>
+                  <td>$ 3146.74</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
-    <!--NEW EARNING STATS -->
-    <div class="panel terques-chart">
-        <div class="panel-body">
-            <div class="chart">
-                <div class="centered">
-                    <span>TODAY EARNINGS</span>
-                    <strong>$ 890,00 | 15%</strong>
-                </div>
-                <br>
-                <div class="sparkline" data-type="line" data-resize="true" data-height="75" data-width="90%"
-                    data-line-width="1" data-line-color="#fff" data-spot-color="#fff" data-fill-color=""
-                    data-highlight-line-color="#fff" data-spot-radius="4"
-                    data-data="[200,135,667,333,526,996,564,123,890,564,455]">
-                </div>
-            </div>
+  </div>
+  <!--/ Sell Orders & Buy Order -->
+  <!-- Active Orders -->
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Active Order</h4>
+          <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+          <div class="heading-elements">
+            <td>
+              <button class="btn btn-sm round btn-danger btn-glow"><i class="la la-close font-medium-1"></i> Cancel all</button>
+            </td>
+          </div>
         </div>
+        <div class="card-content">
+          <div class="table-responsive">
+            <table class="table table-de mb-0">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Type</th>
+                  <th>Amount BTC</th>
+                  <th>BTC Remaining</th>
+                  <th>Price</th>
+                  <th>USD</th>
+                  <th>Fee (%)</th>
+                  <th>Cancel</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2018-01-31 06:51:51</td>
+                  <td class="success">Buy</td>
+                  <td><i class="cc BTC-alt"></i> 0.58647</td>
+                  <td><i class="cc BTC-alt"></i> 0.58647</td>
+                  <td>11900.12</td>
+                  <td>$ 6979.78</td>
+                  <td>0.2</td>
+                  <td>
+                    <button class="btn btn-sm round btn-outline-danger"> Cancel</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2018-01-31 06:50:50</td>
+                  <td class="danger">Sell</td>
+                  <td><i class="cc BTC-alt"></i> 1.38647</td>
+                  <td><i class="cc BTC-alt"></i> 0.38647</td>
+                  <td>11905.09</td>
+                  <td>$ 4600.97</td>
+                  <td>0.2</td>
+                  <td>
+                    <button class="btn btn-sm round btn-outline-danger"> Cancel</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2018-01-31 06:49:51</td>
+                  <td class="success">Buy</td>
+                  <td><i class="cc BTC-alt"></i> 0.45879</td>
+                  <td><i class="cc BTC-alt"></i> 0.45879</td>
+                  <td>11901.85</td>
+                  <td>$ 5460.44</td>
+                  <td>0.2</td>
+                  <td>
+                    <button class="btn btn-sm round btn-outline-danger"> Cancel</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2018-01-31 06:51:51</td>
+                  <td class="success">Buy</td>
+                  <td><i class="cc BTC-alt"></i> 0.89877</td>
+                  <td><i class="cc BTC-alt"></i> 0.89877</td>
+                  <td>11899.25</td>
+                  <td>$ 10694.6</td>
+                  <td>0.2</td>
+                  <td>
+                    <button class="btn btn-sm round btn-outline-danger"> Cancel</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2018-01-31 06:51:51</td>
+                  <td class="danger">Sell</td>
+                  <td><i class="cc BTC-alt"></i> 0.45712</td>
+                  <td><i class="cc BTC-alt"></i> 0.45712</td>
+                  <td>11908.58</td>
+                  <td>$ 5443.65</td>
+                  <td>0.2</td>
+                  <td>
+                    <button class="btn btn-sm round btn-outline-danger"> Cancel</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2018-01-31 06:51:51</td>
+                  <td class="success">Buy</td>
+                  <td><i class="cc BTC-alt"></i> 0.58647</td>
+                  <td><i class="cc BTC-alt"></i> 0.58647</td>
+                  <td>11900.12</td>
+                  <td>$ 6979.78</td>
+                  <td>0.2</td>
+                  <td>
+                    <button class="btn btn-sm round btn-outline-danger"> Cancel</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
-    <!--new earning end-->
-    <!-- RECENT ACTIVITIES SECTION -->
-    <h4 class="centered mt">RECENT ACTIVITY</h4>
-    <!-- First Activity -->
-    <div class="desc">
-        <div class="thumb">
-            <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-        </div>
-        <div class="details">
-            <p>
-                <muted>Just Now</muted>
-                <br />
-                <a href="#">Paul Rudd</a> purchased an item.<br />
-            </p>
-        </div>
-    </div>
-    <!-- Second Activity -->
-    <div class="desc">
-        <div class="thumb">
-            <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-        </div>
-        <div class="details">
-            <p>
-                <muted>2 Minutes Ago</muted>
-                <br />
-                <a href="#">James Brown</a> subscribed to your newsletter.<br />
-            </p>
-        </div>
-    </div>
-    <!-- Third Activity -->
-    <div class="desc">
-        <div class="thumb">
-            <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-        </div>
-        <div class="details">
-            <p>
-                <muted>3 Hours Ago</muted>
-                <br />
-                <a href="#">Diana Kennedy</a> purchased a year subscription.<br />
-            </p>
-        </div>
-    </div>
-    <!-- Fourth Activity -->
-    <div class="desc">
-        <div class="thumb">
-            <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-        </div>
-        <div class="details">
-            <p>
-                <muted>7 Hours Ago</muted>
-                <br />
-                <a href="#">Brando Page</a> purchased a year subscription.<br />
-            </p>
-        </div>
-    </div>
-    <!-- USERS ONLINE SECTION -->
-    <h4 class="centered mt">TEAM MEMBERS ONLINE</h4>
-    <!-- First Member -->
-    <div class="desc">
-        <div class="thumb">
-            <img class="img-circle" src="img/ui-divya.jpg" width="35px" height="35px" align="">
-        </div>
-        <div class="details">
-            <p>
-                <a href="#">DIVYA MANIAN</a><br />
-                <muted>Available</muted>
-            </p>
-        </div>
-    </div>
-    <!-- Second Member -->
-    <div class="desc">
-        <div class="thumb">
-            <img class="img-circle" src="img/ui-sherman.jpg" width="35px" height="35px" align="">
-        </div>
-        <div class="details">
-            <p>
-                <a href="#">DJ SHERMAN</a><br />
-                <muted>I am Busy</muted>
-            </p>
-        </div>
-    </div>
-    <!-- Third Member -->
-    <div class="desc">
-        <div class="thumb">
-            <img class="img-circle" src="img/ui-danro.jpg" width="35px" height="35px" align="">
-        </div>
-        <div class="details">
-            <p>
-                <a href="#">DAN ROGERS</a><br />
-                <muted>Available</muted>
-            </p>
-        </div>
-    </div>
-    <!-- Fourth Member -->
-    <div class="desc">
-        <div class="thumb">
-            <img class="img-circle" src="img/ui-zac.jpg" width="35px" height="35px" align="">
-        </div>
-        <div class="details">
-            <p>
-                <a href="#">Zac Sniders</a><br />
-                <muted>Available</muted>
-            </p>
-        </div>
-    </div>
-    <!-- CALENDAR-->
-    <div id="calendar" class="mb">
-        <div class="panel green-panel no-margin">
-            <div class="panel-body">
-                <div id="date-popover" class="popover top"
-                    style="cursor: pointer; disadding: block; margin-left: 33%; margin-top: -50px; width: 175px;">
-                    <div class="arrow"></div>
-                    <h3 class="popover-title" style="disadding: none;"></h3>
-                    <div id="date-popover-content" class="popover-content"></div>
-                </div>
-                <div id="my-calendar"></div>
-            </div>
-        </div>
-    </div>
-    <!-- / calendar -->
-</div>
-<!-- /col-lg-3 -->
-</div>
+  </div>
+  <!-- Active Orders -->
 @endsection
