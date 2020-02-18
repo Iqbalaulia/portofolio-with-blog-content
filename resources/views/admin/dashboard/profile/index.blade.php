@@ -7,8 +7,14 @@
             <div class="card">
                 <div class="text-center">
                     <div class="card-body">
-                        <img src="{{ URL::to('/') }}/admin/images/{{ $profileUser->photo }}"
-                            class="height-150" alt="Card image">
+                      @if (empty($profileUser->photo))
+                      <img src="{{ URL::to('/') }}/admin/images/user.png"
+                      class="height-150" alt="Card image">
+                      @else
+                      <img src="{{ URL::to('/') }}/admin/images/{{ $profileUser->photo }}"
+                            class="height-150" alt="Card image">    
+                      @endif  
+                      
                     </div>
                     <div class="card-body">
                         <h4 class="card-title">{{ $profileUser->name }}</h4>

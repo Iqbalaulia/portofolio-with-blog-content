@@ -17,7 +17,7 @@ class CreateDetailProfilesTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->string('date_birth');
+            $table->date('date_birth');
             $table->string('address');
             $table->string('country');
             $table->string('email');
