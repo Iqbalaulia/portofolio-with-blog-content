@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\DetailProfile;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -16,7 +17,8 @@ class AdminDashboardProfileController extends Controller
     public function index()
     {
         $profileUser = Auth::user();
-        return view('admin.dashboard.profile.index',compact('profileUser'));
+        $detailProfile = DetailProfile::where('user_id', Auth::user()->id)->first();
+        return view('admin.dashboard.profile.index',compact('profileUser','detailProfile'));
 
     }
 

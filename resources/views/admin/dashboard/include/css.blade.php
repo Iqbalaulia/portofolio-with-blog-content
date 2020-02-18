@@ -16,3 +16,10 @@ rel="stylesheet">
 <!-- BEGIN Custom CSS-->
 <link rel="stylesheet" type="text/css" href="{{ asset('/admin/assets/css/style.css') }}">
 <!-- END Custom CSS-->
+
+
+{{-- LOGIN --}}
+<!-- BEGIN VENDOR CSS-->
+<link rel="stylesheet" type="text/css" href="{{ asset('/admin/app-assets/vendors/css/forms/icheck/icheck.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('/admin/app-assets/vendors/css/forms/icheck/custom.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('/admin/app-assets/css/pages/login-register.css') }}">

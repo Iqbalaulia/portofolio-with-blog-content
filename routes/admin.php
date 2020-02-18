@@ -11,7 +11,9 @@ Route::name('admin.')->group(function () {
     ], function () {
 
         Route::resource('/admin','AdminDashboardController');
-        Route::resource('/profile', 'AdminDashboardProfileController');        
+        Route::resource('/profile', 'AdminDashboardProfileController');
+        Route::resource('/detail-profile', 'AdminDashboardDetailProfileController');        
+        
 
     });
 

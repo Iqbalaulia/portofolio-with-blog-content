@@ -334,14 +334,3 @@
       </div>
     </div>
   </nav>
-
-      <div class="top-menu">
-        <ul class="nav pull-right top-menu">
-            <li><a class="logout" href="{{ route('logout') }}" onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();"> {{ __('Logout') }}</a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                </form>
-            </li>
-        </ul>
-    </div>
