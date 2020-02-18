@@ -14,7 +14,8 @@ class AdminDashboardEducationController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.dashboard.education.index');
+
     }
 
     /**

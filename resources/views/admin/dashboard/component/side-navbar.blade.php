@@ -11,7 +11,7 @@
       <li class=" nav-item"><a href="{{route('admin.profile.index')}}"><i class="la la-columns"></i><span class="menu-title" data-i18n="nav.page_layouts.main">Detail Profile</span><span class="badge badge badge-pill badge-danger float-right mr-2">New</span></a>
         
         </li>
-        <li class=" nav-item"><a href="#"><i class="la la-navicon"></i><span class="menu-title" data-i18n="nav.navbars.main">Education</span></a>
+      <li class=" nav-item"><a href="{{route('admin.education.index')}}"><i class="la la-navicon"></i><span class="menu-title" data-i18n="nav.navbars.main">Education</span></a>
         
         </li>
         <li class=" nav-item"><a href="#"><i class="la la-arrows-v"></i><span class="menu-title" data-i18n="nav.vertical_nav.main">Experience</span></a>
