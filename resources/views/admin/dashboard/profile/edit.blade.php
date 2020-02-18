@@ -4,7 +4,7 @@
     <section class="profile">
         <div class="card">
             <div class="card-body">
-                <form action="{{ route('admin.detail-profile.update',$detailProfile->user_id) }}" method="post">
+                <form action="{{ route('admin.detail-profile.update',$detailProfile->user_id) }}" method="post" enctype="multipart/form-data">
                     @csrf
                     @method('PATCH')                    
                     <div class="row">
@@ -189,6 +189,17 @@
                                 </fieldset>
                             </div>
                         </div>
+                        <div class="col-md-12">
+                            <div class="card-block mt-1">
+                                <p>Photo</p>
+                                <fieldset>
+                                    <div class="input-group">
+                                        <input type="file" name="photo" class="" id="inputGroupFile01">
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                      
                         <div class="col-md-12">
                             <div class="card-block mt-1">
                                 <p>Tentang Saya</p>

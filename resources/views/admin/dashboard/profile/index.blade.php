@@ -7,23 +7,26 @@
             <div class="card">
                 <div class="text-center">
                     <div class="card-body">
-                        <img src="{{ asset('/admin/app-assets/images/portrait/medium/avatar-m-4.png') }}"
-                            class="rounded-circle  height-150" alt="Card image">
+                        <img src="{{ URL::to('/') }}/admin/images/{{ $profileUser->photo }}"
+                            class="height-150" alt="Card image">
                     </div>
                     <div class="card-body">
                         <h4 class="card-title">{{ $profileUser->name }}</h4>
                         <h6 class="card-subtitle text-muted">Managing Director</h6>
                     </div>
                     <div class="text-center">
-                        <a href="#" class="btn btn-social-icon mr-1 mb-1 btn-outline-facebook">
+                    <a href="{{$detailProfile['facebook']}}" target="_blank" class="btn btn-social-icon mr-1 mb-1 btn-outline-facebook">
                             <span class="la la-facebook"></span>
                         </a>
-                        <a href="#" class="btn btn-social-icon mr-1 mb-1 btn-outline-twitter">
-                            <span class="la la-twitter"></span>
+                        <a href="{{$detailProfile['instagram']}}" target="_blank" class="btn btn-social-icon mr-1 mb-1 btn-outline-instagram">
+                            <span class="la la-instagram"></span>
                         </a>
-                        <a href="#" class="btn btn-social-icon mb-1 btn-outline-linkedin">
-                            <span class="la la-linkedin font-medium-4"></span>
+                        <a href="{{$detailProfile['linkedin']}}" target="_blank" class="btn btn-social-icon mb-1 mr-1 btn-outline-linkedin">
+                            <span class="la la-linkedin"></span>
                         </a>
+                        <a href="{{$detailProfile['github']}}" target="_blank" class="btn btn-social-icon mb-1 btn-outline-github">
+                          <span class="la la-github"></span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -133,7 +136,7 @@
                                         <div class="input-group-prepend">
                                           <span class="input-group-text" id="basic-addon3"><i class="la la-user"></i></span>
                                         </div>
-                                    <input type="date" value="{{$detailProfile->date_birth}}" name="date_birth" class="form-control" placeholder="Addon to Left" aria-describedby="basic-addon3">
+                                    <input type="date" value="{{$detailProfile['date_birth']}}" name="date_birth" class="form-control" placeholder="Addon to Left" aria-describedby="basic-addon3">
                                       </div>
                                     </fieldset>
                                   </div>
@@ -147,7 +150,7 @@
                                         <div class="input-group-prepend">
                                           <span class="input-group-text" id="basic-addon3"><i class="la la-map-marker"></i></span>
                                         </div>
-                                        <input type="text" value="{{$detailProfile->address}}" name="address" class="form-control" placeholder="Addon to Left" aria-describedby="basic-addon3">
+                                        <input type="text" value="{{$detailProfile['address']}}" name="address" class="form-control" placeholder="Addon to Left" aria-describedby="basic-addon3">
                                       </div>
                                     </fieldset>
                                   </div>
@@ -160,7 +163,7 @@
                                         <div class="input-group-prepend">
                                           <span class="input-group-text" id="basic-addon3"><i class="la la-flag-o"></i></span>
                                         </div>
-                                        <input type="text" value="{{$detailProfile->country}}" name="country" class="form-control" placeholder="Addon to Left" aria-describedby="basic-addon3">
+                                        <input type="text" value="{{$detailProfile['country']}}" name="country" class="form-control" placeholder="Addon to Left" aria-describedby="basic-addon3">
                                       </div>
                                     </fieldset>
                                   </div>
@@ -173,7 +176,7 @@
                                         <div class="input-group-prepend">
                                           <span class="input-group-text" id="basic-addon3"><i class="la la-envelope"></i></span>
                                         </div>
-                                        <input type="text" value="{{$detailProfile->email}}" name="email" class="form-control" placeholder="Addon to Left" aria-describedby="basic-addon3">
+                                        <input type="text" value="{{$detailProfile['email']}}" name="email" class="form-control" placeholder="Addon to Left" aria-describedby="basic-addon3">
                                       </div>
                                     </fieldset>
                                   </div>
@@ -186,7 +189,7 @@
                                         <div class="input-group-prepend">
                                           <span class="input-group-text" id="basic-addon3"><i class="la la-archive"></i></span>
                                         </div>
-                                        <input type="text" value="{{$detailProfile->project_complate}}" name="project_complate" class="form-control" placeholder="Addon to Left" aria-describedby="basic-addon3">
+                                        <input type="text" value="{{$detailProfile['project_complate']}}" name="project_complate" class="form-control" placeholder="Addon to Left" aria-describedby="basic-addon3">
                                       </div>
                                     </fieldset>
                                   </div>
@@ -199,7 +202,7 @@
                                         <div class="input-group-prepend">
                                           <span class="input-group-text" id="basic-addon3"><i class="la la-phone"></i></span>
                                         </div>
-                                        <input type="text" value="{{$detailProfile->phone}}" name="phone" class="form-control" placeholder="Addon to Left" aria-describedby="basic-addon3">
+                                        <input type="text" value="{{$detailProfile['phone']}}" name="phone" class="form-control" placeholder="Addon to Left" aria-describedby="basic-addon3">
                                       </div>
                                     </fieldset>
                                   </div>
@@ -212,7 +215,7 @@
                                         <div class="input-group-prepend">
                                           <span class="input-group-text" id="basic-addon3"><i class="la la-facebook"></i></span>
                                         </div>
-                                        <input type="text" value="{{$detailProfile->facebook}}" name="facebook" class="form-control" placeholder="Addon to Left" aria-describedby="basic-addon3">
+                                        <input type="text" value="{{$detailProfile['facebook']}}" name="facebook" class="form-control" placeholder="Addon to Left" aria-describedby="basic-addon3">
                                       </div>
                                     </fieldset>
                                   </div>
@@ -225,7 +228,7 @@
                                         <div class="input-group-prepend">
                                           <span class="input-group-text" id="basic-addon3"><i class="la la-github"></i></span>
                                         </div>
-                                        <input type="text" value="{{$detailProfile->github}}" name="github" class="form-control" placeholder="Addon to Left" aria-describedby="basic-addon3">
+                                        <input type="text" value="{{$detailProfile['github']}}" name="github" class="form-control" placeholder="Addon to Left" aria-describedby="basic-addon3">
                                       </div>
                                     </fieldset>
                                   </div>
@@ -238,7 +241,7 @@
                                         <div class="input-group-prepend">
                                           <span class="input-group-text" id="basic-addon3"><i class="la la-instagram"></i></span>
                                         </div>
-                                        <input type="text" value="{{$detailProfile->instagram}}" name="instagram" class="form-control" placeholder="Addon to Left" aria-describedby="basic-addon3">
+                                        <input type="text" value="{{$detailProfile['instagram']}}" name="instagram" class="form-control" placeholder="Addon to Left" aria-describedby="basic-addon3">
                                       </div>
                                     </fieldset>
                                   </div>
@@ -251,7 +254,7 @@
                                         <div class="input-group-prepend">
                                           <span class="input-group-text" id="basic-addon3"><i class="la la-linkedin"></i></span>
                                         </div>
-                                        <input type="text" value="{{$detailProfile->linkedin}}" name="linkedin" class="form-control" placeholder="Addon to Left" aria-describedby="basic-addon3">
+                                        <input type="text" value="{{$detailProfile['linkedin']}}" name="linkedin" class="form-control" placeholder="Addon to Left" aria-describedby="basic-addon3">
                                       </div>
                                     </fieldset>
                                   </div>
@@ -261,7 +264,7 @@
                                     <p>Tentang Saya</p>
                                     <fieldset>
                                       <div class="input-group">
-                                        <textarea name="about_me"  class="form-control" placeholder="Tentang Saya" id="" cols="30" rows="10">{{$detailProfile->about_me}}</textarea>
+                                        <textarea name="about_me"  class="form-control" placeholder="Tentang Saya" id="" cols="30" rows="10">{{$detailProfile['about_me']}}</textarea>
                                       </div>
                                     </fieldset>
                                   </div>

@@ -124,14 +124,29 @@ class AdminDashboardDetailProfileController extends Controller
             
         );
 
-
-        $formDataProfile = array(
+        $imageProfile = $request->photo;
+        if(empty($imageProfile)){
+            $formDataProfile = array(
             
-            'name'                      =>   $request->name,
-            'role'                      =>   $request->role,
-            'email'                     =>   $request->email,
+                'name'                      =>   $request->name,
+                'role'                      =>   $request->role,
+                'email'                     =>   $request->email,
+                
+            );
+        }else{
+            $image = $request->file('photo');
+            $imageProfile = rand(). '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('admin/images'), $imageProfile);
+            $formDataProfile = array(
             
-        );
+                'name'                      =>   $request->name,
+                'role'                      =>   $request->role,
+                'email'                     =>   $request->email,
+                'photo'                     =>   $imageProfile,
+                
+            );
+        }
+        
         User::where('id',$user_id)->update($formDataProfile);
         DetailProfile::where('user_id',$user_id)->update($formDataDetail);
         
