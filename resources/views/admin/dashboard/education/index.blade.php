@@ -36,33 +36,93 @@
                                 <table class="table table-striped table-bordered zero-configuration">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th>No</th>
+                                            <th>Pendidikan</th>
+                                            <th>Bidang Studi</th>
+                                            <th>Tahun Memulai</th>
+                                            <th>Tahun Selesai</th>
+                                            <th>Action</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
+                                            @foreach ($myEducation as $education)
                                             <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
+                                            <td>{{ $education->university }}</td>
+                                            <td>{{ $education->degree }}</td>
+                                            <td>{{ $education->ed_start_year }}</td>
+                                            <td>{{ $education->ed_end_year }}</td>
+                                            <td>
+
+                                                <div class="row">
+                                                    <a href="{{ route('admin.education.edit',$education->id) }}"
+                                                        class="ml-2 ">
+                                                        <button type="button" class="btn btn-primary"> <i
+                                                                class="la la-edit"></i></button>
+                                                    </a>
+
+                                                    &nbsp;&nbsp;
+                                                    <a href="" class="" data-toggle="modal"
+                                                        onclick="deleteDataEducation({{$education->id}})"
+                                                        data-target="#DeleteModalUser">
+                                                        <button type="button" class="btn btn-danger"><i
+                                                                class="la la-trash"></i></button>
+                                                    </a>
+                                                </div>
+
+                                            </td>
+
+                                            {{-- Modal Delete --}}
+                                            <section>
+                                                <div id="DeleteModalUser" class="modal fade" tabindex="-1" role="dialog"
+                                                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLongTitle">
+                                                                    Menghapus Data</h5>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <form action="" id="deleteFormEducation" method="post">
+                                                                    <div class="">
+
+                                                                        {{ csrf_field() }}
+                                                                        {{ method_field('DELETE') }}
+                                                                        <p class="text-center">Apakah kamu yakin untuk
+                                                                            menghapus data berikut ini ?</p>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-info"
+                                                                    data-dismiss="modal">Close</button>
+                                                                <button type="submit" name=""
+                                                                    class="btn btn-danger bg-red" data-dismiss="modal"
+                                                                    onclick="formSubmitEducation()">Yes, Delete</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            @endforeach
+
+
                                         </tr>
 
                                     </tbody>
                                     <tfoot>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th>No</th>
+                                            <th>Pendidikan</th>
+                                            <th>Bidang Studi</th>
+                                            <th>Tahun Memulai</th>
+                                            <th>Tahun Selesai</th>
+                                            <th>Action</th>
                                         </tr>
                                     </tfoot>
                                 </table>
@@ -72,6 +132,19 @@
                 </div>
             </div>
         </section>
+        <script type="text/javascript">
+            function deleteDataEducation(id) {
+                let idEducation = id;
+                let url = '{{ route("admin.education.destroy", ":id") }}';
+                url = url.replace(':id', idEducation);
+                $("#deleteFormEducation").attr('action', url);
+            }
+
+            function formSubmitEducation() {
+                $("#deleteFormEducation").submit();
+            }
+
+        </script>
         <!--/ Zero configuration table -->
     </div>
 </div>
