@@ -23,3 +23,9 @@ rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="{{ asset('/admin/app-assets/vendors/css/forms/icheck/icheck.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('/admin/app-assets/vendors/css/forms/icheck/custom.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('/admin/app-assets/css/pages/login-register.css') }}">
+
+{{-- EDUCATION --}}
+
+
+<link rel="stylesheet" type="text/css" href="{{ asset('/admin/app-assets/vendors/css/tables/datatable/datatables.min.css') }}">
+

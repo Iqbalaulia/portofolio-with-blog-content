@@ -14,7 +14,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/admin/app-assets/images/ico/favicon.ico') }}">
 
   @include('.admin/dashboard/include/css')
-  <!-- END Custom CSS-->
+  
 </head>
 <body class="vertical-layout vertical-menu 2-columns   menu-expanded fixed-navbar"
 data-open="click" data-menu="vertical-menu" data-col="2-columns">
@@ -31,7 +31,9 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
       </div>
     </div>
   </div>
- @include('./admin/dashboard/component/footer')
+  
   @include('.admin/dashboard/include/js')
+
 </body>
+
 </html>
