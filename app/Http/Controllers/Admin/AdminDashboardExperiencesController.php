@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Experience;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class AdminDashboardExperiencesController extends Controller
 {
@@ -14,7 +16,10 @@ class AdminDashboardExperiencesController extends Controller
      */
     public function index()
     {
-        //
+        $user = Auth::user()->id;
+        $myExperiences = Experience::where('user_id',$user)->get();
+        return view('admin.dashboard.experiences.index',compact('myExperiences'));
+
     }
 
     /**
@@ -24,7 +29,8 @@ class AdminDashboardExperiencesController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.dashboard.experiences.create');
+
     }
 
     /**
@@ -35,7 +41,22 @@ class AdminDashboardExperiencesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $formDataExperiences = array(
+
+            'user_id'   =>  Auth::user()->id,
+            'title'     =>  $request->title,
+            'type_of_work'  =>  $request->type_of_work,
+            'company'       =>  $request->company,
+            'location'      =>  $request->location,
+            'ex_start_year' =>  $request->ex_start_year,
+            'ex_end_year'   =>  $request->ex_end_year,
+            'ex_description'=>  $request->ex_description,
+
+        );
+
+        Experience::create($formDataExperiences);
+        return redirect('admin/experiences')->with('success', 'Data Added successfully.');
+
     }
 
     /**
@@ -57,7 +78,9 @@ class AdminDashboardExperiencesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $myExperiences = Experience::findOrFail($id);
+        return view('admin.dashboard.experiences.edit',compact('myExperiences'));
+
     }
 
     /**
@@ -67,9 +90,24 @@ class AdminDashboardExperiencesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $user_id)
     {
-        //
+        $formDataExperiences = array(
+
+            'user_id'   =>  Auth::user()->id,
+            'title'     =>  $request->title,
+            'type_of_work'  =>  $request->type_of_work,
+            'company'       =>  $request->company,
+            'location'      =>  $request->location,
+            'ex_start_year' =>  $request->ex_start_year,
+            'ex_end_year'   =>  $request->ex_end_year,
+            'ex_description'=>  $request->ex_description,
+
+        );  
+
+        Experience::where('user_id',$user_id)->update($formDataExperiences);
+        return redirect('admin/experiences')->with('success', 'Data Edited successfully.');
+
     }
 
     /**
@@ -80,6 +118,9 @@ class AdminDashboardExperiencesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $deleteData = Experience::findOrFail($id);
+        $deleteData->delete();
+        return redirect('admin/experiences')->with('success', 'Data is successfully deleted');
+
     }
 }

@@ -14,7 +14,7 @@
       <li class=" nav-item"><a href="{{route('admin.education.index')}}"><i class="la la-navicon"></i><span class="menu-title" data-i18n="nav.navbars.main">Education</span></a>
         
         </li>
-        <li class=" nav-item"><a href="#"><i class="la la-arrows-v"></i><span class="menu-title" data-i18n="nav.vertical_nav.main">Experience</span></a>
+      <li class=" nav-item"><a href="{{route('admin.experiences.index')}}"><i class="la la-arrows-v"></i><span class="menu-title" data-i18n="nav.vertical_nav.main">Experience</span></a>
         
         </li>
         <li class=" nav-item"><a href="#"><i class="la la-arrows-h"></i><span class="menu-title" data-i18n="nav.horz_nav.main">Project</span></a>
