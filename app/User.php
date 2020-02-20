@@ -54,4 +54,8 @@ class User extends Authenticatable
     public function Skill(){
         return $this->hasMany(Skill::class, 'username','id','name','email');        
     }
+
+    public function Project(){
+        return $this->hasMany(Skill::class, 'username','id','name','email');        
+    }
 }
