@@ -68,7 +68,7 @@
     			<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
     				<div class="row justify-content-start pb-3">
 		          <div class="col-md-12 heading-section ftco-animate">
-		          	<h1 class="big">Abouts</h1>
+		          	<h1 class="big">About</h1>
 		            <h2 class="mb-4">About Me</h2>
 				  <p>{{$profileDetail['about_me']}}</p>
 		            <ul class="about-info mt-4 px-md-0 px-2">
