@@ -22,4 +22,5 @@ Route::resource('/', 'LandingPageController');
 
 require('admin.php');
 // Admin
+Route::resource('/message', 'MessageController');               
 

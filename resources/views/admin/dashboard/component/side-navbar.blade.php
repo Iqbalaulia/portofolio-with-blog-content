@@ -23,7 +23,7 @@
         <li class=" nav-item"><a href="{{route('admin.skill.index')}}"><i class="la la-header"></i><span class="menu-title" data-i18n="nav.page_headers.main">Skills</span></a>
           
         </li>
-        <li class=" nav-item"><a href="#"><i class="la la-download"></i><span class="menu-title" data-i18n="nav.footers.main">Messages</span></a>
+        <li class=" nav-item"><a href="{{route('admin.message-admin.index')}}"><i class="la la-download"></i><span class="menu-title" data-i18n="nav.footers.main">Messages</span></a>
          
         </li>
         <li class=" navigation-header">
