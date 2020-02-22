@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Skill;
+use Illuminate\Support\Facades\Auth;
 
 class AdminDashboardSkillController extends Controller
 {
@@ -14,7 +16,10 @@ class AdminDashboardSkillController extends Controller
      */
     public function index()
     {
-        //
+        $user = Auth::user()->id;
+        $mySkill = Skill::where('user_id', $user)->get();
+        return view('admin.dashboard.skill.index',compact('mySkill'));
+
     }
 
     /**
@@ -24,7 +29,8 @@ class AdminDashboardSkillController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.dashboard.skill.create');
+
     }
 
     /**
@@ -35,7 +41,16 @@ class AdminDashboardSkillController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $formSkill = array(
+                
+            'user_id'                   =>   Auth::user()->id,
+            'title'                     =>   $request->title,
+            'range_skill'               =>   $request->range_skill,
+                           
+        );
+
+        Skill::create($formSkill);
+        return redirect('admin/skill')->with('success', 'Data Added successfully.');
     }
 
     /**
@@ -57,7 +72,8 @@ class AdminDashboardSkillController extends Controller
      */
     public function edit($id)
     {
-        //
+        $mySkill = Skill::findOrFail($id);
+        return view('admin.dashboard.skill.edit',compact('mySkill'));
     }
 
     /**
@@ -67,9 +83,17 @@ class AdminDashboardSkillController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $user_id)
     {
-        //
+        $formSkill = array(
+                
+            'title'                     =>   $request->title,
+            'range_skill'               =>   $request->range_skill,
+                           
+        );
+
+        Skill::where('user_id',$user_id)->update($formSkill);
+        return redirect('admin/skill')->with('success', 'Data Edited successfully.');
     }
 
     /**
@@ -80,6 +104,8 @@ class AdminDashboardSkillController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $deleteData = Skill::findOrFail($id);
+        $deleteData->delete();
+        return redirect('admin/skill')->with('success', 'Data is successfully deleted');
     }
 }
