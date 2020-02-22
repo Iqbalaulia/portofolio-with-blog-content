@@ -17,7 +17,7 @@
       <li class=" nav-item"><a href="{{route('admin.experiences.index')}}"><i class="la la-arrows-v"></i><span class="menu-title" data-i18n="nav.vertical_nav.main">Experience</span></a>
         
         </li>
-        <li class=" nav-item"><a href="#"><i class="la la-arrows-h"></i><span class="menu-title" data-i18n="nav.horz_nav.main">Project</span></a>
+        <li class=" nav-item"><a href="{{route('admin.project.index')}}"><i class="la la-arrows-h"></i><span class="menu-title" data-i18n="nav.horz_nav.main">Project</span></a>
           
         </li>
         <li class=" nav-item"><a href="#"><i class="la la-header"></i><span class="menu-title" data-i18n="nav.page_headers.main">Skills</span></a>

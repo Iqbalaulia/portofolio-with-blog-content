@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Project;
+use Illuminate\Support\Facades\Auth;
 
 class AdminDashboardProjectController extends Controller
 {
@@ -14,7 +16,9 @@ class AdminDashboardProjectController extends Controller
      */
     public function index()
     {
-        //
+        $user = Auth::user()->id;
+        $myProject = Project::where('user_id', $user)->get();
+        return view('admin.dashboard.project.index',compact('myProject'));
     }
 
     /**
@@ -24,7 +28,8 @@ class AdminDashboardProjectController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.dashboard.project.create');
+
     }
 
     /**
@@ -35,7 +40,35 @@ class AdminDashboardProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $imageProject = $request->image;
+        if(empty($imageProject)){
+            $formProject = array(
+            
+                'user_id'                   =>   Auth::user()->id,
+                'title'                     =>   $request->title,
+                'job'                       =>   $request->job,
+
+            );
+        }else{
+
+                $image = $request->file('image');
+                $imageProject = rand(). '.' . $image->getClientOriginalExtension();
+                $image->move(public_path('admin/images/project'), $imageProject);
+                
+                $formProject = array(
+            
+                
+                'user_id'                   =>   Auth::user()->id,
+                'title'                     =>   $request->title,
+                'job'                       =>   $request->job,
+                'image'                     =>   $imageProject,
+                               
+            );
+        }
+
+        Project::create($formProject);
+        return redirect('admin/project')->with('success', 'Data Added successfully.');
+
     }
 
     /**
@@ -57,7 +90,9 @@ class AdminDashboardProjectController extends Controller
      */
     public function edit($id)
     {
-        //
+        $myProject = Project::findOrFail($id);
+        return view('admin.dashboard.project.edit',compact('myProject'));
+
     }
 
     /**
@@ -67,9 +102,37 @@ class AdminDashboardProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $user_id)
     {
-        //
+        $imageProject = $request->file('image');
+        if(empty($imageProject)){
+            $formProject = array(
+            
+                'user_id'                   =>   Auth::user()->id,
+                'title'                     =>   $request->title,
+                'job'                       =>   $request->job,
+
+            );
+        }else{
+
+            $myImageProject = $request->hidden_image;
+            $myImageProject = rand(). '.' . $imageProject->getClientOriginalExtension();
+            $imageProject->move(public_path('admin/images/project'), $myImageProject);
+            $formProject = array(
+            
+                
+                'user_id'                   =>   Auth::user()->id,
+                'title'                     =>   $request->title,
+                'job'                       =>   $request->job,
+                'image'                     =>   $myImageProject,
+                               
+            );
+        }
+
+        // dd($formEducation);
+        Project::where('user_id',$user_id)->update($formProject);
+        return redirect('admin/project')->with('success', 'Data Edited successfully.');
+
     }
 
     /**
@@ -80,6 +143,9 @@ class AdminDashboardProjectController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $deleteData = Project::findOrFail($id);
+        $deleteData->delete();
+        return redirect('admin/project')->with('success', 'Data is successfully deleted');
+
     }
 }
