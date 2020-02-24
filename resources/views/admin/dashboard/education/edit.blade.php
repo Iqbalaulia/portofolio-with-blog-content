@@ -16,7 +16,7 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon3"><i
-                                                    class="la la-map-marker"></i></span>
+                                                    class="la la-university"></i></span>
                                         </div>
                                     <input type="text" value="{{$myEducation->university}}" name="university" class="form-control"
                                             placeholder="Addon to Left" aria-describedby="basic-addon3">
@@ -31,7 +31,7 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon3"><i
-                                                    class="la la-map-marker"></i></span>
+                                                    class="la la-trophy"></i></span>
                                         </div>
                                         <input type="text" value="{{$myEducation->degree}}" name="degree" class="form-control"
                                             placeholder="Addon to Left" aria-describedby="basic-addon3">
@@ -46,7 +46,7 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon3"><i
-                                                    class="la la-map-marker"></i></span>
+                                                    class="la la-graduation-cap"></i></span>
                                         </div>
                                         <input type="text" value="{{$myEducation->field_study}}" name="field_study" class="form-control"
                                             placeholder="Addon to Left" aria-describedby="basic-addon3">
@@ -61,7 +61,7 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon3"><i
-                                                    class="la la-map-marker"></i></span>
+                                                    class="la la-certificate"></i></span>
                                         </div>
                                         <input type="text" value="{{$myEducation->score}}" name="score" class="form-control" placeholder="Addon to Left"
                                             aria-describedby="basic-addon3">
@@ -76,7 +76,7 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon3"><i
-                                                    class="la la-user"></i></span>
+                                                    class="la la-clock-o"></i></span>
                                         </div>
                                         <input type="month" value="{{$myEducation->ed_start_year}}" name="ed_start_year" class="form-control"
                                             placeholder="Addon to Left" aria-describedby="basic-addon3">
@@ -91,7 +91,7 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon3"><i
-                                                    class="la la-user"></i></span>
+                                                    class="la la-clock-o"></i></span>
                                         </div>
                                         <input type="month" value="{{$myEducation->ed_end_year}}" name="ed_end_year" class="form-control"
                                             placeholder="Addon to Left" aria-describedby="basic-addon3">
@@ -104,7 +104,7 @@
                                 <p>Photo</p>
                                 <fieldset>
                                     <div class="input-group">
-                                        <input type="file" value="{{$myEducation->image}}" name="image" class="" id="inputGroupFile01">
+                                        <input type="file" class="form-control" value="{{$myEducation->image}}" name="image" class="" id="inputGroupFile01">
                                         <img loading="lazy" class="card-img-top mt-0 ml-5" alt="..." style="width:50%; margin-bottom:10%;" src="{{ URL::to('/') }}/admin/images/education/{{ $myEducation->image }}"/>
                                         <input type="hidden" name="hidden_image" value="{{ URL::to('/') }}/admin/images/education/{{ $myEducation->image }}">
 

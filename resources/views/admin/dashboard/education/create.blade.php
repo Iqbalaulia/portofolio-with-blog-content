@@ -15,7 +15,7 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon3"><i
-                                                    class="la la-map-marker"></i></span>
+                                                    class="la la-university"></i></span>
                                         </div>
                                         <input type="text" name="university" class="form-control"
                                             placeholder="Addon to Left" aria-describedby="basic-addon3">
@@ -30,7 +30,7 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon3"><i
-                                                    class="la la-map-marker"></i></span>
+                                                    class="la la-trophy"></i></span>
                                         </div>
                                         <input type="text" name="degree" class="form-control"
                                             placeholder="Addon to Left" aria-describedby="basic-addon3">
@@ -45,7 +45,7 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon3"><i
-                                                    class="la la-map-marker"></i></span>
+                                                    class="la la-graduation-cap"></i></span>
                                         </div>
                                         <input type="text" name="field_study" class="form-control"
                                             placeholder="Addon to Left" aria-describedby="basic-addon3">
@@ -59,8 +59,8 @@
                                 <fieldset>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon3"><i
-                                                    class="la la-map-marker"></i></span>
+                                            <span class="input-group-text " id="basic-addon3"><i
+                                                    class="la la-certificate "></i></span>
                                         </div>
                                         <input type="text" name="score" class="form-control" placeholder="Addon to Left"
                                             aria-describedby="basic-addon3">
@@ -75,7 +75,7 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon3"><i
-                                                    class="la la-user"></i></span>
+                                                    class="la la-clock-o"></i></span>
                                         </div>
                                         <input type="month" name="ed_start_year" class="form-control"
                                             placeholder="Addon to Left" aria-describedby="basic-addon3">
@@ -90,7 +90,7 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon3"><i
-                                                    class="la la-user"></i></span>
+                                                    class="la la-clock-o"></i></span>
                                         </div>
                                         <input type="month" name="ed_end_year" class="form-control"
                                             placeholder="Addon to Left" aria-describedby="basic-addon3">
@@ -103,7 +103,7 @@
                                 <p>Photo</p>
                                 <fieldset>
                                     <div class="input-group">
-                                        <input type="file" name="image" class="" id="inputGroupFile01">
+                                        <input type="file" class="form-control" name="image" class="" id="inputGroupFile01">
                                     </div>
                                 </fieldset>
                             </div>

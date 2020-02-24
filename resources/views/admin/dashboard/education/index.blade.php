@@ -46,13 +46,22 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php $no = 0;?>
+                                        @foreach ($myEducation as $education)
+                                        <?php $no++ ;?>
                                         <tr>
-                                            @foreach ($myEducation as $education)
-                                            <td>Tiger Nixon</td>
+
+                                            <td>{{ $no }}</td>
                                             <td>{{ $education->university }}</td>
                                             <td>{{ $education->degree }}</td>
                                             <td>{{ $education->ed_start_year }}</td>
-                                            <td>{{ $education->ed_end_year }}</td>
+                                            <td>
+                                                @if (empty($education->ed_end_year))
+                                                Sampai Saat Ini
+                                                @else
+                                                {{ $education->ed_end_year }}
+                                                @endif
+                                            </td>
                                             <td>
 
                                                 <div class="row">
@@ -109,10 +118,11 @@
                                                     </div>
                                                 </div>
                                             </section>
-                                            @endforeach
+
 
 
                                         </tr>
+                                        @endforeach
 
                                     </tbody>
                                     <tfoot>
