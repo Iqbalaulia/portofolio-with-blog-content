@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\DetailProfile;
+use App\Education;
+use App\Experience;
+use App\Project;
+use App\Skill;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -17,7 +21,12 @@ class LandingPageController extends Controller
     {
         $profileUser = User::first();
         $profileDetail = DetailProfile::where('user_id',$profileUser['id'])->first();
-        return view('index' , compact('profileUser','profileDetail'));
+        $education = Education::all();
+        $experience = Experience::all();
+        $project = Project::all();
+        $skill = Skill::all();
+
+        return view('index' , compact('profileUser','profileDetail','education','experience','project','skill'));
 
     }
 
