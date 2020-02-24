@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Clark - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Muhammad Iqbal Aulia Rafi Profile</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -400,7 +400,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-7 ftco-animate text-center">
                     <h2>I'm <span>Available</span> for freelancing</h2>
-                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                    <p style="color:white">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
                     <p class="mb-0"><a href="#" class="btn btn-primary py-3 px-5">Hire me</a></p>
                 </div>
             </div>
