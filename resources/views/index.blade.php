@@ -120,59 +120,51 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6">
-                    <div class="resume-wrap ftco-animate">
-                        <span class="date">2014-2015</span>
-                        <h2>Master Degree of Design</h2>
-                        <span class="position">Cambridge University</span>
-                        <p class="mt-4">A small river named Duden flows by their place and supplies it with the
-                            necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly
-                            into your mouth.</p>
+
+                <div class="col-md-12">
+                    <h2 class="mb-4">Pendidikan</h2>
+
+                    <div class="row">
+                        @foreach ($education as $edu)
+                        <div class="col-md-6">
+
+                            <div class="resume-wrap ftco-animate">
+                                <span
+                                    class="date">{{ date('Y', strtotime($edu->ed_start_year)) }}-{{ date('Y', strtotime($edu->ed_end_year)) }}</span>
+                                <h2>{{ $edu->field_study }}</h2>
+                                <span class="position">{{ $edu->university }}</span>
+                                <p class="mt-4">{{ $edu->ed_description}}</p>
+                            </div>
+                        </div>
+                        @endforeach
+
                     </div>
-                    <div class="resume-wrap ftco-animate">
-                        <span class="date">2014-2015</span>
-                        <h2>Bachelor's Degree of C.A</h2>
-                        <span class="position">Cambridge University</span>
-                        <p class="mt-4">A small river named Duden flows by their place and supplies it with the
-                            necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly
-                            into your mouth.</p>
-                    </div>
-                    <div class="resume-wrap ftco-animate">
-                        <span class="date">2014-2015</span>
-                        <h2>Diploma in Computer</h2>
-                        <span class="position">Cambridge University</span>
-                        <p class="mt-4">A small river named Duden flows by their place and supplies it with the
-                            necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly
-                            into your mouth.</p>
-                    </div>
+
+
                 </div>
 
-                <div class="col-md-6">
-                    <div class="resume-wrap ftco-animate">
-                        <span class="date">2014-2015</span>
-                        <h2>Art &amp; Creative Director</h2>
-                        <span class="position">Cambridge University</span>
-                        <p class="mt-4">A small river named Duden flows by their place and supplies it with the
-                            necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly
-                            into your mouth.</p>
+                <div class="col-md-12">
+                    <h2 class="mb-4">Pengalaman Kerja</h2>
+                    <div class="row">
+
+                        @foreach ($experience as $exp)
+                        <div class="col-md-12">
+
+                            <div class="resume-wrap ftco-animate">
+                                <span
+                                    class="date">{{ date('Y', strtotime($exp->ex_start_year)) }}-{{ date('Y', strtotime($exp->ex_end_year)) }}</span>
+                                <h2>{{ $exp->type_of_work }}</h2>
+                                <span class="position">{{ $exp->company }}</span>
+                                <p class="mt-4">{{ $exp->ex_description}}</p>
+                            </div>
+
+                        </div>
+                        @endforeach
                     </div>
-                    <div class="resume-wrap ftco-animate">
-                        <span class="date">2014-2015</span>
-                        <h2>Wordpress Developer</h2>
-                        <span class="position">Cambridge University</span>
-                        <p class="mt-4">A small river named Duden flows by their place and supplies it with the
-                            necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly
-                            into your mouth.</p>
-                    </div>
-                    <div class="resume-wrap ftco-animate">
-                        <span class="date">2017-2018</span>
-                        <h2>UI/UX Designer</h2>
-                        <span class="position">Cambridge University</span>
-                        <p class="mt-4">A small river named Duden flows by their place and supplies it with the
-                            necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly
-                            into your mouth.</p>
-                    </div>
+
                 </div>
+
+
             </div>
             <div class="row justify-content-center mt-5">
                 <div class="col-md-6 text-center ftco-animate">
@@ -202,16 +194,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-4 text-center d-flex ftco-animate">
-                    <a href="#" class="services-1">
-                        <span class="icon">
-                            <i class="flaticon-flasks"></i>
-                        </span>
-                        <div class="desc">
-                            <h3 class="mb-5">Phtography</h3>
-                        </div>
-                    </a>
-                </div>
+
                 <div class="col-md-4 text-center d-flex ftco-animate">
                     <a href="#" class="services-1">
                         <span class="icon">
@@ -233,26 +216,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-4 text-center d-flex ftco-animate">
-                    <a href="#" class="services-1">
-                        <span class="icon">
-                            <i class="flaticon-flasks"></i>
-                        </span>
-                        <div class="desc">
-                            <h3 class="mb-5">Branding</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4 text-center d-flex ftco-animate">
-                    <a href="#" class="services-1">
-                        <span class="icon">
-                            <i class="flaticon-ideas"></i>
-                        </span>
-                        <div class="desc">
-                            <h3 class="mb-5">Product Strategy</h3>
-                        </div>
-                    </a>
-                </div>
+
             </div>
         </div>
     </section>
@@ -268,72 +232,24 @@
                 </div>
             </div>
             <div class="row">
+                @foreach ($skill as $ski)
                 <div class="col-md-6 animate-box">
                     <div class="progress-wrap ftco-animate">
-                        <h3>Photoshop</h3>
+                        <h3>{{ $ski->title }}</h3>
                         <div class="progress">
-                            <div class="progress-bar color-1" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-                                aria-valuemax="100" style="width:90%">
-                                <span>90%</span>
+                            <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{ $ski->range_skill }}"
+                                aria-valuemin="0" aria-valuemax="100" style="width:{{ $ski->range_skill }}%">
+                                <span>{{ $ski->range_skill }}%</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 animate-box">
-                    <div class="progress-wrap ftco-animate">
-                        <h3>jQuery</h3>
-                        <div class="progress">
-                            <div class="progress-bar color-2" role="progressbar" aria-valuenow="85" aria-valuemin="0"
-                                aria-valuemax="100" style="width:85%">
-                                <span>85%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 animate-box">
-                    <div class="progress-wrap ftco-animate">
-                        <h3>HTML5</h3>
-                        <div class="progress">
-                            <div class="progress-bar color-3" role="progressbar" aria-valuenow="95" aria-valuemin="0"
-                                aria-valuemax="100" style="width:95%">
-                                <span>95%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 animate-box">
-                    <div class="progress-wrap ftco-animate">
-                        <h3>CSS3</h3>
-                        <div class="progress">
-                            <div class="progress-bar color-4" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-                                aria-valuemax="100" style="width:90%">
-                                <span>90%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 animate-box">
-                    <div class="progress-wrap ftco-animate">
-                        <h3>WordPress</h3>
-                        <div class="progress">
-                            <div class="progress-bar color-5" role="progressbar" aria-valuenow="70" aria-valuemin="0"
-                                aria-valuemax="100" style="width:70%">
-                                <span>70%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 animate-box">
-                    <div class="progress-wrap ftco-animate">
-                        <h3>SEO</h3>
-                        <div class="progress">
-                            <div class="progress-bar color-6" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                                aria-valuemax="100" style="width:80%">
-                                <span>80%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+                @endforeach
+
+
+
+
             </div>
         </div>
     </section>
@@ -349,70 +265,21 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4">
-                    <div class="project img ftco-animate d-flex justify-content-center align-items-center"
-                        style="background-image: url(images/project-4.jpg);">
-                        <div class="overlay"></div>
-                        <div class="text text-center p-4">
-                            <h3><a href="#">Branding &amp; Illustration Design</a></h3>
-                            <span>Web Design</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="project img ftco-animate d-flex justify-content-center align-items-center"
-                        style="background-image: url(images/project-5.jpg);">
-                        <div class="overlay"></div>
-                        <div class="text text-center p-4">
-                            <h3><a href="#">Branding &amp; Illustration Design</a></h3>
-                            <span>Web Design</span>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-md-8">
-                    <div class="project img ftco-animate d-flex justify-content-center align-items-center"
-                        style="background-image: url(images/project-1.jpg);">
-                        <div class="overlay"></div>
-                        <div class="text text-center p-4">
-                            <h3><a href="#">Branding &amp; Illustration Design</a></h3>
-                            <span>Web Design</span>
-                        </div>
-                    </div>
-
-                    <div class="project img ftco-animate d-flex justify-content-center align-items-center"
-                        style="background-image: url(images/project-6.jpg);">
-                        <div class="overlay"></div>
-                        <div class="text text-center p-4">
-                            <h3><a href="#">Branding &amp; Illustration Design</a></h3>
-                            <span>Web Design</span>
-                        </div>
-                    </div>
-                </div>
+                @foreach ($project as $pro)
                 <div class="col-md-4">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="project img ftco-animate d-flex justify-content-center align-items-center"
-                                style="background-image: url(images/project-2.jpg);">
-                                <div class="overlay"></div>
-                                <div class="text text-center p-4">
-                                    <h3><a href="#">Branding &amp; Illustration Design</a></h3>
-                                    <span>Web Design</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="project img ftco-animate d-flex justify-content-center align-items-center"
-                                style="background-image: url(images/project-3.jpg);">
-                                <div class="overlay"></div>
-                                <div class="text text-center p-4">
-                                    <h3><a href="#">Branding &amp; Illustration Design</a></h3>
-                                    <span>Web Design</span>
-                                </div>
-                            </div>
+                    <div class="project img ftco-animate d-flex justify-content-center align-items-center" 
+                    style="background-image: url({{ URL::to('/') }}/admin/images/project/{{ $pro->image }});
+                             background-size: 100% 80%;
+                      }">
+                        <div class="overlay"></div>
+                        <div class="text text-center p-4">
+                            <h3><a href="#">{{ $pro->title }}</a></h3>
+                            <span>{{ $pro->job }}</span>
                         </div>
                     </div>
                 </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -528,7 +395,7 @@
         </div>
     </section>
 
-    <section class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+    <section class="ftco-section ftco-hireme img margin-top" style="background-image: url({{ URL::to('/') }}/admin/images/background.jpeg)">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-7 ftco-animate text-center">
@@ -614,7 +481,7 @@
                 </div>
 
                 <div class="col-md-6 d-flex">
-                    <div class="img" style="background-image: url(images/about.jpg);"></div>
+                    <div class="img" style="background-image: url({{ URL::to('/') }}/admin/images/{{ $profileUser->photo }});"></div>
                 </div>
             </div>
         </div>
