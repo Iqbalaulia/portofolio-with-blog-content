@@ -53,7 +53,7 @@
 
                                             <td>{{ $no }}</td>
                                             <td>{{ $education->university }}</td>
-                                            <td>{{ $education->degree }}</td>
+                                            <td>{{ $education->field_study }}</td>
                                             <td>{{ $education->ed_start_year }}</td>
                                             <td>
                                                 @if (empty($education->ed_end_year))

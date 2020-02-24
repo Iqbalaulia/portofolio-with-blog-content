@@ -23,13 +23,13 @@
 
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="buton-add w-100" align="right">
+                                        {{-- <div class="buton-add w-100" align="right">
                                             <a href="{{route('admin.skill.create')}}">
                                                 <button type="button"
                                                     class="mr-1 mb-1 btn btn-outline-info btn-min-width"><i
                                                         class="la la-user"></i> Add Skill</button>
                                             </a>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                 </div>
 
@@ -46,9 +46,12 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php $no = 0;?>
+                                        @foreach ($myMessage as $message)
+                                        <?php $no++ ;?>
                                         <tr>
-                                            @foreach ($myMessage as $message)
-                                            <td>Tiger Nixon</td>
+                                          
+                                            <td>{{ $no }}</td>
                                             <td>{{ $message->name }}</td>
                                             <td>{{ $message->email }}</td>
                                             <td>{{ $message->subject }}</td>
@@ -110,11 +113,11 @@
                                                     </div>
                                                 </div>
                                             </section> --}}
-                                            @endforeach
+                                         
 
 
                                         </tr>
-
+                                        @endforeach
                                     </tbody>
                                     <tfoot>
                                         <tr>

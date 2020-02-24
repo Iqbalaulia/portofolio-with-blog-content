@@ -45,16 +45,19 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php $no = 0;?>
+                                        @foreach ($myProject as $project)
+                                        <?php $no++ ;?>
                                         <tr>
-                                            @foreach ($myProject as $project)
-                                            <td>Tiger Nixon</td>
-                                            <td>{{ $project->title }}</td>
-                                            <td>{{ $project->job }}</td>
+                                           
+                                            <td>{{ $no }}</td>
+                                            <td style="width:20%;">{{ $project->title }}</td>
+                                            <td style="width:20%;">{{ $project->job }}</td>
                                             <td>
-                                            <img loading="lazy" class="card-img-top mt-0 ml-5" alt="..." style="width:20%;" src="{{ URL::to('/') }}/admin/images/project/{{ $project->image }}"/>
+                                            <img loading="lazy" class="card-img-top mt-0 ml-0 mr-0 auto" alt="..."  style="width:20%;"  src="{{ URL::to('/') }}/admin/images/project/{{ $project->image }}"/>
                                         </td>
                                         
-                                            <td>
+                                            <td  style="width:20%;">
 
                                                 <div class="row">
                                                     <a href="{{ route('admin.project.edit',$project->id) }}"
@@ -110,11 +113,11 @@
                                                     </div>
                                                 </div>
                                             </section>
-                                            @endforeach
+                                          
 
 
                                         </tr>
-
+                                        @endforeach
                                     </tbody>
                                     <tfoot>
                                         <tr>

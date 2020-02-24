@@ -23,7 +23,7 @@ class CreateEducationTable extends Migration
             $table->string('ed_start_year')->nullable();
             $table->string('ed_end_year')->nullable();
             $table->string('score')->nullable();
-            $table->string('ed_description')->nullable();
+            $table->longText('ed_description')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();
         });

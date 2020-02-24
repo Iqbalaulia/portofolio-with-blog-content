@@ -4,7 +4,7 @@
     <section class="profile">
         <div class="card">
             <div class="card-body">
-                <form action="{{route('admin.experiences.update',$myExperiences->user_id)}}" method="post" enctype="multipart/form-data">
+                <form action="{{route('admin.experiences.update',$myExperiences->id)}}" method="post" enctype="multipart/form-data">
                     @csrf
                     @method('PATCH')                    
 
@@ -16,7 +16,7 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon3"><i
-                                                    class="la la-map-marker"></i></span>
+                                                    class="la la-header"></i></span>
                                         </div>
                                     <input type="text" value="{{$myExperiences->title}}" name="title" class="form-control"
                                             placeholder="Addon to Left" aria-describedby="basic-addon3">
@@ -31,7 +31,7 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon3"><i
-                                                    class="la la-map-marker"></i></span>
+                                                    class="la la-graduation-cap"></i></span>
                                         </div>
                                     <input type="text" value="{{$myExperiences->type_of_work}}" name="type_of_work" class="form-control"
                                             placeholder="Addon to Left" aria-describedby="basic-addon3">
@@ -46,7 +46,7 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon3"><i
-                                                    class="la la-map-marker"></i></span>
+                                                    class="la la-industry"></i></span>
                                         </div>
                                         <input type="text" value="{{$myExperiences->company}}" name="company" class="form-control" placeholder="Addon to Left"
                                             aria-describedby="basic-addon3">
@@ -76,7 +76,7 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon3"><i
-                                                    class="la la-user"></i></span>
+                                                    class="la la-calendar-o"></i></span>
                                         </div>
                                         <input type="month" value="{{$myExperiences->ex_start_year}}" name="ex_start_year" class="form-control"
                                             placeholder="Addon to Left" aria-describedby="basic-addon3">
@@ -91,7 +91,7 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon3"><i
-                                                    class="la la-user"></i></span>
+                                                    class="la la-calendar-o"></i></span>
                                         </div>
                                         <input type="month" value="{{$myExperiences->ex_end_year}}" name="ex_end_year" class="form-control"
                                             placeholder="Addon to Left" aria-describedby="basic-addon3">

@@ -4,7 +4,7 @@
     <section class="profile">
         <div class="card">
             <div class="card-body">
-                <form action="{{route('admin.skill.update',$mySkill->user_id)}}" method="post" enctype="multipart/form-data">
+                <form action="{{route('admin.skill.update',$mySkill->id)}}" method="post" enctype="multipart/form-data">
                     @csrf
                     @method('PATCH')                    
 

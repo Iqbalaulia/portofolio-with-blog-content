@@ -102,7 +102,7 @@ class AdminDashboardProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $user_id)
+    public function update(Request $request, $id)
     {
         $imageProject = $request->file('image');
         if(empty($imageProject)){
@@ -130,7 +130,7 @@ class AdminDashboardProjectController extends Controller
         }
 
         // dd($formEducation);
-        Project::where('user_id',$user_id)->update($formProject);
+        Project::whereId($id)->update($formProject);
         return redirect('admin/project')->with('success', 'Data Edited successfully.');
 
     }

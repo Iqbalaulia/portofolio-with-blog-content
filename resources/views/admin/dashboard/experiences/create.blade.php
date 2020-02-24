@@ -15,7 +15,7 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon3"><i
-                                                    class="la la-map-marker"></i></span>
+                                                    class="la la-header"></i></span>
                                         </div>
                                         <input type="text" name="title" class="form-control"
                                             placeholder="Addon to Left" aria-describedby="basic-addon3">
@@ -30,7 +30,7 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon3"><i
-                                                    class="la la-map-marker"></i></span>
+                                                    class="la la-graduation-cap"></i></span>
                                         </div>
                                         <input type="text" name="type_of_work" class="form-control"
                                             placeholder="Addon to Left" aria-describedby="basic-addon3">
@@ -45,7 +45,7 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon3"><i
-                                                    class="la la-map-marker"></i></span>
+                                                    class="la la-industry"></i></span>
                                         </div>
                                         <input type="text" name="company" class="form-control" placeholder="Addon to Left"
                                             aria-describedby="basic-addon3">
@@ -75,7 +75,7 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon3"><i
-                                                    class="la la-user"></i></span>
+                                                    class="la la-calendar-o"></i></span>
                                         </div>
                                         <input type="month" name="ex_start_year" class="form-control"
                                             placeholder="Addon to Left" aria-describedby="basic-addon3">
@@ -90,7 +90,7 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon3"><i
-                                                    class="la la-user"></i></span>
+                                                    class="la la-calendar-o"></i></span>
                                         </div>
                                         <input type="month" name="ex_end_year" class="form-control"
                                             placeholder="Addon to Left" aria-describedby="basic-addon3">

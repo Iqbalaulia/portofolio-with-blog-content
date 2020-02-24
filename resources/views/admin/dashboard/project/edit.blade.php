@@ -4,7 +4,7 @@
     <section class="profile">
         <div class="card">
             <div class="card-body">
-                <form action="{{route('admin.project.update',$myProject->user_id)}}" method="post" enctype="multipart/form-data">
+                <form action="{{route('admin.project.update',$myProject->id)}}" method="post" enctype="multipart/form-data">
                     @csrf
                     @method('PATCH')                    
 

@@ -83,7 +83,7 @@ class AdminDashboardSkillController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $user_id)
+    public function update(Request $request, $id)
     {
         $formSkill = array(
                 
@@ -92,7 +92,7 @@ class AdminDashboardSkillController extends Controller
                            
         );
 
-        Skill::where('user_id',$user_id)->update($formSkill);
+        Skill::whereId($id)->update($formSkill);
         return redirect('admin/skill')->with('success', 'Data Edited successfully.');
     }
 

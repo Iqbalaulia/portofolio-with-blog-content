@@ -111,7 +111,7 @@ class AdminDashboardEducationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $user_id)
+    public function update(Request $request, $id)
     {
         $imageEducation = $request->file('image');
         if(empty($imageEducation)){
@@ -148,7 +148,7 @@ class AdminDashboardEducationController extends Controller
         }
 
         // dd($formEducation);
-        Education::where('user_id',$user_id)->update($formEducation);
+        Education::whereId($id)->update($formEducation);
         return redirect('admin/education')->with('success', 'Data Edited successfully.');
 
     }

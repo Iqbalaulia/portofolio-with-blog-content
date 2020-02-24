@@ -47,9 +47,12 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php $no = 0;?>
+                                        @foreach ($myExperiences as $experiences)
+                                        <?php $no++ ;?>
                                         <tr>
-                                            @foreach ($myExperiences as $experiences)
-                                            <td>Tiger Nixon</td>
+                                         
+                                            <td>{{ $no }}</td>
                                             <td>{{ $experiences->title }}</td>
                                             <td>{{ $experiences->type_of_work }}</td>
                                             <td>{{ $experiences->company }}</td>
@@ -111,11 +114,11 @@
                                                     </div>
                                                 </div>
                                             </section>
-                                            @endforeach
+                                          
 
 
                                         </tr>
-
+                                        @endforeach
                                     </tbody>
                                     <tfoot>
                                         <tr>

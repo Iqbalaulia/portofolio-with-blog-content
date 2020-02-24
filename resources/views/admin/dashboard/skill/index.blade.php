@@ -45,9 +45,13 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php $no = 0;?>
+                                        @foreach ($mySkill as $skill)
+                                        <?php $no++ ;?>
+
                                         <tr>
-                                            @foreach ($mySkill as $skill)
-                                            <td>Tiger Nixon</td>
+                                           
+                                            <td>{{ $no }}</td>
                                             <td>{{ $skill->title }}</td>
                                             <td>{{ $skill->range_skill }}</td>
                                             
@@ -107,10 +111,10 @@
                                                     </div>
                                                 </div>
                                             </section>
-                                            @endforeach
-
+                                           
 
                                         </tr>
+                                        @endforeach
 
                                     </tbody>
                                     <tfoot>

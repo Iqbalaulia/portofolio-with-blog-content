@@ -90,7 +90,7 @@ class AdminDashboardExperiencesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $user_id)
+    public function update(Request $request, $id)
     {
         $formDataExperiences = array(
 
@@ -105,7 +105,7 @@ class AdminDashboardExperiencesController extends Controller
 
         );  
 
-        Experience::where('user_id',$user_id)->update($formDataExperiences);
+        Experience::whereId($id)->update($formDataExperiences);
         return redirect('admin/experiences')->with('success', 'Data Edited successfully.');
 
     }

@@ -4,7 +4,7 @@
     <section class="profile">
         <div class="card">
             <div class="card-body">
-                <form action="{{route('admin.education.update',$myEducation->user_id)}}" method="post" enctype="multipart/form-data">
+                <form action="{{route('admin.education.update',$myEducation->id)}}" method="post" enctype="multipart/form-data">
                     @csrf
                     @method('PATCH')                    
 
