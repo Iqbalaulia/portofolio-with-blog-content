@@ -90,7 +90,7 @@
                                 </li>
                                 <li class="d-flex"><span>Country:</span> <span>{{ $profileDetail['country'] }}</span>
                                 </li>
-                                <li class="d-flex"><span>Email:</span> <span>{{ $profileUser['email'] }}</span></li>
+                                <li class="d-flex"><span>Email:</span> <span>{{ $profileDetail['email'] }}</span></li>
                                 <li class="d-flex"><span>Phone: </span> <span>{{ $profileDetail['phone'] }}</span></li>
                             </ul>
                         </div>
@@ -115,8 +115,7 @@
                 <div class="col-md-10 heading-section text-center ftco-animate">
                     <h1 class="big big-2">Resume</h1>
                     <h2 class="mb-4">Resume</h2>
-                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It
-                        is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                    <p></p>
                 </div>
             </div>
             <div class="row">
@@ -186,7 +185,7 @@
                 <div class="col-md-12 heading-section text-center ftco-animate">
                     <h1 class="big big-2">Services</h1>
                     <h2 class="mb-4">Services</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                    <p></p>
                 </div>
             </div>
             <div class="row">
@@ -234,7 +233,7 @@
                 <div class="col-md-12 heading-section text-center ftco-animate">
                     <h1 class="big big-2">Skills</h1>
                     <h2 class="mb-4">My Skills</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                    <p></p>
                 </div>
             </div>
             <div class="row">
@@ -267,7 +266,7 @@
                 <div class="col-md-12 heading-section text-center ftco-animate">
                     <h1 class="big big-2">Projects</h1>
                     <h2 class="mb-4">Our Projects</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                    <p></p>
                 </div>
             </div>
             <div class="row">
@@ -297,7 +296,7 @@
                 <div class="col-md-7 heading-section text-center ftco-animate">
                     <h1 class="big big-2">Blog</h1>
                     <h2 class="mb-4">Our Blog</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                    <p></p>
                 </div>
             </div>
             <div class="row d-flex">
@@ -419,7 +418,7 @@
                 <div class="col-md-7 heading-section text-center ftco-animate">
                     <h1 class="big big-2">Contact</h1>
                     <h2 class="mb-4">Contact Me</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                    <p></p>
                 </div>
             </div>
 
@@ -430,7 +429,7 @@
                             <span class="icon-map-signs"></span>
                         </div>
                         <h3 class="mb-4">Address</h3>
-                        <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+                        <p>{{ $profileDetail['address'] }}</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -439,7 +438,7 @@
                             <span class="icon-phone2"></span>
                         </div>
                         <h3 class="mb-4">Contact Number</h3>
-                        <p><a href="tel://1234567920">+ 1235 2355 98</a></p>
+                        <p><a href="tel://{{ $profileDetail['phone'] }}">{{ $profileDetail['phone'] }}</a></p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -448,7 +447,7 @@
                             <span class="icon-paper-plane"></span>
                         </div>
                         <h3 class="mb-4">Email Address</h3>
-                        <p><a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                        <p><a href="mailto:{{ $profileDetail['email'] }}">{{ $profileDetail['email'] }}</a></p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -457,7 +456,7 @@
                             <span class="icon-globe"></span>
                         </div>
                         <h3 class="mb-4">Website</h3>
-                        <p><a href="#">yoursite.com</a></p>
+                        <p><a href="http://www.iqbalaulia.com/">iqbalaulia.com</a></p>
                     </div>
                 </div>
             </div>
