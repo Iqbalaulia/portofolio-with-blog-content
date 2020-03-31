@@ -115,7 +115,8 @@
                 <div class="col-md-10 heading-section text-center ftco-animate">
                     <h1 class="big big-2">Resume</h1>
                     <h2 class="mb-4">Resume</h2>
-                    <p></p>
+                    <p>
+                        It contains about my educational history and work experience</p>
                 </div>
             </div>
             <div class="row">
@@ -185,7 +186,8 @@
                 <div class="col-md-12 heading-section text-center ftco-animate">
                     <h1 class="big big-2">Services</h1>
                     <h2 class="mb-4">Services</h2>
-                    <p></p>
+                    <p>Things I can offer
+                    </p>
                 </div>
             </div>
             <div class="row">
@@ -233,7 +235,8 @@
                 <div class="col-md-12 heading-section text-center ftco-animate">
                     <h1 class="big big-2">Skills</h1>
                     <h2 class="mb-4">My Skills</h2>
-                    <p></p>
+                    <p>
+                        The following are my skills in the world of technology</p>
                 </div>
             </div>
             <div class="row">
@@ -266,7 +269,8 @@
                 <div class="col-md-12 heading-section text-center ftco-animate">
                     <h1 class="big big-2">Projects</h1>
                     <h2 class="mb-4">Our Projects</h2>
-                    <p></p>
+                    <p>
+                        Projects that I have worked on or contributed to</p>
                 </div>
             </div>
             <div class="row">
