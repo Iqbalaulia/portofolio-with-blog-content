@@ -253,7 +253,9 @@
                   <h6 class="dropdown-header m-0">
                     <span class="grey darken-2">Messages</span>
                   </h6>
-                <span class="notification-tag badge badge-default badge-warning float-right m-0">{{ $messageCount }}</span>
+                <span class="notification-tag badge badge-default badge-warning float-right m-0">
+                  {{ $messageCount }}
+                </span>
                 </li>
                 <li class="scrollable-container media-list w-100">
                   

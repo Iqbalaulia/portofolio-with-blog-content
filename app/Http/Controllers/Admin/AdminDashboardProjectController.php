@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Message;
 use App\Project;
 use Illuminate\Support\Facades\Auth;
 
@@ -18,7 +19,9 @@ class AdminDashboardProjectController extends Controller
     {
         $user = Auth::user()->id;
         $myProject = Project::where('user_id', $user)->get();
-        return view('admin.dashboard.project.index',compact('myProject'));
+        $myMessage = Message::all();
+        $messageCount = $myMessage->count();
+        return view('admin.dashboard.project.index',compact('myProject','myMessage','messageCount'));
     }
 
     /**
@@ -91,7 +94,9 @@ class AdminDashboardProjectController extends Controller
     public function edit($id)
     {
         $myProject = Project::findOrFail($id);
-        return view('admin.dashboard.project.edit',compact('myProject'));
+        $myMessage = Message::all();
+        $messageCount = $myMessage->count();
+        return view('admin.dashboard.project.edit',compact('myProject','myMessage','messageCount'));
 
     }
 

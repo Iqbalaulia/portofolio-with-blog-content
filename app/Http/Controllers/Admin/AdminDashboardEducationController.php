@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Education;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Message;
 use Illuminate\Support\Facades\Auth;
 
 class AdminDashboardEducationController extends Controller
@@ -16,8 +17,10 @@ class AdminDashboardEducationController extends Controller
      */
     public function index()
     {
+        $myMessage = Message::all();
+        $messageCount = $myMessage->count();
         $myEducation = Education::all();
-        return view('admin.dashboard.education.index', compact('myEducation'));
+        return view('admin.dashboard.education.index', compact('myEducation','myMessage','messageCount'));
 
     }
 
@@ -101,7 +104,11 @@ class AdminDashboardEducationController extends Controller
     public function edit($id)
     {
         $myEducation = Education::findOrFail($id);
-        return view('admin.dashboard.education.edit',compact('myEducation'));
+        $myMessage = Message::all();
+        $messageCount = $myMessage->count();
+        return view('admin.dashboard.education.edit',compact(
+            'myEducation','myMessage','messageCount'
+        ));
     }
 
     /**

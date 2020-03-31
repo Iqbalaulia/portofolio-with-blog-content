@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Message;
 
 class AdminDashboardController extends Controller
 {
@@ -14,7 +15,9 @@ class AdminDashboardController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard.dashboardadmin.index');
+        $myMessage = Message::all();
+        $messageCount = $myMessage->count();
+        return view('admin.dashboard.dashboardadmin.index',compact('myMessage','messageCount'));
     }
 
     

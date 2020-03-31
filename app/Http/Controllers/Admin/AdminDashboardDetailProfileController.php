@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\DetailProfile;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Message;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 
@@ -27,7 +28,9 @@ class AdminDashboardDetailProfileController extends Controller
      */
     public function create()
     {
-        return view('admin.dashboard.profile.create');
+        $myMessage = Message::all();
+        $messageCount = $myMessage->count();
+        return view('admin.dashboard.profile.create' ,compact('myMessage','messageCount'));
     }
 
     /**
@@ -87,9 +90,14 @@ class AdminDashboardDetailProfileController extends Controller
     {
         $detailProfile = DetailProfile::where('user_id',$user_id)->first();
         $profileUser = User::where('id',$user_id)->first();
+        $myMessage = Message::all();
+        $messageCount = $myMessage->count();
+
 
         // dd($profileUser);
-        return view('admin.dashboard.profile.edit', compact('detailProfile','profileUser'));
+        return view('admin.dashboard.profile.edit', compact(
+            'detailProfile','profileUser' ,'myMessage','messageCount'
+        ));
 
     }
 

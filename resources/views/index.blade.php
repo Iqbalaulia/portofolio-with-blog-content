@@ -130,7 +130,13 @@
 
                             <div class="resume-wrap ftco-animate">
                                 <span
-                                    class="date">{{ date('Y', strtotime($edu->ed_start_year)) }}-{{ date('Y', strtotime($edu->ed_end_year)) }}</span>
+                                    class="date">{{ date('Y', strtotime($edu->ed_start_year)) }}-
+                                    @if (empty($edu->ed_end_year))
+                                    Saat ini
+                                    @else
+                                    {{ date('Y', strtotime($edu->ed_end_year)) }}
+                                    @endif
+                                    </span>
                                 <h2>{{ $edu->field_study }}</h2>
                                 <span class="position">{{ $edu->university }}</span>
                                 <p class="mt-4">{{ $edu->ed_description}}</p>
@@ -152,7 +158,7 @@
 
                             <div class="resume-wrap ftco-animate">
                                 <span
-                                    class="date">{{ date('Y', strtotime($exp->ex_start_year)) }}-{{ date('Y', strtotime($exp->ex_end_year)) }}</span>
+                                    class="date">{{ date('M Y', strtotime($exp->ex_start_year)) }}-{{ date('M Y', strtotime($exp->ex_end_year)) }}</span>
                                 <h2>{{ $exp->type_of_work }}</h2>
                                 <span class="position">{{ $exp->company }}</span>
                                 <p class="mt-4">{{ $exp->ex_description}}</p>

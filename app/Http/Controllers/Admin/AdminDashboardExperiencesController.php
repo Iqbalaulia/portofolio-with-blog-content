@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Experience;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Message;
 use Illuminate\Support\Facades\Auth;
 
 class AdminDashboardExperiencesController extends Controller
@@ -18,7 +19,9 @@ class AdminDashboardExperiencesController extends Controller
     {
         $user = Auth::user()->id;
         $myExperiences = Experience::where('user_id',$user)->get();
-        return view('admin.dashboard.experiences.index',compact('myExperiences'));
+        $myMessage = Message::all();
+        $messageCount = $myMessage->count();
+        return view('admin.dashboard.experiences.index',compact('myExperiences','myMessage','messageCount'));
 
     }
 
@@ -79,7 +82,11 @@ class AdminDashboardExperiencesController extends Controller
     public function edit($id)
     {
         $myExperiences = Experience::findOrFail($id);
-        return view('admin.dashboard.experiences.edit',compact('myExperiences'));
+        $myMessage = Message::all();
+        $messageCount = $myMessage->count();
+        return view('admin.dashboard.experiences.edit',compact(
+            'myExperiences','myMessage','messageCount'
+        ));
 
     }
 

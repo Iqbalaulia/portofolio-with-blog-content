@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Message;
 use App\Skill;
 use Illuminate\Support\Facades\Auth;
 
@@ -18,7 +19,9 @@ class AdminDashboardSkillController extends Controller
     {
         $user = Auth::user()->id;
         $mySkill = Skill::where('user_id', $user)->get();
-        return view('admin.dashboard.skill.index',compact('mySkill'));
+        $myMessage = Message::all();
+        $messageCount = $myMessage->count();
+        return view('admin.dashboard.skill.index',compact('mySkill','myMessage','messageCount'));
 
     }
 
@@ -73,7 +76,9 @@ class AdminDashboardSkillController extends Controller
     public function edit($id)
     {
         $mySkill = Skill::findOrFail($id);
-        return view('admin.dashboard.skill.edit',compact('mySkill'));
+        $myMessage = Message::all();
+        $messageCount = $myMessage->count();
+        return view('admin.dashboard.skill.edit',compact('mySkill','myMessage','messageCount'));
     }
 
     /**
