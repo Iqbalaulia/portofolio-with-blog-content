@@ -32,7 +32,11 @@ class AdminDashboardSkillController extends Controller
      */
     public function create()
     {
-        return view('admin.dashboard.skill.create');
+        $myMessage = Message::all();
+        $messageCount = $myMessage->count();
+        return view('admin.dashboard.skill.create', compact(
+            'myMessage','messageCount'
+        ));
 
     }
 

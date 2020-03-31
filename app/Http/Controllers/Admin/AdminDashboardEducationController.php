@@ -31,7 +31,11 @@ class AdminDashboardEducationController extends Controller
      */
     public function create()
     {
-        return view('admin.dashboard.education.create');
+        $myMessage = Message::all();
+        $messageCount = $myMessage->count();
+        return view('admin.dashboard.education.create', compact(
+            'myMessage', 'messageCount'
+        ));
 
     }
 

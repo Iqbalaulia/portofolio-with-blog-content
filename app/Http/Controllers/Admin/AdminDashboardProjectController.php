@@ -31,7 +31,11 @@ class AdminDashboardProjectController extends Controller
      */
     public function create()
     {
-        return view('admin.dashboard.project.create');
+        $myMessage = Message::all();
+        $messageCount = $myMessage->count();
+        return view('admin.dashboard.project.create', compact(
+            'myMessage','messageCount'
+        ));
 
     }
 

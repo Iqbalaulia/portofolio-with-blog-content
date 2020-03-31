@@ -32,7 +32,11 @@ class AdminDashboardExperiencesController extends Controller
      */
     public function create()
     {
-        return view('admin.dashboard.experiences.create');
+        $myMessage = Message::all();
+        $messageCount = $myMessage->count();
+        return view('admin.dashboard.experiences.create', compact(
+            'myMessage','messageCount'
+        ));
 
     }
 
