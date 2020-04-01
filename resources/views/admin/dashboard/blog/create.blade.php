@@ -4,7 +4,16 @@
     <section class="profile">
         <div class="card">
             <div class="card-body">
-                <form action="{{route('admin.my-blog.store')}}" method="post" enctype="multipart/form-data">
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error}}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
+                <form action="{{route('admin.my-blog.store')}}" method="POST" enctype="multipart/form-data">
                     @csrf
 
                     <div class="row">
@@ -25,29 +34,38 @@
                         </div>
                         <div class="col-md-6">
                             <div class="card-block mt-1">
-                                <p>Bidang Pengalaman</p>
+                                <p>Category Blog</p>
                                 <fieldset>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon3"><i
                                                     class="la la-graduation-cap"></i></span>
                                         </div>
-                                        <input type="text" name="type_of_work" class="form-control"
-                                            placeholder="Addon to Left" aria-describedby="basic-addon3">
+                                        <select name="category" id="" class="form-control">
+                                            <option value="" disabled>Category Blog</option>
+                                            @forelse ($categoryBlog as $category)
+                                                
+                                                <option value="{{$category->category}}">{{$category->category}}</option>
+
+                                            @empty
+                                                <option value="">Category Kosong</option>
+                                            @endforelse
+                                        </select>
+                                        
                                     </div>
                                 </fieldset>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="card-block mt-1">
-                                <p>Perusahaan</p>
+                                <p>Thumbnail</p>
                                 <fieldset>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon3"><i
                                                     class="la la-industry"></i></span>
                                         </div>
-                                        <input type="text" name="company" class="form-control" placeholder="Addon to Left"
+                                        <input type="file" name="image" class="form-control" placeholder="Addon to Left"
                                             aria-describedby="basic-addon3">
                                     </div>
                                 </fieldset>
@@ -65,7 +83,7 @@
                         </div>
                         <div class="col-sm-12 mt-1">
                             <div class="buton-add w-100" align="right">
-                                <button type="submit" class="mr-1 mb-1 btn btn-outline-success btn-min-width"><i
+                                <button type="submit" class="btn-block mr-1 mb-1 btn btn-outline-success btn-min-width"><i
                                         class="la la-user"></i> Save Detail</button>
 
                             </div>
