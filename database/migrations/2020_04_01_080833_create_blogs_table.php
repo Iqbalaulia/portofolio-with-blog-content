@@ -18,6 +18,7 @@ class CreateBlogsTable extends Migration
             $table->string('users_id')->nullable();
             $table->string('title');
             $table->string('slug');
+            $table->text('image');
             $table->string('category')->nullable();
             $table->longText('content');
             $table->timestamps();

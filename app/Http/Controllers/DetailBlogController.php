@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\DetailProfile;
+use App\User;
 use Illuminate\Http\Request;
 
 class DetailBlogController extends Controller
@@ -13,8 +15,13 @@ class DetailBlogController extends Controller
      */
     public function index()
     {
+        $profileUser = User::first();
+
+        $profileDetail = DetailProfile::where('user_id',$profileUser['id'])->first();
+
         return view('blog', [
             
+            'profileDetail' =>  $profileDetail,
         ]);
     }
 
