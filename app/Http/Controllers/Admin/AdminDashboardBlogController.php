@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Education;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Message;
 
 class AdminDashboardBlogController extends Controller
 {
@@ -14,7 +16,15 @@ class AdminDashboardBlogController extends Controller
      */
     public function index()
     {
-        //
+        $myMessage = Message::all();
+        $messageCount = $myMessage->count();
+        $myEducation = Education::all();
+        return view('admin.dashboard.blog.index' ,[
+            'messageCount'  => $messageCount,
+            'myEducation'   => $myEducation,
+            'myMessage'     => $myMessage,
+                 
+        ]);
     }
 
     /**
@@ -24,7 +34,15 @@ class AdminDashboardBlogController extends Controller
      */
     public function create()
     {
-        //
+        $myMessage = Message::all();
+        $messageCount = $myMessage->count();
+        $myEducation = Education::all();
+        return view('admin.dashboard.blog.create' ,[
+            'messageCount'  => $messageCount,
+            'myEducation'   => $myEducation,
+            'myMessage'     => $myMessage,
+                 
+        ]);
     }
 
     /**

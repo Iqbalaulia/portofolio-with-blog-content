@@ -19,7 +19,8 @@ Route::name('admin.')->group(function () {
         Route::resource('/skill', 'AdminDashboardSkillController');               
         Route::resource('/message-admin', 'AdminDashboardMessageController');
         Route::resource('/category-blog', 'AdminDashboardCategoryController');               
-               
+        Route::resource('/my-blog', 'AdminDashboardBlogController');               
+
 
     });
 

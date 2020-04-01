@@ -12,7 +12,12 @@
   <link rel="apple-touch-icon" href="{{ asset('/admin/app-assets/images/ico/apple-icon-120.png') }}">
   <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/admin/app-assets/images/ico/favicon.ico') }}">
 
+  @stack('prepend-style')
+ 
   @include('.admin/dashboard/include/css')
+
+  @stack('addon-style')
+
   
 </head>
 <body class="vertical-layout vertical-menu 2-columns   menu-expanded fixed-navbar"
@@ -31,8 +36,12 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
     </div>
   </div>
   
+  
+  @stack('prepend-script')
+
   @include('.admin/dashboard/include/js')
 
+  @stack('addon-script')
 </body>
 
 </html>

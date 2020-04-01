@@ -33,6 +33,10 @@
         <li class=" nav-item"><a href="{{route('admin.category-blog.index')}}"><i class="la la-download"></i><span class="menu-title" data-i18n="nav.footers.main">Category</span></a>
          
         </li>
+
+        <li class=" nav-item"><a href="{{route('admin.my-blog.index')}}"><i class="la la-download"></i><span class="menu-title" data-i18n="nav.footers.main">My Blog</span></a>
+         
+        </li>
       
        
         

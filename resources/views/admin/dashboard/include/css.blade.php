@@ -29,3 +29,4 @@ rel="stylesheet">
 
 <link rel="stylesheet" type="text/css" href="{{ asset('/admin/app-assets/vendors/css/tables/datatable/datatables.min.css') }}">
 
+
