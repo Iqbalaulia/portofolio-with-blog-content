@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Blog;
 use App\DetailProfile;
 use App\Education;
 use App\Experience;
@@ -26,7 +27,9 @@ class LandingPageController extends Controller
         $project = Project::all();
         $skill = Skill::all();
 
-        return view('index' , compact('profileUser','profileDetail','education','experience','project','skill'));
+        $contentBlog = Blog::with('user')->get();
+
+        return view('index' , compact('profileUser','profileDetail','education','experience','project','skill','contentBlog'));
 
     }
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Blog;
 use App\DetailProfile;
 use App\User;
 use Illuminate\Http\Request;
@@ -13,15 +14,22 @@ class DetailBlogController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request, $slug)
     {
         $profileUser = User::first();
 
         $profileDetail = DetailProfile::where('user_id',$profileUser['id'])->first();
 
+        $content = Blog::with(['user'])->where('slug', $slug)->firstOrFail();
+
+        $recentBlog = Blog::with('user')->get();
+
+
         return view('blog', [
             
             'profileDetail' =>  $profileDetail,
+            'content'       =>  $content,
+            'recentBlog'    =>  $recentBlog,
         ]);
     }
 
