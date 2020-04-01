@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Category;
+use App\Education;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Message;
+use App\Http\Requests\CategoryRequest;
+
 
 class AdminDashboardCategoryController extends Controller
 {
@@ -14,7 +19,16 @@ class AdminDashboardCategoryController extends Controller
      */
     public function index()
     {
-        //
+        $myMessage = Message::all();
+        $messageCount = $myMessage->count();
+        $myEducation = Education::all();
+        $category = Category::all();
+        return view('admin.dashboard.category.index' ,[
+            'messageCount'  => $messageCount,
+            'myEducation'   => $myEducation,
+            'myMessage'     => $myMessage,
+            'category'      => $category,           
+        ]);
     }
 
     /**
@@ -24,7 +38,19 @@ class AdminDashboardCategoryController extends Controller
      */
     public function create()
     {
-        //
+        $myMessage = Message::all();
+        $messageCount = $myMessage->count();
+        $myEducation = Education::all();
+       
+        
+      
+        
+        return view('admin.dashboard.category.create' ,[
+            'messageCount'  => $messageCount,
+            'myEducation'   => $myEducation,
+            'myMessage'     => $myMessage,
+             
+        ]);
     }
 
     /**
@@ -33,9 +59,13 @@ class AdminDashboardCategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CategoryRequest $request)
     {
-        //
+        $data = $request->all();
+
+        Category::create($data);
+        
+        return redirect()->route('admin.category-blog.index');
     }
 
     /**
@@ -57,7 +87,21 @@ class AdminDashboardCategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $myMessage = Message::all();
+        $messageCount = $myMessage->count();
+        $myEducation = Education::all();
+       
+        $item = Category::findOrFail($id);
+
+      
+        
+        return view('admin.dashboard.category.edit' ,[
+            'messageCount'  => $messageCount,
+            'myEducation'   => $myEducation,
+            'myMessage'     => $myMessage,
+            'item'          => $item
+             
+        ]);
     }
 
     /**
@@ -67,9 +111,15 @@ class AdminDashboardCategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CategoryRequest $request, $id)
     {
-        //
+        $data = $request->all();
+   
+        $item = Category::findOrFail($id);
+
+        $item->update($data);
+        
+        return redirect()->route('admin.category-blog.index');
     }
 
     /**
@@ -80,6 +130,10 @@ class AdminDashboardCategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $item = Category::findOrFail($id);
+        
+        $item->delete();
+
+        return redirect()->route('admin.category-blog.index');
     }
 }

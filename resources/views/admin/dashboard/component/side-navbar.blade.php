@@ -27,10 +27,12 @@
          
         </li>
         <li class=" navigation-header">
-          <span data-i18n="nav.category.general">General</span><i class="la la-ellipsis-h ft-minus" data-toggle="tooltip"
+          <span data-i18n="nav.category.general">Blog</span><i class="la la-ellipsis-h ft-minus" data-toggle="tooltip"
           data-placement="right" data-original-title="General"></i>
         </li>
-        
+        <li class=" nav-item"><a href="{{route('admin.category-blog.index')}}"><i class="la la-download"></i><span class="menu-title" data-i18n="nav.footers.main">Category</span></a>
+         
+        </li>
       
        
         
