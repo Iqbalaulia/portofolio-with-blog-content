@@ -84,13 +84,13 @@
                             <p>{{$profileDetail['about_me']}}</p>
                             <ul class="about-info mt-4 px-md-0 px-2">
                                 <li class="d-flex"><span>Name:</span> <span>{{$profileUser['name']}}</span></li>
-                                <li class="d-flex"><span>Date of birth:</span>
-                                    <span>{{ date('d M Y', strtotime($profileDetail['date_birth'])) }}</span></li>
+                                {{-- <li class="d-flex"><span>Date of birth:</span>
+                                    <span>{{ date('d M Y', strtotime($profileDetail['date_birth'])) }}</span></li> --}}
                                 <li class="d-flex"><span>Address:</span> <span>{{ $profileDetail['address'] }}</span>
                                 </li>
                                 <li class="d-flex"><span>Country:</span> <span>{{ $profileDetail['country'] }}</span>
                                 </li>
-                                <li class="d-flex"><span>Email:</span> <span>{{ $profileDetail['email'] }}</span></li>
+                                {{-- <li class="d-flex"><span>Email:</span> <span>{{ $profileDetail['email'] }}</span></li> --}}
                                 <li class="d-flex"><span>Phone: </span> <span>{{ $profileDetail['phone'] }}</span></li>
                             </ul>
                         </div>
@@ -307,7 +307,7 @@
                 @forelse ($contentBlog as $blog)
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry justify-content-end">
-                        <a href="{{ route('detail',$blog->slug) }}" class="block-20" style="background-image: url('{{ $blog->count() ? Storage::url($blog->image) : '' }}');">
+                        <a href="{{ route('detail',$blog->slug) }}" class="block-20" style="background-image: url('{{ $blog->count() ? Storage::url($blog->image) : '' }}'); background-size: contain;">
                         </a>
                         <div class="text mt-3 float-right d-block">
                             <div class="d-flex align-items-center mb-3 meta">
