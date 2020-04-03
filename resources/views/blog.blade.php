@@ -10,16 +10,63 @@
     @include('./component/css')
 
     <style>
-     @media only screen and (max-width: 375px) {
-          
-         
-          .ftco-section p img{
-            
-            width: 92vw !important;
-            height: 35vh !important;
-          }
+            @media only screen and (max-width: 375px) {
+                 
 
-        }
+                }
+            /* Extra small devices (portrait phones, less than 576px) */
+            @media (max-width: 575.98px) { 
+              .ftco-section p img{
+                    
+                    width: 92vw !important;
+                    height: 20vh !important;
+                  }
+              .ftco-section p {
+                text-align: left;
+              }
+             }
+            /* Small devices (landscape phones, 576px and up) */
+            @media (min-width: 576px) and (max-width: 767.98px) {
+              .ftco-section p img{
+                    
+                    width: 65vw !important;
+                    height: 30vh !important;
+                  }
+              .ftco-section p {
+                text-align: left;
+              }
+
+              }
+
+            /* Medium devices (tablets, 768px and up) */
+            @media (min-width: 768px) and (max-width: 991.98px) { 
+              .ftco-section p img{
+                    
+                    width: 88vw !important;
+                    height: 32vh !important;
+                  }
+              .ftco-section p {
+                text-align: left;
+              }
+             }
+
+            /* Large devices (desktops, 992px and up) */
+            @media (min-width: 992px) and (max-width: 1199.98px) { 
+              .ftco-section p img{
+                    
+                    width: 55vw !important;
+                    height: 28vh !important;
+                  }
+              .ftco-section p {
+                text-align: left;
+              }
+             }
+             
+
+            /* // Extra large devices (large desktops, 1200px and up) */
+            @media (min-width: 1200px) { 
+          
+             }
     </style>
 
   </head>
