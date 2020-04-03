@@ -27,7 +27,7 @@
 	  
 	  
     {{-- Header --}}
-    @include('./component/header')
+    @include('./component/header-blog')
     {{--  --}}
 
 	  <section class="hero-wrap js-fullheight" data-stellar-background-ratio="0.5">

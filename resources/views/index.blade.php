@@ -97,7 +97,7 @@
                     </div>
                     <div class="counter-wrap ftco-animate d-flex mt-md-3">
                         <div class="text">
-                            <p class="mb-4">
+                            <p class="mb-4">    
                                 <span class="number" data-number="{{$profileDetail['project_complate']}}">0</span>
                                 <span>Project complete</span>
                             </p>
@@ -313,7 +313,7 @@
                             <div class="d-flex align-items-center mb-3 meta">
                                 <p class="mb-0">
                                     <span class="mr-2">{{ $blog->created_at->format('F n, Y') }}</span>
-                                    <a href="#" class="mr-2">{{ $blog->user->name }}</a>
+                                    <a href="{{ route('detail',$blog->slug) }}" class="mr-2">{{ $blog->user->name }}</a>
                                     {{-- <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a> --}}
                                 </p>
                             </div>
