@@ -193,7 +193,7 @@
                 <div class="text">
                 <h3 class="heading"><a href="{{ route('detail', $recent->slug)}}">{{$recent->title}}</a></h3>
                   <div class="meta">
-                  <div><a href="{{ route('detail', $recent->slug)}}"><span class="icon-calendar"></span>   {{ $recent->created_at->format('F n, Y')   }}</a></div>
+                  <div><a href="{{ route('detail', $recent->slug)}}"><span class="icon-calendar"></span>   {{ $recent->created_at->format('d M yy')   }}</a></div>
                     <div><a href="{{ route('detail', $recent->slug)}}"><span class="icon-person"></span> {{ $recent->user->name }}</a></div>
                     {{-- <div><a href="#"><span class="icon-chat"></span> 19</a></div> --}}
                   </div>
