@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Message;
 use App\Http\Requests\BlogRequest;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use illuminate\Support\Str;
 
@@ -71,6 +72,7 @@ class AdminDashboardBlogController extends Controller
             'slug'      => Str::slug($request->title),
             'category'  => $request->category,
             'content'   => $request->content,
+            'date_blog' => Carbon::now(),
             'image'     => $request->file('image')->store('assets/thumbnail', 'public')
         ]);
         
