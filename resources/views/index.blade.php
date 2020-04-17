@@ -312,7 +312,7 @@
                         <div class="text mt-3 float-right d-block">
                             <div class="d-flex align-items-center mb-3 meta">
                                 <p class="mb-0">
-                                    <span class="mr-2">{{ $blog->created_at->format('F n, Y') }}</span>
+                                    <span class="mr-2">{{\Carbon\Carbon::create($blog->date_blog)->format('F n, Y')}}</span>
                                     <a href="{{ route('detail',$blog->slug) }}" class="mr-2">{{ $blog->user->name }}</a>
                                     {{-- <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a> --}}
                                 </p>
