@@ -23,14 +23,21 @@ class AdminDashboardBlogController extends Controller
     public function index()
     {
         $myMessage = Message::all();
+        
         $messageCount = $myMessage->count();
+        
         $myEducation = Education::all();
+        
         $blogContent    =   Blog::all();
 
         return view('admin.dashboard.blog.index' ,[
+
             'messageCount'  => $messageCount,
+            
             'myEducation'   => $myEducation,
+            
             'myMessage'     => $myMessage,
+            
             'blogContent'   => $blogContent, 
                  
         ]);
@@ -44,14 +51,21 @@ class AdminDashboardBlogController extends Controller
     public function create()
     {
         $myMessage = Message::all();
+
         $messageCount = $myMessage->count();
+
         $myEducation = Education::all();
 
         $categoryBlog = Category::all();
+
         return view('admin.dashboard.blog.create' ,[
+
             'messageCount'  => $messageCount,
+
             'myEducation'   => $myEducation,
+
             'myMessage'     => $myMessage,
+
             'categoryBlog'  => $categoryBlog, 
                  
         ]);
@@ -65,18 +79,19 @@ class AdminDashboardBlogController extends Controller
      */
     public function store(BlogRequest $request)
     {
+        $data = $request->all();
         
-        Blog::create([
-            'title'     => $request->title,
-            'users_id'  => Auth::user()->id,
-            'slug'      => Str::slug($request->title),
-            'category'  => $request->category,
-            'content'   => $request->content,
-            'date_blog' => Carbon::now(),
-            'image'     => $request->file('image')->store('assets/thumbnail', 'public')
-        ]);
-        
-        
+        $data['users_id'] = Auth::user()->id;
+
+        $data['slug'] = Str::slug($request->title);
+
+        $data['date_blog'] = Carbon::now();
+
+        $data['image'] = $request->file('image')->store('assets/thumbnail', 'public');
+
+        // dd($data);
+
+        Blog::create($data); 
         
         return redirect()->route('admin.my-blog.index');
     }
@@ -100,19 +115,30 @@ class AdminDashboardBlogController extends Controller
      */
     public function edit($id)
     {
-        $myMessage = Message::all();
-        $messageCount = $myMessage->count();
-        $myEducation = Education::all();
-        $categoryBlog = Category::all();
-        $item = Blog::findOrFail($id);
+        // content pada message navbar
 
-      
+        $myMessage = Message::all();
+
+        $messageCount = $myMessage->count();
+
+        $myEducation = Education::all();
+
+        // edited blog
+
+        $categoryBlog = Category::all();
+
+        $item = Blog::findOrFail($id);
         
         return view('admin.dashboard.blog.edit' ,[
+
             'messageCount'  => $messageCount,
+
             'myEducation'   => $myEducation,
+
             'myMessage'     => $myMessage,
+
             'item'          => $item,
+
             'categoryBlog'  => $categoryBlog,
              
         ]);
