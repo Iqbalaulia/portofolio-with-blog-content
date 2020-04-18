@@ -21,10 +21,15 @@ class LandingPageController extends Controller
     public function index()
     {
         $profileUser = User::first();
+
         $profileDetail = DetailProfile::where('user_id',$profileUser['id'])->first();
+        
         $education = Education::orderBy('ed_start_year','DESC')->get();
+        
         $experience = Experience::orderBy('ex_start_year','DESC')->get();
+        
         $project = Project::all();
+        
         $skill = Skill::all();
 
         $contentBlog = Blog::with('user')->get();

@@ -28,7 +28,9 @@ class DetailBlogController extends Controller
         return view('blog', [
             
             'profileDetail' =>  $profileDetail,
+            
             'content'       =>  $content,
+
             'recentBlog'    =>  $recentBlog,
         ]);
     }

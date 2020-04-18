@@ -35,16 +35,10 @@ class MessageController extends Controller
      */
     public function store(Request $request)
     {
-        $formMessage = array(
-                
-            'name'                   =>   $request->name,
-            'email'                     =>   $request->email,
-            'subject'               =>   $request->subject,
-            'message'               =>   $request->message,
-                           
-        );
+        $data = $request->all();
 
-        Message::create($formMessage);
+        Message::create($data);
+        
         return redirect('/')->with('success', 'Data Added successfully.');
     }
 
