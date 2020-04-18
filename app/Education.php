@@ -15,8 +15,7 @@ class Education extends Model
         'ed_start_year',
         'ed_end_year',
         'score',
-        'ed_description',
-        'image',
+        'ed_description',        
     ];
     public function user()
     {

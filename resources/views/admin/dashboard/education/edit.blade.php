@@ -101,19 +101,6 @@
                         </div>
                         <div class="col-md-6">
                             <div class="card-block mt-1">
-                                <p>Photo</p>
-                                <fieldset>
-                                    <div class="input-group">
-                                        <input type="file" class="form-control" value="{{$myEducation->image}}" name="image" class="" id="inputGroupFile01">
-                                        <img loading="lazy" class="card-img-top mt-0 ml-5" alt="..." style="width:50%; margin-bottom:10%;" src="{{ URL::to('/') }}/admin/images/education/{{ $myEducation->image }}"/>
-                                        <input type="hidden" name="hidden_image" value="{{ URL::to('/') }}/admin/images/education/{{ $myEducation->image }}">
-
-                                    </div>
-                                </fieldset>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card-block mt-1">
                                 <p>Deskripsi</p>
                                 <fieldset>
                                     <div class="input-group">

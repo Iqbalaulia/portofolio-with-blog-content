@@ -97,17 +97,7 @@
                                     </div>
                                 </fieldset>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card-block mt-1">
-                                <p>Photo</p>
-                                <fieldset>
-                                    <div class="input-group">
-                                        <input type="file" class="form-control" name="image" class="" id="inputGroupFile01">
-                                    </div>
-                                </fieldset>
-                            </div>
-                        </div>
+                        </div>                     
                         <div class="col-md-6">
                             <div class="card-block mt-1">
                                 <p>Deskripsi</p>

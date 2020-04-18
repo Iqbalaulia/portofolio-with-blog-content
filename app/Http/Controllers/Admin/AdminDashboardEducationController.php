@@ -18,9 +18,20 @@ class AdminDashboardEducationController extends Controller
     public function index()
     {
         $myMessage = Message::all();
+
         $messageCount = $myMessage->count();
+
         $myEducation = Education::all();
-        return view('admin.dashboard.education.index', compact('myEducation','myMessage','messageCount'));
+
+        return view('admin.dashboard.education.index', [
+            
+            'myEducation' => $myEducation,
+
+            'myMessage' => $myMessage,
+            
+            'messageCount' => $messageCount,
+
+            ]);
 
     }
 
@@ -32,10 +43,15 @@ class AdminDashboardEducationController extends Controller
     public function create()
     {
         $myMessage = Message::all();
+
         $messageCount = $myMessage->count();
-        return view('admin.dashboard.education.create', compact(
-            'myMessage', 'messageCount'
-        ));
+
+        return view('admin.dashboard.education.create', [
+            
+            'myMessage' => $myMessage, 
+            
+            'messageCount' => $messageCount,
+        ]);
 
     }
 
@@ -47,45 +63,16 @@ class AdminDashboardEducationController extends Controller
      */
     public function store(Request $request)
     {
-        $imageEducation = $request->image;
-        if(empty($imageEducation)){
-            $formEducation = array(
+       
+            $data = $request->all();
+
+            $data['user_id'] = Auth::user()->id;
             
-                'user_id'                   =>   Auth::user()->id,
-                'university'                =>   $request->university,
-                'degree'                    =>   $request->degree,
-                'field_study'               =>   $request->field_study,
-                'ed_start_year'             =>   $request->ed_start_year,
-                'ed_end_year'               =>   $request->ed_end_year,
-                'score'                     =>   $request->score,
-                'ed_description'            =>   $request->ed_description,
-               
-            );
-        }else{
-
-            $image = $request->file('image');
-            $imageEducation = rand(). '.' . $image->getClientOriginalExtension();
-            $image->move(public_path('admin/images/education'), $imageEducation);
-            $formEducation = array(
+            // dd($data);
             
-                'user_id'                   =>   Auth::user()->id,
-                'university'                =>   $request->university,
-                'degree'                    =>   $request->degree,
-                'field_study'               =>   $request->field_study,
-                'ed_start_year'             =>   $request->ed_start_year,
-                'ed_end_year'               =>   $request->ed_end_year,
-                'score'                     =>   $request->score,
-                'ed_description'            =>   $request->ed_description,
-                'image'                     =>   $imageEducation,
-               
-            );
-        }
-        
+            Education::create($data);
 
-
-        // dd($form_data);
-        Education::create($formEducation);
-        return redirect('admin/education')->with('success', 'Data Added successfully.');
+            return redirect('admin/education')->with('success', 'Data Added successfully.');
     }
 
     /**
@@ -108,11 +95,19 @@ class AdminDashboardEducationController extends Controller
     public function edit($id)
     {
         $myEducation = Education::findOrFail($id);
+
         $myMessage = Message::all();
+
         $messageCount = $myMessage->count();
-        return view('admin.dashboard.education.edit',compact(
-            'myEducation','myMessage','messageCount'
-        ));
+
+        return view('admin.dashboard.education.edit',[
+            
+            'myEducation'   =>  $myEducation,
+            
+            'myMessage'     =>  $myMessage,
+            
+            'messageCount'  =>  $messageCount,
+        ]);
     }
 
     /**
@@ -124,42 +119,16 @@ class AdminDashboardEducationController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $imageEducation = $request->file('image');
-        if(empty($imageEducation)){
-            $formEducation = array(
-            
-                'user_id'                   =>   Auth::user()->id,
-                'university'                =>   $request->university,
-                'degree'                    =>   $request->degree,
-                'field_study'               =>   $request->field_study,
-                'ed_start_year'             =>   $request->ed_start_year,
-                'ed_end_year'               =>   $request->ed_end_year,
-                'score'                     =>   $request->score,
-                'ed_description'            =>   $request->ed_description,
-               
-            );
-        }else{
+        $data = $request->all();
 
-            $myImageEducation = $request->hidden_image;
-            $myImageEducation = rand(). '.' . $imageEducation->getClientOriginalExtension();
-            $imageEducation->move(public_path('admin/images/education'), $myImageEducation);
-            $formEducation = array(
-            
-                'user_id'                   =>   Auth::user()->id,
-                'university'                =>   $request->university,
-                'degree'                    =>   $request->degree,
-                'field_study'               =>   $request->field_study,
-                'ed_start_year'             =>   $request->ed_start_year,
-                'ed_end_year'               =>   $request->ed_end_year,
-                'score'                     =>   $request->score,
-                'ed_description'            =>   $request->ed_description,
-                'image'                     =>   $myImageEducation,
-               
-            );
-        }
+        $data['user_id'] = Auth::user()->id;
+        
+        $item = Education::findOrFail($id);
+        
+        // dd($data);
+        
+        $item->update($data);
 
-        // dd($formEducation);
-        Education::whereId($id)->update($formEducation);
         return redirect('admin/education')->with('success', 'Data Edited successfully.');
 
     }
@@ -173,7 +142,9 @@ class AdminDashboardEducationController extends Controller
     public function destroy($id)
     {
         $deleteData = Education::findOrFail($id);
+        
         $deleteData->delete();
+        
         return redirect('admin/education')->with('success', 'Data is successfully deleted');
     }
 }
