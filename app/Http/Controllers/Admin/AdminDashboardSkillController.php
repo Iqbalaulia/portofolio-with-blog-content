@@ -18,10 +18,21 @@ class AdminDashboardSkillController extends Controller
     public function index()
     {
         $user = Auth::user()->id;
+
         $mySkill = Skill::where('user_id', $user)->get();
+
         $myMessage = Message::all();
+
         $messageCount = $myMessage->count();
-        return view('admin.dashboard.skill.index',compact('mySkill','myMessage','messageCount'));
+
+        return view('admin.dashboard.skill.index',[
+            
+            'mySkill'       =>  $mySkill,
+            
+            'myMessage'     =>  $myMessage,
+            
+            'messageCount'  =>  $messageCount,
+        ]);
 
     }
 
@@ -33,10 +44,16 @@ class AdminDashboardSkillController extends Controller
     public function create()
     {
         $myMessage = Message::all();
+
         $messageCount = $myMessage->count();
-        return view('admin.dashboard.skill.create', compact(
-            'myMessage','messageCount'
-        ));
+
+        return view('admin.dashboard.skill.create', [
+          
+            'myMessage'     =>  $myMessage,
+            
+            'messageCount'  =>  $messageCount,
+
+        ]);
 
     }
 
@@ -48,15 +65,12 @@ class AdminDashboardSkillController extends Controller
      */
     public function store(Request $request)
     {
-        $formSkill = array(
-                
-            'user_id'                   =>   Auth::user()->id,
-            'title'                     =>   $request->title,
-            'range_skill'               =>   $request->range_skill,
-                           
-        );
+        $data = $request->all();
 
-        Skill::create($formSkill);
+        $data['user_id'] = Auth::user()->id;
+
+        Skill::create($data);
+
         return redirect('admin/skill')->with('success', 'Data Added successfully.');
     }
 
@@ -80,9 +94,20 @@ class AdminDashboardSkillController extends Controller
     public function edit($id)
     {
         $mySkill = Skill::findOrFail($id);
+
         $myMessage = Message::all();
+
         $messageCount = $myMessage->count();
-        return view('admin.dashboard.skill.edit',compact('mySkill','myMessage','messageCount'));
+
+        return view('admin.dashboard.skill.edit',[
+            
+            'mySkill'   =>  $mySkill,
+            
+            'myMessage' =>  $myMessage,
+            
+            'messageCount'  =>  $messageCount,
+        
+            ]);
     }
 
     /**
@@ -94,14 +119,12 @@ class AdminDashboardSkillController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $formSkill = array(
-                
-            'title'                     =>   $request->title,
-            'range_skill'               =>   $request->range_skill,
-                           
-        );
+        $data = $request->all();
 
-        Skill::whereId($id)->update($formSkill);
+        $item = Skill::findOrFail($id);
+
+        $item->update($data);
+        
         return redirect('admin/skill')->with('success', 'Data Edited successfully.');
     }
 
@@ -114,7 +137,9 @@ class AdminDashboardSkillController extends Controller
     public function destroy($id)
     {
         $deleteData = Skill::findOrFail($id);
+        
         $deleteData->delete();
+        
         return redirect('admin/skill')->with('success', 'Data is successfully deleted');
     }
 }
