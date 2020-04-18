@@ -18,10 +18,22 @@ class AdminDashboardExperiencesController extends Controller
     public function index()
     {
         $user = Auth::user()->id;
+        
         $myExperiences = Experience::where('user_id',$user)->get();
+        
         $myMessage = Message::all();
+        
         $messageCount = $myMessage->count();
-        return view('admin.dashboard.experiences.index',compact('myExperiences','myMessage','messageCount'));
+        
+        return view('admin.dashboard.experiences.index',[
+            
+            'myExperiences' =>  $myExperiences,
+            
+            'myMessage'     =>  $myMessage,
+            
+            'messageCount'  =>  $messageCount,
+            
+            ]);
 
     }
 
@@ -33,10 +45,16 @@ class AdminDashboardExperiencesController extends Controller
     public function create()
     {
         $myMessage = Message::all();
+
         $messageCount = $myMessage->count();
-        return view('admin.dashboard.experiences.create', compact(
-            'myMessage','messageCount'
-        ));
+
+        return view('admin.dashboard.experiences.create', [
+            
+            'myMessage'     => $myMessage,
+            
+            'messageCount'  =>  $messageCount,
+
+        ]);
 
     }
 
@@ -48,20 +66,12 @@ class AdminDashboardExperiencesController extends Controller
      */
     public function store(Request $request)
     {
-        $formDataExperiences = array(
+        $data = $request->all();
 
-            'user_id'   =>  Auth::user()->id,
-            'title'     =>  $request->title,
-            'type_of_work'  =>  $request->type_of_work,
-            'company'       =>  $request->company,
-            'location'      =>  $request->location,
-            'ex_start_year' =>  $request->ex_start_year,
-            'ex_end_year'   =>  $request->ex_end_year,
-            'ex_description'=>  $request->ex_description,
+        $data['user_id'] = Auth::user()->id;            
 
-        );
+        Experience::create($data);
 
-        Experience::create($formDataExperiences);
         return redirect('admin/experiences')->with('success', 'Data Added successfully.');
 
     }
@@ -86,11 +96,20 @@ class AdminDashboardExperiencesController extends Controller
     public function edit($id)
     {
         $myExperiences = Experience::findOrFail($id);
+
         $myMessage = Message::all();
+
         $messageCount = $myMessage->count();
-        return view('admin.dashboard.experiences.edit',compact(
-            'myExperiences','myMessage','messageCount'
-        ));
+
+        return view('admin.dashboard.experiences.edit',[
+            
+            'myExperiences' =>  $myExperiences,
+            
+            'myMessage'     =>  $myMessage,
+            
+            'messageCount'  =>  $messageCount,
+
+        ]);
 
     }
 
@@ -103,20 +122,14 @@ class AdminDashboardExperiencesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $formDataExperiences = array(
+        $data = $request->all();
 
-            'user_id'   =>  Auth::user()->id,
-            'title'     =>  $request->title,
-            'type_of_work'  =>  $request->type_of_work,
-            'company'       =>  $request->company,
-            'location'      =>  $request->location,
-            'ex_start_year' =>  $request->ex_start_year,
-            'ex_end_year'   =>  $request->ex_end_year,
-            'ex_description'=>  $request->ex_description,
+        $data['user_id'] = Auth::user()->id;
 
-        );  
+        $item = Experience::findOrFail($id);
 
-        Experience::whereId($id)->update($formDataExperiences);
+        $item->update($data);
+
         return redirect('admin/experiences')->with('success', 'Data Edited successfully.');
 
     }
@@ -130,7 +143,9 @@ class AdminDashboardExperiencesController extends Controller
     public function destroy($id)
     {
         $deleteData = Experience::findOrFail($id);
+
         $deleteData->delete();
+        
         return redirect('admin/experiences')->with('success', 'Data is successfully deleted');
 
     }
