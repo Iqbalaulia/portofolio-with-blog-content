@@ -18,10 +18,24 @@ class AdminDashboardProfileController extends Controller
     public function index()
     {
         $profileUser = Auth::user();
-        $detailProfile = DetailProfile::where('user_id', Auth::user()->id)->first();
+        
+        $detailProfile = DetailProfile::where('user_id', $profileUser->id)->first();
+        
         $myMessage = Message::all();
+        
         $messageCount = $myMessage->count();
-        return view('admin.dashboard.profile.index',compact('profileUser','detailProfile','myMessage','messageCount'));
+        
+        return view('admin.dashboard.profile.index', [
+            
+            'profileUser'   =>  $profileUser,
+            
+            'detailProfile' =>  $detailProfile,
+            
+            'myMessage'     =>  $myMessage,
+            
+            'messageCount'  =>  $messageCount,
+            
+            ]);
 
     }
 
