@@ -17,8 +17,16 @@ class AdminDashboardMessageController extends Controller
     public function index()
     {
         $myMessage = Message::all();
+
         $messageCount = $myMessage->count();
-        return view('admin.dashboard.message.index',compact('myMessage','messageCount'));
+
+        return view('admin.dashboard.message.index',[
+            
+            'myMessage'     =>  $myMessage,
+            
+            'messageCount'  =>  $messageCount,
+            
+            ]);
 
     }
 
