@@ -20,13 +20,20 @@ class AdminDashboardCategoryController extends Controller
     public function index()
     {
         $myMessage = Message::all();
+
         $messageCount = $myMessage->count();
+
         $myEducation = Education::all();
+
         $category = Category::all();
+
         return view('admin.dashboard.category.index' ,[
             'messageCount'  => $messageCount,
+
             'myEducation'   => $myEducation,
+
             'myMessage'     => $myMessage,
+            
             'category'      => $category,           
         ]);
     }
@@ -39,15 +46,17 @@ class AdminDashboardCategoryController extends Controller
     public function create()
     {
         $myMessage = Message::all();
-        $messageCount = $myMessage->count();
-        $myEducation = Education::all();
-       
         
-      
+        $messageCount = $myMessage->count();
+
+        $myEducation = Education::all();
         
         return view('admin.dashboard.category.create' ,[
+        
             'messageCount'  => $messageCount,
+        
             'myEducation'   => $myEducation,
+        
             'myMessage'     => $myMessage,
              
         ]);
@@ -88,17 +97,21 @@ class AdminDashboardCategoryController extends Controller
     public function edit($id)
     {
         $myMessage = Message::all();
+        
         $messageCount = $myMessage->count();
+      
         $myEducation = Education::all();
        
         $item = Category::findOrFail($id);
 
-      
-        
         return view('admin.dashboard.category.edit' ,[
+            
             'messageCount'  => $messageCount,
+            
             'myEducation'   => $myEducation,
+            
             'myMessage'     => $myMessage,
+            
             'item'          => $item
              
         ]);
