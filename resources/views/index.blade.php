@@ -303,8 +303,10 @@
                     <p></p>
                 </div>
             </div>
-            <div class="row d-flex">
+            <div class="row d-flex justify-content-center">
+                
                 @forelse ($contentBlog as $blog)
+               
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry justify-content-end">
                         <a href="{{ route('detail',$blog->slug) }}" class="block-20" style="background-image: url('{{ $blog->count() ? Storage::url($blog->image) : '' }}'); background-size: contain;">
@@ -327,6 +329,13 @@
                     
                 @endforelse
                
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="button-blog justify-content-center" align="right">
+                            <a href="{{ route('blog.index') }}" align="center" class="btn btn-block btn-primary py-3 px-3">All Blog</a>
+                        </div>
+                    </div>
+                </div>
                 
             </div>
         </div>

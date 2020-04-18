@@ -4,14 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Blog;
 use App\DetailProfile;
-use App\Education;
-use App\Experience;
-use App\Project;
-use App\Skill;
 use App\User;
 use Illuminate\Http\Request;
 
-class LandingPageController extends Controller
+class BlogController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -23,19 +19,17 @@ class LandingPageController extends Controller
         $profileUser = User::first();
 
         $profileDetail = DetailProfile::where('user_id',$profileUser['id'])->first();
-        
-        $education = Education::orderBy('ed_start_year','DESC')->get();
-        
-        $experience = Experience::orderBy('ex_start_year','DESC')->get();
-        
-        $project = Project::all();
-        
-        $skill = Skill::all();
 
-        $contentBlog = Blog::with('user')->limit(3)->get();
+        // dd($profileDetail);
+        
+        $contentBlog = Blog::with('user')->get();
 
-        return view('index' , compact('profileUser','profileDetail','education','experience','project','skill','contentBlog'));
+        return view('all-blog' , [
+            
+            'profileDetail' => $profileDetail,
 
+            'contentBlog' => $contentBlog,
+        ]);
     }
 
     /**
