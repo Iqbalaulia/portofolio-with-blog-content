@@ -29,8 +29,16 @@ class AdminDashboardDetailProfileController extends Controller
     public function create()
     {
         $myMessage = Message::all();
+        
         $messageCount = $myMessage->count();
-        return view('admin.dashboard.profile.create' ,compact('myMessage','messageCount'));
+        
+        return view('admin.dashboard.profile.create' ,[
+            
+            'myMessage' => $myMessage,
+            
+            'messageCount' => $messageCount,
+
+            ]);
     }
 
     /**
@@ -41,31 +49,16 @@ class AdminDashboardDetailProfileController extends Controller
      */
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'nama_kategori'    =>  'required',
-            
-        // ]); 
+       
+        $data = $request->all();
 
-        $form_data = array(
-            
-            'user_id'                   =>   Auth::user()->id,
-            'date_birth'                =>   $request->date_birth,
-            'address'                   =>   $request->address,
-            'country'                   =>   $request->country,
-            'email'                     =>   Auth::user()->email,
-            'phone'                     =>   $request->phone,
-            'about_me'                  =>   $request->about_me,
-            'project_complate'          =>   $request->project_complate,
-            'facebook'                  =>   $request->facebook,
-            'github'                    =>   $request->github,
-            'linkedin'                  =>   $request->linkedin,
-            'instagram'                 =>   $request->instagram,
-            
-        );
+        $data['user_id'] = Auth::user()->id;
 
+        $data['email']  = Auth::user()->email;
 
         // dd($form_data);
-        DetailProfile::create($form_data);
+
+        DetailProfile::create($data);
         return redirect('admin/profile')->with('success', 'Data Added successfully.');
     }
 
@@ -88,16 +81,25 @@ class AdminDashboardDetailProfileController extends Controller
      */
     public function edit($user_id)
     {
-        $detailProfile = DetailProfile::where('user_id',$user_id)->first();
+        $detailProfile = DetailProfile::findOrFail($user_id);
+        
         $profileUser = User::where('id',$user_id)->first();
+        
         $myMessage = Message::all();
+       
         $messageCount = $myMessage->count();
 
-
         // dd($profileUser);
-        return view('admin.dashboard.profile.edit', compact(
-            'detailProfile','profileUser' ,'myMessage','messageCount'
-        ));
+        return view('admin.dashboard.profile.edit', [
+            
+            'detailProfile' => $detailProfile,
+
+            'profileUser'   => $profileUser,
+
+            'myMessage' =>  $myMessage,
+
+            'messageCount'  => $messageCount ,
+        ]);
 
     }
 
@@ -110,11 +112,7 @@ class AdminDashboardDetailProfileController extends Controller
      */
     public function update(Request $request, $user_id)
     {
-        // $request->validate([
-        //     'nama_kategori'    =>  'required',
-            
-        // ]);
-
+      
         $formDataDetail = array(
             
             'user_id'                   =>   Auth::user()->id,
@@ -156,9 +154,9 @@ class AdminDashboardDetailProfileController extends Controller
         }
         
         User::where('id',$user_id)->update($formDataProfile);
+        
         DetailProfile::where('user_id',$user_id)->update($formDataDetail);
         
-
         return redirect('admin/profile')->with('success', 'Data Edited successfully.');
     }
 
