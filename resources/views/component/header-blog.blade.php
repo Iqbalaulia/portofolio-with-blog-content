@@ -6,12 +6,14 @@
     </button>
 
     <div class="collapse navbar-collapse" id="ftco-nav">
+      
       <ul class="navbar-nav nav ml-auto">
         
         <li class="nav-item"><a href="{{ url('/blog') }}" class="nav-link"><span>Blog</span></a></li>
         
         <li class="nav-item"><a href="{{ url('/') }}" class="nav-link"><span>Home</span></a></li>
 
+      
       </ul>
     </div>
   </div>
