@@ -8,7 +8,7 @@ class Blog extends Model
 {
     
     protected $fillable = [
-        'users_id', 'title' , 'slug' , 'category' ,'image', 'content', 'date_blog'
+        'users_id', 'title' , 'slug' , 'category' ,'image', 'content', 'date_blog' , 'tag'
     ];
     
     
