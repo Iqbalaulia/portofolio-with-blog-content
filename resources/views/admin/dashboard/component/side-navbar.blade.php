@@ -38,6 +38,9 @@
          
         </li>
       
+        <li class=" nav-item"><a href="{{route('admin.tag.index')}}"><i class="la la-download"></i><span class="menu-title" data-i18n="nav.footers.main">Tag</span></a>
+         
+        </li>
        
         
       
