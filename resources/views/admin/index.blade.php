@@ -20,12 +20,11 @@
 
   
 </head>
-<body class="vertical-layout vertical-menu 2-columns   menu-expanded fixed-navbar"
-data-open="click" data-menu="vertical-menu" data-col="2-columns">
+<body >
   <!-- fixed-top-->
- @include('.admin/dashboard/component/navbar')
+ {{-- @include('.admin/dashboard/component/navbar') --}}
   <!-- ////////////////////////////////////////////////////////////////////////////-->
-  @include('.admin/dashboard/component/side-navbar')
+  {{-- @include('.admin/dashboard/component/side-navbar')
   <div class="app-content content">
     <div class="content-wrapper">
       <div class="content-header row">
@@ -35,7 +34,20 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
       </div>
     </div>
   </div>
-  
+   --}}
+
+   <div id="app">
+    <div class="main-wrapper">   
+      
+      @include('.admin/dashboard/component/navbar')
+      
+      @include('.admin/dashboard/component/side-navbar')
+      <!-- Main Content -->
+      @yield('content-admin')
+      
+      @include('.admin/dashboard/component/footer')
+    </div>
+  </div>
   
   @stack('prepend-script')
 

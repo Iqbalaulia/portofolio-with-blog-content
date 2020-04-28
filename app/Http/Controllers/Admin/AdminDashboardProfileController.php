@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Blog;
 use App\DetailProfile;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -17,10 +18,11 @@ class AdminDashboardProfileController extends Controller
      */
     public function index()
     {
-        $profileUser = Auth::user();
+    
+        $profileUser = DetailProfile::with('User')->first();
         
-        $detailProfile = DetailProfile::where('user_id', $profileUser->id)->first();
-        
+        $blogContent = Blog::count();
+      
         $myMessage = Message::all();
         
         $messageCount = $myMessage->count();
@@ -29,11 +31,13 @@ class AdminDashboardProfileController extends Controller
             
             'profileUser'   =>  $profileUser,
             
-            'detailProfile' =>  $detailProfile,
-            
+            'blogContent'   =>  $blogContent,
+
             'myMessage'     =>  $myMessage,
             
             'messageCount'  =>  $messageCount,
+
+            ''
             
             ]);
 

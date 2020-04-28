@@ -1,49 +1,70 @@
-<div class="main-menu menu-fixed menu-light menu-accordion    menu-shadow " data-scroll-to-active="true">
-    <div class="main-menu-content">
-      <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-        <li class=" nav-item"><a href="index.html"><i class="la la-home"></i><span class="menu-title" data-i18n="nav.dash.main">Dashboard</span><span class="badge badge badge-info badge-pill float-right mr-2">3</span></a>
-         
-        </li>
-        <li class=" navigation-header">
-          <span data-i18n="nav.category.layouts">Profile</span><i class="la la-ellipsis-h ft-minus" data-toggle="tooltip"
-          data-placement="right" data-original-title="Layouts"></i>
-        </li>
-      <li class=" nav-item"><a href="{{route('admin.profile.index')}}"><i class="la la-columns"></i><span class="menu-title" data-i18n="nav.page_layouts.main">Detail Profile</span><span class="badge badge badge-pill badge-danger float-right mr-2">New</span></a>
-        
-        </li>
-      <li class=" nav-item"><a href="{{route('admin.education.index')}}"><i class="la la-navicon"></i><span class="menu-title" data-i18n="nav.navbars.main">Education</span></a>
-        
-        </li>
-      <li class=" nav-item"><a href="{{route('admin.experiences.index')}}"><i class="la la-arrows-v"></i><span class="menu-title" data-i18n="nav.vertical_nav.main">Experience</span></a>
-        
-        </li>
-        <li class=" nav-item"><a href="{{route('admin.project.index')}}"><i class="la la-arrows-h"></i><span class="menu-title" data-i18n="nav.horz_nav.main">Project</span></a>
+  <div class="main-sidebar">
+    <aside id="sidebar-wrapper">
+      <div class="sidebar-brand">
+        <a href="{{route('admin.admin.index')}}">Stisla</a>
+      </div>
+      <div class="sidebar-brand sidebar-brand-sm">
+        <a href="{{route('admin.admin.index')}}">St</a>
+      </div>
+      <ul class="sidebar-menu">
+          <li class="menu-header">Dashboard</li>
+          <li class="nav-item  active">
+            <a href="{{route('admin.admin.index')}}" class="nav-link "><i class="fas fa-fire"></i><span>Dashboard</span></a>               
+          </li>
+          <li class="menu-header">Data Diri</li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-address-card"></i></i> <span>Data Diri</span></a>
+            <ul class="dropdown-menu">
+              <li><a class="nav-link" href="{{route('admin.profile.index')}}">Detail Data Diri</a></li>
+            </ul>
+          </li>
           
-        </li>
-        <li class=" nav-item"><a href="{{route('admin.skill.index')}}"><i class="la la-header"></i><span class="menu-title" data-i18n="nav.page_headers.main">Skills</span></a>
+          <li class="menu-header">Pengalaman</li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-laptop-code"></i> <span>Pengalaman</span></a>
+            <ul class="dropdown-menu">
+              <li><a class="nav-link" href="{{route('admin.experiences.index')}}">Detail Pengalaman Kerja</a></li>
+            </ul>
+          </li>
           
-        </li>
-        <li class=" nav-item"><a href="{{route('admin.message-admin.index')}}"><i class="la la-download"></i><span class="menu-title" data-i18n="nav.footers.main">Messages</span></a>
+          <li class="menu-header">Pendidikan</li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-user-graduate"></i> <span>Pendidikan</span></a>
+            <ul class="dropdown-menu">
+              <li><a class="nav-link" href="{{route('admin.education.index')}}">Detail Pendidikan</a></li>
+            </ul>
+          </li>
+          
+          <li class="menu-header">Keahlian</li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-chart-pie"></i></i> <span>Keahlian</span></a>
+            <ul class="dropdown-menu">
+              <li><a class="nav-link" href="{{route('admin.skill.index')}}">Detail Keahlian</a></li>
+            </ul>
+          </li>
          
-        </li>
-        <li class=" navigation-header">
-          <span data-i18n="nav.category.general">Blog</span><i class="la la-ellipsis-h ft-minus" data-toggle="tooltip"
-          data-placement="right" data-original-title="General"></i>
-        </li>
-        <li class=" nav-item"><a href="{{route('admin.category-blog.index')}}"><i class="la la-download"></i><span class="menu-title" data-i18n="nav.footers.main">Category</span></a>
-         
-        </li>
-
-        <li class=" nav-item"><a href="{{route('admin.my-blog.index')}}"><i class="la la-download"></i><span class="menu-title" data-i18n="nav.footers.main">My Blog</span></a>
-         
-        </li>
-      
-        <li class=" nav-item"><a href="{{route('admin.tag.index')}}"><i class="la la-download"></i><span class="menu-title" data-i18n="nav.footers.main">Tag</span></a>
-         
-        </li>
-       
-        
-      
-      </ul>
-    </div>
+          <li class="menu-header">Proyek</li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-tasks"></i></i> <span>Proyek</span></a>
+            <ul class="dropdown-menu">
+              <li><a class="nav-link" href="{{route('admin.project.index')}}">Detail Proyek</a></li>
+            </ul>
+          </li>
+          
+          <li class="menu-header">Konten Blog</li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-tasks"></i></i> <span>Kontent Blog</span></a>
+            <ul class="dropdown-menu">
+              <li><a class="nav-link" href="{{route('admin.tag.index')}}">Tags</a></li>
+              <li><a class="nav-link" href="{{route('admin.category-blog.index')}}">Kategori</a></li>
+              <li><a class="nav-link" href="{{route('admin.my-blog.index')}}">Konten</a></li>
+            </ul>
+          </li>
+          
+        <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
+          <a href="{{route('admin.message-admin.index')}}" class="btn btn-primary btn-lg btn-block btn-icon-split">
+            <i class="fas fa-mail-bulk"></i> Pesan Untuk Saya
+          </a>
+        </div>
+    </aside>
   </div>

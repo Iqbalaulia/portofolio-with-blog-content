@@ -1,53 +1,62 @@
 @extends('./admin/index')
 @section('content-admin')
-<div class="col-md-12 col-sm-12 col-lg-12 col-xl-12">
-    <section class="profile">
-        <div class="card">
-            <div class="card-body">
-                <form action="{{route('admin.skill.update',$mySkill->id)}}" method="post" enctype="multipart/form-data">
-                    @csrf
-                    @method('PATCH')                    
+<!-- Main Content -->
+<div class="main-content">
+    <section class="section">
+        <div class="section-header">
+            <h1>Mengubah Data Keahlian</h1>
+            <div class="section-header-breadcrumb">
+                <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
+                <div class="breadcrumb-item"><a href="#">Forms</a></div>
+                <div class="breadcrumb-item">Mengubah Data Keahlian</div>
+            </div>
+        </div>
+        <div class="section-body">
+            <h2 class="section-title">Mengubah Data Keahlian</h2>
+            <p class="section-lead">We provide advanced input fields, such as date picker, color picker, and so on.</p>
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Data Keahlian</h4>
+                        </div>
+                        <div class="card-body">
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="card-block mt-1">
-                                <p>Judul</p>
-                                <fieldset>
+                            <form action="{{route('admin.skill.update',$mySkill->id)}}" method="post" enctype="multipart/form-data">
+                                @csrf
+                                @method('PATCH')                    
+            
+                                <div class="form-group">
+                                    <label>Keahlian</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon3"><i
-                                                    class="la la-map-marker"></i></span>
+                                            <div class="input-group-text">
+                                                <i class="fas fa-user-tie"></i>
+                                            </div>
                                         </div>
-                                    <input type="text" value="{{$mySkill->title}}" name="title" class="form-control"
-                                            placeholder="Addon to Left" aria-describedby="basic-addon3">
+                                        <input type="text" value="{{$mySkill->title}}" name="title" class="form-control">
                                     </div>
-                                </fieldset>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card-block mt-1">
-                                <p>Range Skill</p>
-                                <fieldset>
+                                </div>
+                                <div class="form-group">
+                                    <label>Nilai Keahlian</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon3"><i
-                                                    class="la la-map-marker"></i></span>
+                                            <div class="input-group-text">
+                                                <i class="fas fa-award"></i>
+                                            </div>
                                         </div>
-                                        <input type="text" value="{{$mySkill->range_skill}}" name="range_skill" class="form-control"
-                                            placeholder="Addon to Left" aria-describedby="basic-addon3">
+                                        <input type="number" value="{{$mySkill->range_skill}}" name="range_skill" class="form-control">
                                     </div>
-                                </fieldset>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 mt-1">
-                            <div class="buton-add w-100" align="right">
-                                <button type="submit" class="mr-1 mb-1 btn btn-outline-success btn-min-width"><i
-                                        class="la la-user"></i> Save Change</button>
-
-                            </div>
+                                </div>
+                                <div class="button-edit" align="right">
+                                    <button type="submit"
+                                        class="btn btn-icon icon-left btn-success px-5 py-2 font-weight-bold"><i
+                                            class="fa fa-check-circle" aria-hidden="true"></i> Data Disimpan</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </section>

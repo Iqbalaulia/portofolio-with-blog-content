@@ -1,32 +1,10 @@
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700"
-rel="stylesheet">
-<link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css"
-rel="stylesheet">
-<!-- BEGIN VENDOR CSS-->
-<link rel="stylesheet" type="text/css" href="{{ asset('/admin/app-assets/css/vendors.css') }}">
-<!-- END VENDOR CSS-->
-<!-- BEGIN MODERN CSS-->
-<link rel="stylesheet" type="text/css" href="{{ asset('/admin/app-assets/css/app.css') }}">
-<!-- END MODERN CSS-->
-<!-- BEGIN Page Level CSS-->
-<link rel="stylesheet" type="text/css" href="{{ asset('/admin/app-assets/css/core/menu/menu-types/vertical-menu.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('/admin/app-assets/css/core/colors/palette-gradient.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('/admin/app-assets/vendors/css/cryptocoins/cryptocoins.css') }}">
-<!-- END Page Level CSS-->
-<!-- BEGIN Custom CSS-->
-<link rel="stylesheet" type="text/css" href="{{ asset('/admin/assets/css/style.css') }}">
-<!-- END Custom CSS-->
 
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-{{-- LOGIN --}}
-<!-- BEGIN VENDOR CSS-->
-<link rel="stylesheet" type="text/css" href="{{ asset('/admin/app-assets/vendors/css/forms/icheck/icheck.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('/admin/app-assets/vendors/css/forms/icheck/custom.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('/admin/app-assets/css/pages/login-register.css') }}">
+  <!-- CSS Libraries -->
 
-{{-- EDUCATION --}}
-
-
-<link rel="stylesheet" type="text/css" href="{{ asset('/admin/app-assets/vendors/css/tables/datatable/datatables.min.css') }}">
-
-
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="{{ asset('/backend/assets/css/style.css') }}">
+  <link rel="stylesheet" href="{{ asset('/backend/assets/css/components.css') }}">

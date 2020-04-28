@@ -81,10 +81,8 @@ class AdminDashboardDetailProfileController extends Controller
      */
     public function edit($user_id)
     {
-        $detailProfile = DetailProfile::findOrFail($user_id);
-        
-        $profileUser = User::where('id',$user_id)->first();
-        
+        $detailProfile = DetailProfile::with('User')->findOrFail($user_id);
+                
         $myMessage = Message::all();
        
         $messageCount = $myMessage->count();
@@ -93,8 +91,6 @@ class AdminDashboardDetailProfileController extends Controller
         return view('admin.dashboard.profile.edit', [
             
             'detailProfile' => $detailProfile,
-
-            'profileUser'   => $profileUser,
 
             'myMessage' =>  $myMessage,
 
@@ -135,7 +131,6 @@ class AdminDashboardDetailProfileController extends Controller
             $formDataProfile = array(
             
                 'name'                      =>   $request->name,
-                'role'                      =>   $request->role,
                 'email'                     =>   $request->email,
                 
             );
