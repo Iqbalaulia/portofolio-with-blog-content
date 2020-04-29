@@ -1,50 +1,54 @@
 @extends('./admin/index')
 @section('content-admin')
-<div class="col-md-12 col-sm-12 col-lg-12 col-xl-12">
-    <section class="profile">
-        <div class="card">
-            <div class="card-body">
-                
-              @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                        <li>{{ $error}}</li>
-                        @endforeach
-                    </ul>
-                </div>
-                @endif
 
-                <form action="{{route('admin.category-blog.store')}}" method="post" enctype="multipart/form-data">
-                    @csrf
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card-block mt-1">
-                                <p>Category Blog</p>
-                                <fieldset>
+<!-- Main Content -->
+<div class="main-content">
+    <section class="section">
+        <div class="section-header">
+            <h1>Membuat Data Kategori</h1>
+            <div class="section-header-breadcrumb">
+                <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
+                <div class="breadcrumb-item"><a href="#">Forms</a></div>
+                <div class="breadcrumb-item">Membuat Data Kategori</div>
+            </div>
+        </div>
+
+        <div class="section-body">
+            <h2 class="section-title">Membuat Data Kategori</h2>
+            <p class="section-lead">We provide advanced input fields, such as date picker, color picker, and so on.</p>
+
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Data Kategori</h4>
+                        </div>
+                        <div class="card-body">
+
+                            <form action="{{route('admin.category-blog.store')}}" method="post"
+                                enctype="multipart/form-data">
+                                @csrf
+                                <div class="form-group">
+                                    <label>Kategori</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon3"><i
-                                                    class="la la-university"></i></span>
+                                            <div class="input-group-text">
+                                                <i class="fab fa-creative-commons-share"></i> </div>
                                         </div>
-                                        <input type="text" name="category" class="form-control"
-                                            placeholder="Create Category" aria-describedby="basic-addon3">
+                                        <input type="text" name="category" class="form-control phone-number">
                                     </div>
-                                </fieldset>
-                            </div>
-                        </div>
+                                </div>
+                                <div class="button-edit" align="right">
+                                    <button type="submit"
+                                        class="btn btn-icon icon-left btn-success px-5 py-2 font-weight-bold"><i
+                                            class="fa fa-check-circle" aria-hidden="true"></i> Data Disimpan</button>
+                                </div>
+                            </form>
 
-                        <div class="col-sm-12 mt-1">
-                            <div class="buton-add w-100" align="right">
-                                <button type="submit"
-                                    class="mr-1 mb-1 btn btn-outline-success btn-min-width btn-block"><i
-                                        class="la la-user"></i> Save Category</button>
-
-                            </div>
                         </div>
                     </div>
+                </div>
 
-                </form>
             </div>
         </div>
     </section>
