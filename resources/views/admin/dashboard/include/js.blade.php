@@ -8,6 +8,7 @@
   
   <!-- JS Libraies -->
   <script src="{{ asset('/backend/assets/js/stisla.js') }}"></script>
+  <script src="{{ asset('/backend/assets/plugins/select2/js/select2.full.min.js') }}"></script>
 
   <!-- Template JS File -->
   <script src="{{ asset('/backend/assets/js/scripts.js') }}"></script>

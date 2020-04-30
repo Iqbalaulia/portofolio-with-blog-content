@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Message;
 use App\Http\Requests\BlogRequest;
+use App\Tag;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use illuminate\Support\Str;
@@ -29,6 +30,15 @@ class AdminDashboardBlogController extends Controller
         $myEducation = Education::all();
         
         $blogContent    =   Blog::all();
+
+        // foreach ($blogContent as $content){
+
+        //     $dataContent = json_decode($content->tag);
+            
+        //     foreach ($dataContent as $tags){
+        //         dd($tags->value);
+        //     }
+        // }
 
         return view('admin.dashboard.blog.index' ,[
 
@@ -58,6 +68,8 @@ class AdminDashboardBlogController extends Controller
 
         $categoryBlog = Category::all();
 
+        $tagBlog = Tag::all();
+
         return view('admin.dashboard.blog.create' ,[
 
             'messageCount'  => $messageCount,
@@ -67,6 +79,8 @@ class AdminDashboardBlogController extends Controller
             'myMessage'     => $myMessage,
 
             'categoryBlog'  => $categoryBlog, 
+
+            'tagBlog'       => $tagBlog,
                  
         ]);
     }
@@ -89,8 +103,10 @@ class AdminDashboardBlogController extends Controller
 
         $data['image'] = $request->file('image')->store('assets/thumbnail', 'public');
 
-        // dd($data);
-
+        // Insert tag array
+        
+        $data['tag'] = json_encode($request->tag);
+            
         Blog::create($data); 
         
         return redirect()->route('admin.my-blog.index');
@@ -127,8 +143,10 @@ class AdminDashboardBlogController extends Controller
 
         $categoryBlog = Category::all();
 
+        $tagBlog = Tag::all();
+
         $item = Blog::findOrFail($id);
-        
+
         return view('admin.dashboard.blog.edit' ,[
 
             'messageCount'  => $messageCount,
@@ -140,6 +158,8 @@ class AdminDashboardBlogController extends Controller
             'item'          => $item,
 
             'categoryBlog'  => $categoryBlog,
+
+            'tagBlog'       => $tagBlog,
              
         ]);
     }
@@ -168,6 +188,8 @@ class AdminDashboardBlogController extends Controller
 
         $data['users_id'] = Auth::user()->id;
 
+        $data['tag'] = json_encode($request->tag);
+        
         $item = Blog::findOrFail($id);
 
         $item->update($data);
