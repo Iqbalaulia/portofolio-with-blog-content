@@ -2,139 +2,116 @@
 <html class="loading" lang="en" data-textdirection="ltr">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta name="description"
-        content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
-    <meta name="keywords"
-        content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
-    <meta name="author" content="PIXINVENT">
-    <title>Login with Background Image - Modern Admin - Clean Bootstrap 4 Dashboard HTML Template
-        + Bitcoin Dashboard</title>
-    <link rel="apple-touch-icon" href="../../../app-assets/images/ico/apple-icon-120.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/ico/favicon.ico">
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700"
-        rel="stylesheet">
-    <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>Login &mdash; IB-Working</title>
 
     @include('./admin/dashboard/include/css')
 
 </head>
 
-<body class="vertical-layout vertical-menu 1-column  bg-full-screen-image menu-expanded blank-page blank-page"
-    data-open="click" data-menu="vertical-menu" data-col="1-column">
-    <!-- ////////////////////////////////////////////////////////////////////////////-->
-    <div class="app-content content">
-        <div class="content-wrapper">
-            <div class="content-header row">
-            </div>
-            <div class="content-body">
-                <section class="flexbox-container">
-                    <div class="col-12 d-flex align-items-center justify-content-center">
-                        <div class="col-md-4 col-10 box-shadow-2 p-0">
-                            <div class="card border-grey border-lighten-3 px-1 py-1 m-0">
-                                <div class="card-header border-0">
-                                    <div class="card-title text-center">
-                                        <img src="{{ asset('/admin/app-assets/images/logo/logo-dark.png') }}" alt="branding logo">
-                                    </div>
-                                    <h6 class="card-subtitle line-on-side text-muted text-center font-small-3 pt-2">
-                                        <span>Easily Using</span>
-                                    </h6>
+<body>
+    <div id="app">
+        <section class="section">
+            <div class="d-flex flex-wrap align-items-stretch">
+                <div class="col-lg-4 col-md-6 col-12 order-lg-1 min-vh-100 order-2 bg-white">
+                    <div class="p-4 m-3">
+                        <img src="{{ asset('/backend/assets/img/stisla-fill.svg') }}" alt="logo" width="80"
+                            class="shadow-light rounded-circle mb-5 mt-2">
+                        <h4 class="text-dark font-weight-normal">Selamat Datang Di <span
+                                class="font-weight-bold">IB-Working</span></h4>
+                        <p class="text-muted">Before you get started, you must login or register if you don't already
+                            have an account.</p>
+                        <form class="form-horizontal" method="POST" action="{{ route('login') }}">
+                            @csrf
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input id="email" placeholder="Email" type="email"
+                                    class="form-control @error('email') is-invalid @enderror" name="email"
+                                    value="{{ old('email') }}" required autocomplete="email" autofocus>
+
+                                @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                                <div class="invalid-feedback">
+                                    Please fill in your email
                                 </div>
-                                <div class="card-content">
-                                    <div class="text-center">
-                                        <a href="#" class="btn btn-social-icon mr-1 mb-1 btn-outline-facebook">
-                                            <span class="la la-facebook"></span>
-                                        </a>
-                                        <a href="#" class="btn btn-social-icon mr-1 mb-1 btn-outline-twitter">
-                                            <span class="la la-twitter"></span>
-                                        </a>
-                                        <a href="#" class="btn btn-social-icon mr-1 mb-1 btn-outline-linkedin">
-                                            <span class="la la-linkedin font-medium-4"></span>
-                                        </a>
-                                        <a href="#" class="btn btn-social-icon mr-1 mb-1 btn-outline-github">
-                                            <span class="la la-github font-medium-4"></span>
-                                        </a>
-                                    </div>
-                                    <p class="card-subtitle line-on-side text-muted text-center font-small-3 mx-2 my-1">
-                                        <span>OR Using Account Details</span>
-                                    </p>
-                                    <div class="card-body">
-                                        <form class="form-horizontal" method="POST" action="{{ route('login') }}">
-                                            @csrf
+                            </div>
 
-                                            <fieldset class="form-group position-relative has-icon-left">
-                                                <input id="email" placeholder="Email" type="email"
-                                                    class="form-control @error('email') is-invalid @enderror"
-                                                    name="email" value="{{ old('email') }}" required
-                                                    autocomplete="email" autofocus>
-
-                                                @error('email')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                                @enderror
-                                                <div class="form-control-position">
-                                                    <i class="ft-user"></i>
-                                                </div>
-                                            </fieldset>
-                                            <fieldset class="form-group position-relative has-icon-left">
-                                                <input id="password" placeholder="Password" type="password"
-                                                    class="form-control @error('password') is-invalid @enderror"
-                                                    name="password" required autocomplete="current-password">
-
-                                                @error('password')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                                @enderror
-                                                <div class="form-control-position">
-                                                    <i class="la la-key"></i>
-                                                </div>
-                                            </fieldset>
-                                            <div class="form-group row">
-                                                <div class="col-md-6 col-12 text-center text-sm-left">
-                                                    <fieldset>
-                                                        <input class="chk-remember" type="checkbox" name="remember"
-                                                            id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                                        <label for="remember-me"> Remember Me</label>
-                                                    </fieldset>
-                                                </div>
-                                                <div class="col-md-6 col-12 float-sm-left text-center text-sm-right">
-                                                    @if (Route::has('password.request'))
-                                                    <a class="card-link" href="{{ route('password.request') }}">
-                                                        {{ __('Forgot Your Password?') }}
-                                                    </a>
-                                                    @endif
-                                                </div>
-
-                                            </div>
-                                            <button type="submit" class="btn btn-outline-info btn-block"><i
-                                                    class="ft-unlock"></i> Login</button>
-                                        </form>
-                                    </div>
-                                    <p class="card-subtitle line-on-side text-muted text-center font-small-3 mx-2 my-1">
-                                        <span>New to Modern ?</span>
-                                    </p>
-                                    <div class="card-body">
-                                        <a href="register-with-bg-image.html"
-                                            class="btn btn-outline-danger btn-block"><i class="ft-user"></i>
-                                            Register</a>
-                                    </div>
+                            <div class="form-group">
+                                <div class="d-block">
+                                    <label for="password" class="control-label">Password</label>
                                 </div>
+                                <input id="password" placeholder="Password" type="password"
+                                    class="form-control @error('password') is-invalid @enderror" name="password"
+                                    required autocomplete="current-password">
+
+                                @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                                <div class="invalid-feedback">
+                                    please fill in your password
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox">
+                                    <input class="custom-control-input" tabindex="3" type="checkbox" name="remember"
+                                        id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                    <label class="custom-control-label" for="remember-me">Remember Me</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group text-right">
+                                @if (Route::has('password.request'))
+                                <a class="float-left mt-3" href="{{ route('password.request') }}">
+                                    Forgot Password?
+                                </a>
+                                @endif
+                                <button type="submit" class="btn btn-primary btn-lg btn-icon icon-right" tabindex="4">
+                                    Login
+                                </button>
+                            </div>
+
+                            {{-- <div class="mt-5 text-center">
+                    Don't have an account? <a href="auth-register.html">Create new one</a>
+                  </div> --}}
+                        </form>
+
+                        <div class="text-center mt-5 text-small">
+                            Copyright &copy; Your Company. Made with 💙 by Stisla
+                            <div class="mt-2">
+                                <a href="#">Privacy Policy</a>
+                                <div class="bullet"></div>
+                                <a href="#">Terms of Service</a>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
+                <div class="col-lg-8 col-12 order-lg-2 order-1 min-vh-100 background-walk-y position-relative overlay-gradient-bottom"
+                    data-background="{{ asset('/backend/assets/img/unsplash/login-bg.jpg') }}">
+                    <div class="absolute-bottom-left index-2">
+                        <div class="text-light p-5 pb-2">
+                            <div class="mb-5 pb-3">
+                                <h1 class="mb-2 display-4 font-weight-bold">Good Morning</h1>
+                                <h5 class="font-weight-normal text-muted-transparent">Bali, Indonesia</h5>
+                            </div>
+                            Photo by <a class="text-light bb" target="_blank"
+                                href="https://unsplash.com/photos/a8lTjWJJgLA">Justin Kauffman</a> on <a
+                                class="text-light bb" target="_blank" href="https://unsplash.com">Unsplash</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
     </div>
-    <!-- ////////////////////////////////////////////////////////////////////////////-->
-    <!-- BEGIN VENDOR JS-->
-   
+
+
 
     @include('./admin/dashboard/include/js')
 

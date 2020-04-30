@@ -20,7 +20,10 @@ Route::name('admin.')->group(function () {
         Route::resource('/message-admin', 'AdminDashboardMessageController');
         Route::resource('/category-blog', 'AdminDashboardCategoryController');              
         Route::resource('/my-blog', 'AdminDashboardBlogController');             
-        Route::resource('/tag', 'AdminDashboardTagsController');             
+        Route::resource('/tag', 'AdminDashboardTagsController');
+        Route::get('/change-password-form','AdminDashboardController@showChangePasswordForm');
+        Route::post('/change-password','AdminDashboardController@changePassword');
+
 
 
     });

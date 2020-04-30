@@ -504,6 +504,9 @@
           <a href="{{route('admin.message-admin.index')}}" class="dropdown-item has-icon">
             <i class="fas fa-inbox"></i> Message
           </a>
+           <a href="{{url('admin/change-password-form')}}" class="dropdown-item has-icon">
+            <i class="fas fa-tools"></i> Change Password
+          </a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item has-icon text-danger" class="logout" href="{{ route('logout') }}" onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();"><i class="fas fa-sign-out-alt"></i> {{ __('Logout') }}</a>

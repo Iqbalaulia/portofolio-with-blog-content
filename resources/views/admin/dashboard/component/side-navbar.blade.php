@@ -1,7 +1,7 @@
   <div class="main-sidebar">
     <aside id="sidebar-wrapper">
       <div class="sidebar-brand">
-        <a href="{{route('admin.admin.index')}}">Stisla</a>
+        <a href="{{route('admin.admin.index')}}">IB-Working</a>
       </div>
       <div class="sidebar-brand sidebar-brand-sm">
         <a href="{{route('admin.admin.index')}}">St</a>

@@ -37,7 +37,7 @@
                         </div>
                         <div class="article-details">
                             <div class="article-title" style="height:60px">
-                                <h2><a href="#">{{ $content->title }}</a></h2>
+                                <h2><a href="#" class="text-decoration-none" >{{ $content->title }}</a></h2>
                             </div>
 
                             @php
@@ -50,7 +50,7 @@
                             @endforeach
 
                             <div class="article-cta">
-                                <a href="{{ route('admin.my-blog.edit',$content->id) }}">Merubah Data <i
+                                <a href="{{ route('admin.my-blog.edit',$content->id) }}" class="text-decoration-none">Merubah Data <i
                                         class="fas fa-chevron-right"></i></a>
                             </div>
                         </div>
