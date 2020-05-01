@@ -73,14 +73,35 @@
                                             @php
                                             $dataTag = json_decode($item->tag);
                                             @endphp
+                                            @if (empty($dataTag))
+                                            <tr>
+                                              
+                                                <td> 
+                                                   <div class="row">
+                                                       <div class="col-md-11">
+                                                        <input type="text" name="tag[]" class="form-control
+                                                       tag_list">
+                                                        
+                                                       </div>
+                                                       <div class="col-md-1">
+                                                        <button type="button" name="add" id="add" class="btn btn-primary">+</button>
+                                                       </div>
+                                                   </div>
+                                                </td>
+                                            
+                                                {{-- <td align="right">
+
+                                                </td> --}}
+                                            </tr> 
+                                            @else
                                             @foreach($dataTag as $tags)
                                             <tr>
                                               
                                                 <td> 
                                                    <div class="row">
                                                        <div class="col-md-11">
-                                                        <input type="text" name="tag[]" value="{{$tags}}" class="select2 form-control
-                                                        select2bs4 tag_list">
+                                                        <input type="text" name="tag[]" value="{{$tags}}" class="form-control
+                                                         tag_list">
                                                         
                                                        </div>
                                                        <div class="col-md-1">
@@ -94,6 +115,7 @@
                                                 </td> --}}
                                             </tr>
                                             @endforeach
+                                            @endif
                                         </table>
                                 </div>
                                 <div class="form-group">
