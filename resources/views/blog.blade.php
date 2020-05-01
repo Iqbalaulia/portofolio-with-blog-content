@@ -212,9 +212,11 @@
                 @php
                 $dataTag = json_decode($content->tag);
                 @endphp
-                 @foreach($dataTag as $tags)
+                @forelse($dataTag as $tags)
                 <a href="#" class="tag-cloud-link">{{$tags}}</a>
-                @endforeach
+                @empty
+                  
+                @endforelse
               </div>
             </div>
 
