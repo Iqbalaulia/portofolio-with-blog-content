@@ -199,27 +199,26 @@
                   </div>
                 </div>
               </div>  
+            
               @empty
                   
               @endforelse
               
-              
             </div>
 
-            {{-- <div class="sidebar-box ftco-animate">
-              <h3 class="heading-sidebar">Tag Cloud</h3>
+            <div class="sidebar-box ftco-animate">
+              <h3 class="heading-sidebar">Tag's</h3>
               <div class="tagcloud">
-                <a href="#" class="tag-cloud-link">house</a>
-                <a href="#" class="tag-cloud-link">office</a>
-                <a href="#" class="tag-cloud-link">building</a>
-                <a href="#" class="tag-cloud-link">land</a>
-                <a href="#" class="tag-cloud-link">table</a>
-                <a href="#" class="tag-cloud-link">interior</a>
-                <a href="#" class="tag-cloud-link">exterior</a>
-                <a href="#" class="tag-cloud-link">industrial</a>
+                @php
+                $dataTag = json_decode($content->tag);
+                @endphp
+                 @foreach($dataTag as $tags)
+                <a href="#" class="tag-cloud-link">{{$tags}}</a>
+                @endforeach
               </div>
-            </div> --}}
+            </div>
 
+           
             {{-- <div class="sidebar-box ftco-animate">
               <h3 class="heading-sidebar">Paragraph</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>

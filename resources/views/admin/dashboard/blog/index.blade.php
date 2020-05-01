@@ -40,14 +40,14 @@
                                 <h2><a href="#" class="text-decoration-none" >{{ $content->title }}</a></h2>
                             </div>
 
-                            @php
+                            {{-- @php
                             $dataTag = json_decode($content->tag);
                             @endphp
                             @foreach($dataTag as $tags)
                            <button type="button" class="btn btn-info">
                             {{$tags}}
                            </button>
-                            @endforeach
+                            @endforeach --}}
 
                             <div class="article-cta">
                                 <a href="{{ route('admin.my-blog.edit',$content->id) }}" class="text-decoration-none">Merubah Data <i
