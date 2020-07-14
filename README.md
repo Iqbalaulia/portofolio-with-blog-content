@@ -5,7 +5,7 @@ Berasal dari portofolio kita dapat dihire oleh perusahaan serta menenjukan kepad
 
 Pada aplikasi portofolio saya pribadi ini, terdapat fitur blog atau content yang dapat dituliskan oleh pemiliki aplikasi ini. jadi tidak hanya berisikan tentang project apa yang telah kita kerjakan , pengalaman kerja , keahlian kita namun juga terdapat blog content yang digunakan untuk sharing mengenai programming.
 
-#Fitur
+# Fitur
 
 1. Profile
 2. Pengalaman Kerja
