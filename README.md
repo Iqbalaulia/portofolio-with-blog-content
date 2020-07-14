@@ -15,4 +15,7 @@ Pada aplikasi portofolio saya pribadi ini, terdapat fitur blog atau content yang
 6. Share Konten ke Sosial Media
 7. Pengaturan Admini untuk aplikasi website portofolio
 
+# Pengembangan
+
+Untuk saat ini pengembangan menggunakan # Laravel sebagai pondasi dalam aplikasi ini
 
