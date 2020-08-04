@@ -14,7 +14,7 @@ Pada aplikasi portofolio saya pribadi ini, terdapat fitur blog atau content yang
 5. Blog Konten
 6. Share Konten ke Sosial Media
 7. Slug Url Konten
-8. Pengaturan Admini untuk aplikasi website portofolio
+8. Pengaturan Admin untuk aplikasi website portofolio
 
 # Pengembangan
 
